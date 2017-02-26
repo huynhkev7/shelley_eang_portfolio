@@ -1,10 +1,11 @@
 link(rel='stylesheet', href='/css/partial1.css')
-.row
-	.col-lg-12.text-center
-		h1(style="font-family: Quicksand;") Projects Page
-br
-br
-.row
-	.col-lg-12.text-center
-		.col-lg-4(project-item, ng-repeat='project in listOfProjects', url='{{project.url}}', title='{{project.title}}', description='{{project.description}}', route='{{project.route}}', style='margin-bottom: 10px')			
-			
+.page-wrapper
+	.row
+		.col-lg-12.text-center
+			h1(style="font-family: Quicksand;") Projects Page
+	br
+	br
+	.row
+		.col-lg-12.text-center
+			.col-lg-4(project-item, ng-repeat='project in listOfProjects', url='{{project.url}}', title='{{project.title}}', description='{{project.description}}', route='{{project.route}}', style='margin-bottom: 10px')			
+				

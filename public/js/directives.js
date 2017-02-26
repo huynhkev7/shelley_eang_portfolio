@@ -8,10 +8,7 @@ angular.module('myApp.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
-  }]);
-
-
-angular.module('myApp.directives', ['ngAnimate']).
+  }]).
   directive('projectItem', ['version', function(version) {
     return {
         restrict: 'EA',
@@ -40,22 +37,54 @@ angular.module('myApp.directives', ['ngAnimate']).
           $scope.goToProject = function() {
             $location.path('/' + $scope.route);
           }
-        },
-        link: function ($scope, element, attrs) {
-            
-            // element.bind('click', function () {
-            //     element.html('You clicked me!');
-            // });
-            // element.bind('mouseenter', function () {
-            //     element.css('background-color', 'yellow');
-            // });
-            // element.bind('mouseleave', function () {
-            //     element.css('background-color', 'white');
-            // });
         }
+    }
+  }]).
+  directive('multiParallax', ['version', function(version) {
+    return {
+        restrict: 'EA',
+        templateUrl: 'templates/multiParallax.html',
+        scope: {
+          imageurls: '@'
+        },
+        controller: function($scope, $location){
+            //set the image background for each parallax layer
+            $scope.imageurls = JSON.parse($scope.imageurls);
+            var layers = document.querySelectorAll("[data-type='parallax']");
+            for(var i = 0; i < $scope.imageurls.length; i++){
+              var currentImageUrl = $scope.imageurls[i];
+              var $currentLayer = angular.element(layers[i]);
+              var urlValue = "url(\'" + currentImageUrl + "\')";
+              if(i === 0){
+                // /urlValue += ' no-repeat center bottom/cover'
+                $currentLayer.css({
+                  'background': urlValue
+                })
+              }else{
+              $currentLayer.css({
+                  'backgroundImage': urlValue
+                })
+              }
+              console.log(currentImageUrl);
+            }
 
-    };
-    // return function(scope, elm, attrs) {
-    //   elm.text(version);
-    // };
-  }]);
+            //parallax logic
+            window.addEventListener('scroll', function(event) {
+                var depth, i, layer, layers, len, movement, topDistance, translate3d;
+                topDistance = this.pageYOffset;
+                layers = document.querySelectorAll("[data-type='parallax']");
+                for (i = 0, len = layers.length; i < len; i++) {
+                    layer = layers[i];
+                    depth = layer.getAttribute('data-depth');
+                    movement = -(topDistance * depth);
+                    translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+                    layer.style['-webkit-transform'] = translate3d;
+                    layer.style['-moz-transform'] = translate3d;
+                    layer.style['-ms-transform'] = translate3d;
+                    layer.style['-o-transform'] = translate3d;
+                    layer.style.transform = translate3d;
+                }
+            });              
+        }
+    }
+  }])

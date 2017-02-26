@@ -1,4 +1,14 @@
 link(rel='stylesheet', href='/css/partialProject1.css')
+multi-parallax(imageUrls='{{listOfImages}}')
+//div(multi-parallax, imageUrls={{listOfImages}})
+//multi-parallax(imageUrls={{listOfImages}})
+//#hero
+    .layer-bg.layer(data-type='parallax', data-depth='.10')
+    .layer-1.layer(data-type='parallax', data-depth='.20')
+    .layer-2.layer(data-type='parallax', data-depth='.50')
+    .layer-3.layer(data-type='parallax', data-depth='.80')
+    .layer-overlay.layer(data-type='parallax', data-depth='.85')
+    .layer-4.laye(data-type='parallax', data-depth='1.00')
 .project-container
     .row
         .page-header

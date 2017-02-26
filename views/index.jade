@@ -26,13 +26,13 @@ block body
         li  
           a(href="view3")
             span BLOG        
-  .container      
+  .container#app-container   
     div(ng-controller='AppCtrl')
       //.jumbotron  
         h1 Hello {{name}}
       div(ng-view).view-container
     hr  
-    div
+    div.page-wrapper
       | Angular seed app: v
       span(app-version)
   script(src='js/lib/angular/angular.js')

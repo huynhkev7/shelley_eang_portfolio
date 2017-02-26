@@ -33,3 +33,14 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li > a > span:hover{
 div.container {
   padding-top: 30px;
 }
+
+/*add side padding like it normally would*/
+.page-wrapper {
+  padding: 0px 15px;
+}
+
+#app-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;  
+}
