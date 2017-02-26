@@ -8,26 +8,36 @@ block body
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href="#") Brand
-    
+      a.navbar-brand(href="#")
+        img(src="/images/logo.png")
+      div.navbar-brand#logo-text
+        |Shelley Eang
+        |<br>
+        |UX Designer
+
     .collapse.navbar-collapse.navbar-ex1-collapse
-      ul.nav.navbar-nav
+      ul.nav.navbar-nav.navbar-right
         li
-          a(href="view1") View1
+          a(href="view1") 
+            span PROJECTS
         li  
-          a(href="view2") View2 
+          a(href="view2")
+            span ABOUT 
+        li  
+          a(href="view3")
+            span BLOG        
   .container      
     div(ng-controller='AppCtrl')
-      .jumbotron  
+      //.jumbotron  
         h1 Hello {{name}}
-      div(ng-view)
+      div(ng-view).view-container
     hr  
     div
       | Angular seed app: v
       span(app-version)
-
   script(src='js/lib/angular/angular.js')
   script(src='js/lib/angular/angular-route.js')
+  script(src='js/lib/angular/angular-animate.js')
   script(src='js/app.js')
   script(src='js/services.js')
   script(src='js/controllers.js')
@@ -35,3 +45,4 @@ block body
   script(src='js/directives.js')
   script(src='js/lib/jquery/jquery-2.0.3.min.js')
   script(src='bootstrap/js/bootstrap.min.js')
+  script(src='route-styles.js')

@@ -1,0 +1,5 @@
+<img ng-mouseenter='mouseEnterProjectImage($event.target, $event)' class='img-thumbnail ' src='{{url}}' />
+<div ng-click='goToProject()' ng-mouseleave='mouseLeaveProjectImage($event.target)' class='project-wrapper fadein fadeout' ng-hide='isActive'>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+</div>

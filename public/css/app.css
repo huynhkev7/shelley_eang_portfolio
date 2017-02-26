@@ -2,7 +2,34 @@
 
 body {
   padding-top:70px;
+  font-family: 'Quicksand', sans-serif;
 }
 
+.navbar-nav.navbar-right:last-child {
+  margin-right: 0px;
+}
+div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
+  padding-top: 40px;
+}
 
-  
+.navbar {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+#logo-text {
+  font-weight: bold;
+}
+
+div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li > a > span:hover{
+  border-bottom: 3px solid black;
+}
+
+div.container {
+  padding-top: 30px;
+}

@@ -19,11 +19,17 @@ var app = module.exports = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
+app.set('templates', __dirname + '/templates');
 app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname , 'bower_components/angular-route-styles')));
+//app.use(express.static(path.join(__dirname , 'public/templates')));
+
+//app.use(express.static(path.join(__dirname , 'public/css')));
+
 app.use(app.router);
 
 // development only
@@ -52,6 +58,8 @@ app.get('*', routes.index);
 * Start Server
 */
 
+
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
+  console.log(path.join(__dirname, 'bower_components'));
 });

@@ -9,5 +9,6 @@ exports.index = function(req, res){
 
 exports.partial = function (req, res) {
   var name = req.params.name;
+  console.log(__dirname);
   res.render('partials/partial' + name);
 };
