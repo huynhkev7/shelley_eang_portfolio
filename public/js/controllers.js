@@ -61,7 +61,34 @@ MyCtrl2.$inject = [];
 
 function Project1Ctrl($scope) {
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
-    $scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
+    //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
+    $scope.listOfImages = [
+        {
+            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+            depth: '.10',
+            additionalStyles: 'background-position: right bottom;'
+        },
+        {
+            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+            depth: '.50',
+            additionalStyles: 'background-position: right top;'
+        },
+        {
+            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+            depth: '.80',
+            additionalStyles: 'background-position: left top;'
+        },
+        {
+            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+            depth: '.85',
+            additionalStyles: 'background-position: left bottom;'
+        },
+        {
+            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+            depth: '1.00',
+            additionalStyles: ''
+        }
+    ];
     console.log($scope.listOfImages);
     console.log("entering project 1");  
 }

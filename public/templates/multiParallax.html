@@ -1,8 +1,3 @@
 <div id="hero">
-  <!--<div class="layer-bg layer" data-type="parallax" data-depth=".05"></div>-->
-  <div class="layer-1 layer" data-type="parallax" data-depth=".10"></div>
-  <div class="layer-2 layer" data-type="parallax" data-depth=".50"></div>
-  <div class="layer-3 layer" data-type="parallax" data-depth=".80"></div>
-  <div class="layer-overlay layer" data-type="parallax" data-depth=".85"></div>
-  <div class="layer-4 layer" data-type="parallax" data-depth="1.00"></div>
+  <div ng-repeat="image in listOfImages" data-type="parallax" data-depth="{{image.depth}}" class="layer" style='background-image:url("{{image.imageUrl}}"); {{image.additionalStyles}}'></div>
 </div>

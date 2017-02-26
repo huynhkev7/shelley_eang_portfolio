@@ -44,29 +44,37 @@ angular.module('myApp.directives', []).
     return {
         restrict: 'EA',
         templateUrl: 'templates/multiParallax.html',
-        scope: {
-          imageurls: '@'
-        },
+        scope: false,
         controller: function($scope, $location){
+            //$scope.imageurls = JSON.parse($scope.imageurls);
+            //add the layers
+            // var newLayer = angular.element('<div></div>');
+            // newLayer.attr('ng-repeat', 'image in imageUrls');
+            // newLayer.attr('data-type', 'parallax');
+            // newLayer.attr('data-depth', '{{image.depth}}');
+            // newLayer.addClass('layer');
+            // newLayer.addClass('layer-{{image.imageUrl}} layer');
+            // angular.element( document.querySelector( '#hero' ) ).append(newLayer);
+
             //set the image background for each parallax layer
-            $scope.imageurls = JSON.parse($scope.imageurls);
-            var layers = document.querySelectorAll("[data-type='parallax']");
-            for(var i = 0; i < $scope.imageurls.length; i++){
-              var currentImageUrl = $scope.imageurls[i];
-              var $currentLayer = angular.element(layers[i]);
-              var urlValue = "url(\'" + currentImageUrl + "\')";
-              if(i === 0){
-                // /urlValue += ' no-repeat center bottom/cover'
-                $currentLayer.css({
-                  'background': urlValue
-                })
-              }else{
-              $currentLayer.css({
-                  'backgroundImage': urlValue
-                })
-              }
-              console.log(currentImageUrl);
-            }
+            // $scope.imageurls = JSON.parse($scope.imageurls);
+            // var layers = document.querySelectorAll("[data-type='parallax']");
+            // for(var i = 0; i < $scope.imageurls.length; i++){
+            //   var currentImageUrl = $scope.imageurls[i];
+            //   var $currentLayer = angular.element(layers[i]);
+            //   var urlValue = "url(\'" + currentImageUrl + "\')";
+            //   if(i === 0){
+            //     // /urlValue += ' no-repeat center bottom/cover'
+            //     $currentLayer.css({
+            //       'background': urlValue
+            //     })
+            //   }else{
+            //   $currentLayer.css({
+            //       'backgroundImage': urlValue
+            //     })
+            //   }
+            //   console.log(currentImageUrl);
+            // }
 
             //parallax logic
             window.addEventListener('scroll', function(event) {
