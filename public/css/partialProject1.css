@@ -14,6 +14,7 @@
 .bold-text {
     font-size: 12pt;
     color: black;
+    font-weight: 700;
 }
 
 
@@ -36,7 +37,36 @@
 }
 
 .shake:hover {
+  -o-animation: shake 400ms ease-in-out;
   -webkit-animation: shake 400ms ease-in-out;
   animation: shake 400ms ease-in-out;
 }
 
+.sub-item {
+  font-size: 13pt;
+  font-weight: 500;
+}
+
+.bottom-spacing {
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 12pt;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.pdf iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

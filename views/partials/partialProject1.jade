@@ -12,64 +12,210 @@ multi-parallax
 .project-container
     .row
         .page-header
-        h1
-            | Overview
+            h1
+                | Overview
         p For 12 weeks, I worked in a team of four undergraduate students to create a prototype for a carbon tracking application assuming that there is a carbon tax in 2020. This topic was assigned to my team by our professor, Thomas A. Furness III, who is the Grandfather of Virtual Reality.
         br
         h3
            | Team
         .row
-            .col-lg-12
-                .col-lg-4(style='font-size: 12pt')
-                    | Shelley Eang 
-                    br
-                    | Sean Hoon 
-                    br
-                    | Michael Kozlowski 
-                    br
-                    | Lacey Peil
+            .col-lg-4(style='font-size: 12pt')
+                | Shelley Eang 
+                br
+                | Sean Hoon 
+                br
+                | Michael Kozlowski 
+                br
+                | Lacey Peil
 
-                .col-lg-4(style='font-size: 12pt')
-                    | Visual &amp; UX Design 
-                    br
-                    | Project Manager 
-                    br
-                    | Technical Writer 
-                    br
-                    | Visual Design &amp; Research                  
-                .col-lg-4.alert.alert-success
-                    | 6 judges from the professional VR industry critiqued our project. 
-                    span.bold-text Out of 18 teams
-                    |  in the class, my team won 
-                    span.bold-text 3rd place in overall project
-                    |  based on the solution, presentation, and report.      
-        br
+            .col-lg-4(style='font-size: 12pt')
+                | Visual &amp; UX Design 
+                br
+                | Project Manager 
+                br
+                | Technical Writer 
+                br
+                | Visual Design &amp; Research                  
+            .col-lg-4.alert.alert-success
+                | 6 judges from the professional VR industry critiqued our project. 
+                span.bold-text Out of 18 teams
+                |  in the class, my team won 
+                span.bold-text 3rd place in overall project
+                |  based on the solution, presentation, and report.      
         h3
             | My Responsibilities
         br
         .row
-            .col-lg-12
-                .col-lg-3 
+            .col-lg-3 
+                img(src='images/web_research.png').thumbnail-circle.shake
+                p conduct web research and competitive analysis 
+            .col-lg-3 
+                img(src='images/persona.png').thumbnail-circle.shake
+                p create persona and scenarios 
+            .col-lg-3 
+                img(src='images/site_map.png').thumbnail-circle.shake
+                p develop sitemap 
+            .col-lg-3 
+                img(src='images/interface.png').thumbnail-circle.shake
+                p design interfaces of the mobile prototype  
+            .col-lg-3 
+                img(src='images/web_research.png').thumbnail-circle.shake
+                p edit and finalize lo and hi-fi design mockups 
+            .col-lg-3 
+                img(src='images/persona.png').thumbnail-circle.shake
+                p facilitate, moderate, and note take usability studies 
+            .col-lg-3 
+                img(src='images/site_map.png').thumbnail-circle.shake
+                p collaborate in creating group presentations 
+            .col-lg-3 
+                img(src='images/interface.png').thumbnail-circle.shake
+                p contribute and finalize final report  
+        .row
+            .page-header
+                h1
+                    | Problem Statement         
+            div
+                p Although there are many campaigns and advertisements on sustainability and eco-friendly practices, many do not engage in sustainable practices. Based on web research, there is a:
+                ul
+                    li a lack of user awareness of their emissions
+                    li a lack of knowledge on how to improve their efficiency
+                    li a general feeling of overwhelm
+        .row
+            .page-header
+                h1
+                    | Design Question        
+            p(style='font-size: 15pt')
+                |  “How can we help residents in Washington live sustainably within their carbon allotment and increase awareness and user efficiency without overwhelming them across a diverse spectrum?”
+        .row
+            .page-header
+                h1
+                    | Competitive Analysis       
+            p
+                | We discovered that many existing carbon calculator’s estimates user’s carbon footprint level based off of the required and extensive manual user data input. This current method of gathering data is inaccurate and can disempower the user, which is the opposite focus of our project. 
+        .row
+            .page-header
+                h1
+                    | The Solution     
+            p
+                | Through our competitive analysis and interviews, we were able to identify the following features that would meet the needs of our users:
+            .row
+                .col-lg-4 
                     img(src='images/web_research.png').thumbnail-circle.shake
-                    p conduct web research and competitive analysis 
-                .col-lg-3 
+                    p.sub-item Accurate and automated data
+                    p By utilizing an individual’s Carbon Identification Number, atomiC will be able to provide the user with accurate data about their carbon emissions, without the hassle of manual inputs.
+                .col-lg-4 
                     img(src='images/persona.png').thumbnail-circle.shake
-                    p create persona and scenarios 
-                .col-lg-3 
+                    p.sub-item Data analysis
+                    p Our system will present the user’s data to them in a meaningful, digestible way. Users will be able to utilize data visualizations, micro level reports, and macro level themes to learn about their carbon externalities.
+                .col-lg-4 
                     img(src='images/site_map.png').thumbnail-circle.shake
-                    p develop sitemap 
-                .col-lg-3 
+                    p.sub-item A breakdown of carbon externalities
+                    p Users will be able to learn about their overall carbon emissions, as well as their emissions within the four categories of food, goods, transit, and utilities. Within these categories, they can also see a breakdown of items within each category, such as gasoline for their | |||| personal vehicle. 
+            .row
+                .col-lg-4 
                     img(src='images/interface.png').thumbnail-circle.shake
-                    p design interfaces of the mobile prototype  
-                .col-lg-3 
+                    p.sub-item In-app notifications
+                    p Our system provides the user with notifications on how they can reduce their carbon output, as well as notifications for when they are nearing their allotment limit.
+                .col-lg-4 
                     img(src='images/web_research.png').thumbnail-circle.shake
-                    p edit and finalize lo and hi-fi design mockups 
-                .col-lg-3 
+                    p.sub-item Progress tracking
+                    p Our system allows users to track their weekly or monthly progress within the data section of atomiC to help increment their goal of reducing carbon emissions, making this daunting task feel manageable.
+                .col-lg-4 
                     img(src='images/persona.png').thumbnail-circle.shake
-                    p facilitate, moderate, and note take usability studies 
-                .col-lg-3 
-                    img(src='images/site_map.png').thumbnail-circle.shake
-                    p collaborate in creating group presentations 
-                .col-lg-3 
-                    img(src='images/interface.png').thumbnail-circle.shake
-                    p contribute and finalize final report
+                    p.sub-item Improvement coaching
+                    p Our system customizes suggestions for how the user can reduce their carbon emissions. Suggests range from the micro to macro level.
+        .row
+            .page-header
+                h1
+                    | User Research   
+                div  
+                    p
+                        | We talked to 6 potential users, 4 men 2 women, to understand their experiences, frustrations, and needs with tracking carbon emissions. Below are our main findings:
+                    ul
+                        li 5 out of the 6 were supportive of a carbon tax
+                        li 3 of the 6 people would not pay for an application that tracks their carbon output and the maximum amount one of our participants would pay was $50
+        .row
+            .page-header
+                h1
+                    | Persona   
+                div
+                    img(src='images/455_persona.png').img-responsive.img-thumbnail
+        .row
+            .page-header
+                h1
+                    | Storyboard
+                div
+                    img(src='images/455_persona.png').img-responsive.img-thumbnail                    
+        .row
+            .page-header
+                h1
+                    | Sitemap
+                div
+                    img(src='images/sitemap.png').img-responsive.img-thumbnail                     
+        .row
+            .page-header
+                h1
+                    | Core Functions &amp; Abilities
+                div
+                    p
+                        | atomiC allow users to automatically track their carbon emissions to become more aware of their consumption and to stay within their allotment. The features included intend to help users not feel disempowered by their emissions and overwhelmed by manual user data inputs. Our core system functionalities include: 
+                    ul
+                        li tracking carbon emissions from foods, goods, transportation, and utilities
+                        li viewing data visuals
+                        li viewing macro level emissions themes and micro level emissions.
+                        li Viewing given suggestions on how to lessen emissions
+        .row
+            .page-header
+                h1
+                    | Paper Prototype      
+                p
+                    | Using the sitemap, my team divided sections of the system to allow each member to create designs for the paper prototype. My contributions included the administrative screen interfaces, such as the settings and getting started with atomiC. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+        .row
+            .page-header
+                h1
+                    | High Fidelity Prototype
+                .row.bottom-spacing
+                    .col-lg-4
+                        img(src='images/high_fidelity_1.png').img-responsive.img-thumbnail  
+                    .col-lg-4
+                        img(src='images/high_fidelity_2.png').img-responsive.img-thumbnail  
+                    .col-lg-4
+                        img(src='images/high_fidelity_3.png').img-responsive.img-thumbnail  
+                 .row
+                    .col-lg-4
+                        img(src='images/high_fidelity_4.png').img-responsive.img-thumbnail 
+                    .col-lg-4
+                        img(src='images/high_fidelity_5.png').img-responsive.img-thumbnail 
+                    .col-lg-4
+                        img(src='images/high_fidelity_6.png').img-responsive.img-thumbnail 
+        .row
+            .page-header
+                h1
+                    | Usability Tests
+                p 
+                    | Results from the first usability test sessions were from the paper prototypes while the second was gathered using the high fidelity digital prototypes. 
+                    br
+                    br
+                    | After conducting both usability tests, our team noticed a significant drop in average task time and mistakes along with a significant increase in usability and likability rankings in the digital prototypes compared to the paper prototypes. My team used sticky notes and hand drawn prototypes to showcase our paper prototype. For our high fidelity designs, we designed our prototypes on Figma and used the POP app to showcase interactions. 
+                    br
+                    br
+                    | A few positive findings: 
+                ul
+                    li Easy use due to simplicity in screen design
+                    li Covers all basic features given example problem
+                    li Both micro and macro analysis of emissions are included
+        .row
+            .page-header
+                h1
+                    | Final Report
+                .pdf-container
+                    iframe(src='/images/hcde_final.pdf', width='100%', height='500', frameborder='0')
+        .row
+            .page-header
+                h1
+                    | Future Considerations
+                p
+                    | The main objective of atomiC is to help residents of Washington track their carbon emissions. Future development on our project would largely focus on how to automatically track carbon emissions through different platforms outside of a mobile application. One way to do this is to monitor utility emissions through home appliances and allow users to control the power from their mobile application if they are near their carbon emissions.
+                    br
+                    br
+                    | Going forward, we would like to add more tracking capabilities outside of a mobile application, although keep with our initial goal of tracking carbon emissions and not overwhelming our users.

@@ -44,3 +44,37 @@ div.container {
   padding-right: 0px;
   width: 100%;  
 }
+
+#footer {
+  border-top: 1px solid #ddd;
+  padding: 100px;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  font-size: 20pt;
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.footer-sub-title{
+  color: grey;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-right: 10px;
+}
+
+.footer-description{
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.fa {
+  font-size: 20pt;
+  margin: 0px 5px;
+}
+
+.footer-item {
+  margin-bottom: 20px;
+}

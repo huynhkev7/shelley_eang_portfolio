@@ -13,6 +13,31 @@ function AppCtrl($scope, $http) {
 }
 
 function MyCtrl1($location, $scope, $timeout) {
+    $scope.isActive = '';
+    $scope.bool  = true;
+    $scope.slideIn = function(element){
+        var $card = angular.element(element);
+        var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
+        var parentHeight = $card["0"].offsetHeight;
+        // var cardDescTop = $cardDesc["0"].offsetTop
+        // var heightHalf = parentHeight / 2;
+        // console.log(heightHalf);
+        $scope.isActive = 'card-desc-pos';
+        $scope.bool = false;
+        //$cardDesc.css({'height': '60%'});
+    };
+
+    $scope.slideOut = function(element){
+        var $card = angular.element(element);
+        var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
+        // var parentHeight = $card["0"].offsetHeight;
+        // var cardDescTop = $cardDesc["0"].offsetTop
+        // var heightHalf = parentHeight / 2;
+        // console.log(heightHalf);
+        $scope.isActive = '';
+        $scope.bool = true;
+    }
+
     $scope.listOfProjects = [
         {
             url: 'http://www.logo-company.in/logo/171.jpg',
@@ -55,46 +80,134 @@ function MyCtrl1($location, $scope, $timeout) {
 MyCtrl1.$inject = ['$location', '$scope', '$timeout'];
 
 
-function MyCtrl2() {
+function MyCtrl2($scope) {
+    $scope.parallaxTitle = {
+        title: 'Project G2L',
+        color: 'pink'
+    };
+    $scope.listOfImages = [
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Green-Apple-10-446x500.png',
+            depth: '.10',
+            additionalStyles: 'background-position: top;'
+        },
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Banana-27-500x408.png',
+            depth: '.40',
+            additionalStyles: 'background-position: right top;'
+        },
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Cherry-47-500x490.png',
+            depth: '.50',
+            additionalStyles: 'background-position: left top;'
+        },
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Orange-48-500x373.png',
+            depth: '.75',
+            additionalStyles: 'background-position: left bottom;'
+        },
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Peach-42-276x500.png',
+            depth: '.10',
+            additionalStyles: 'background-position: bottom right'
+        },
+        {
+            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Strawberry-38-500x394.png',
+            depth: '1.00',
+            additionalStyles: 'background-position: bottom center'
+        }                
+    ];    
 }
-MyCtrl2.$inject = [];
+MyCtrl2.$inject = ['$scope'];
 
 function Project1Ctrl($scope) {
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
     //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
+    $scope.parallaxTitle = {
+        title: 'Project AtomiC',
+        color: 'dark-grey'
+    };
+    // $scope.listOfImages = [
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.10',
+    //         additionalStyles: 'background-position: right bottom;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.30',
+    //         additionalStyles: 'background-position: right top;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.50',
+    //         additionalStyles: 'background-position: left top;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.75',
+    //         additionalStyles: 'background-position: left bottom;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '1.00',
+    //         additionalStyles: ''
+    //     }
+    // ];
+
     $scope.listOfImages = [
         {
-            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
-            depth: '.10',
-            additionalStyles: 'background-position: right bottom;'
-        },
-        {
-            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
-            depth: '.50',
-            additionalStyles: 'background-position: right top;'
-        },
-        {
-            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
-            depth: '.80',
-            additionalStyles: 'background-position: left top;'
-        },
-        {
-            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
-            depth: '.85',
-            additionalStyles: 'background-position: left bottom;'
-        },
-        {
-            imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
-            depth: '1.00',
+            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
+            //depth: '1.00',
             additionalStyles: ''
         }
     ];
+
     console.log($scope.listOfImages);
     console.log("entering project 1");  
 }
 Project1Ctrl.$inject = ['$scope'];
 
-function Project2Ctrl() {
+function Project2Ctrl($scope) {
+    $scope.parallaxTitle = {
+        title: 'Project WTA',
+        color: 'green'
+    };
+    // $scope.listOfImages = [
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.10',
+    //         additionalStyles: 'background-position: right bottom;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.30',
+    //         additionalStyles: 'background-position: right top;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.50',
+    //         additionalStyles: 'background-position: left top;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '.75',
+    //         additionalStyles: 'background-position: left bottom;'
+    //     },
+    //     {
+    //         imageUrl: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png',
+    //         depth: '1.00',
+    //         additionalStyles: ''
+    //     }
+    // ];
+
+    $scope.listOfImages = [
+        {
+            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
+            //depth: '1.00',
+            additionalStyles: ''
+        }
+    ];    
     console.log("entering project 2");
 }
-Project2Ctrl.$inject = [];
+Project2Ctrl.$inject = ['$scope'];

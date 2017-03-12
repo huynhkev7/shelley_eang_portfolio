@@ -28,3 +28,84 @@
     vertical-align: middle;
     border-radius: 2px;
 }
+
+.card {
+  border: 1px solid black;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.card-image {
+  background-image: url('http://www.logo-company.in/logo/171.jpg');
+  height: 385px;
+  overflow:hidden;
+  position: relative;
+  width: 100%;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center center
+}
+
+.card-desc {
+    position: absolute;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+    background-color: #FFF;
+    padding: 35px 25px;
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+}
+
+
+.card-desc-pos-add, .card-desc-pos-remove {
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+}
+
+.card-desc-pos,
+.card-desc-pos-add, .card-desc-pos-add-active {
+  height: 60%;
+}
+
+.card-desc-pos-remove, .card-desc-pos-remove-active {
+  height: 140px;
+}
+
+.card-desc .label {
+  color: #9394A7;
+}
+
+.label span {
+  margin-right: 10px;
+  font-size: 13pt;
+}
+
+.card-desc h3 {
+  font-size: 35px;
+  line-height: 1.4;
+}
+.card .ic-arrow-right {
+  color: #9394A7;
+  float:right;
+}
+
+.card-desc-panel {
+  font-size: 12pt;
+}
+
+
+.fading {
+    opacity: 1;
+}
+
+.fading.ng-hide {
+    opacity: 0;
+}
+
+.fading.ng-hide-add,
+.fading.ng-hide-remove {
+    -webkit-transition: 1.5s linear all;
+    transition: 1.5s linear all;
+}

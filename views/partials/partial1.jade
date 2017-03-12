@@ -8,4 +8,18 @@ link(rel='stylesheet', href='/css/partial1.css')
 	.row
 		.col-lg-12.text-center
 			.col-lg-4(project-item, ng-repeat='project in listOfProjects', url='{{project.url}}', title='{{project.title}}', description='{{project.description}}', route='{{project.route}}', style='margin-bottom: 10px')			
-				
+		.col-lg-12
+			.col-lg-4.card(ng-mouseenter="slideIn($event.currentTarget); $event.stopPropagation();", ng-mouseleave="slideOut($event.currentTarget); $event.stopPropagation();")
+				div.card-image
+				div.card-desc(ng-class="isActive")
+					p.label
+						span UX/UI 
+						span Illustration
+						span Images
+					h3
+						| Papaya Global
+						span.ic-arrow-right.float-right
+							i.fa.fa-arrow-right(aria-hidden='true')
+					div.card-desc-panel.fading(ng-show="bool")
+						p Papaya is a SaaS platform that connects corporate clients with suppliers to grow their teams and expand globally.
+
