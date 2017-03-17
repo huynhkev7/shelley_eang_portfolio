@@ -13,67 +13,49 @@ function AppCtrl($scope, $http) {
 }
 
 function MyCtrl1($location, $scope, $timeout) {
-    $scope.isActive = '';
-    $scope.bool  = true;
-    $scope.slideIn = function(element){
-        var $card = angular.element(element);
-        var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
-        var parentHeight = $card["0"].offsetHeight;
-        // var cardDescTop = $cardDesc["0"].offsetTop
-        // var heightHalf = parentHeight / 2;
-        // console.log(heightHalf);
-        $scope.isActive = 'card-desc-pos';
-        $scope.bool = false;
-        //$cardDesc.css({'height': '60%'});
-    };
-
-    $scope.slideOut = function(element){
-        var $card = angular.element(element);
-        var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
-        // var parentHeight = $card["0"].offsetHeight;
-        // var cardDescTop = $cardDesc["0"].offsetTop
-        // var heightHalf = parentHeight / 2;
-        // console.log(heightHalf);
-        $scope.isActive = '';
-        $scope.bool = true;
-    }
 
     $scope.listOfProjects = [
         {
             url: 'http://www.logo-company.in/logo/171.jpg',
             title: 'Cool Title',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project1'
+            route: 'project1',
+            tags: ['UX', 'Interaction']
         },
         {
             url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2'
+            route: 'project2',
+            tags: ['User Research']
         },
         {
             url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2'
+            route: 'project2',
+            tags: ['Videography']
         },
         {
             url: 'http://www.logo-company.in/logo/171.jpg',
             title: 'Cool Title',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project1'
+            route: 'project1',
+            tags: ['Fun!', 'UX', 'UI']
         },
         {
             url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2'
+            route: 'project2',
+            tags: ['Healthcare', 'Social Work']
         },
         {
             url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2'
+            route: 'project2',
+            tags: ['TEST']
         }                    
     ]
 }

@@ -91,8 +91,43 @@ angular.module('myApp.directives', []).
                     layer.style['-ms-transform'] = translate3d;
                     layer.style['-o-transform'] = translate3d;
                     layer.style.transform = translate3d;
-                }
+                };
             });              
+        }
+    }
+  }]).
+  directive('cardItem', ['version', function(version) {
+    return {
+        restrict: 'EA',
+        templateUrl: 'templates/cardItem.html',
+        scope: {
+          url: '@',
+          title: '@',
+          description: '@',
+          route: '@',
+          tags: '@'
+        },
+        controller: function($scope, $location){
+          $scope.showPanel = false;
+          $scope.listOfTags = JSON.parse($scope.tags);
+          $scope.slideIn = function(element){
+              console.log("entering");
+              var $card = angular.element(element);
+              var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
+              var parentHeight = $card["0"].offsetHeight;
+              $scope.showPanel = true;
+          };
+
+          $scope.slideOut = function(element){
+              console.log("exiting");
+              var $card = angular.element(element);
+              var $cardDesc = angular.element(element.getElementsByClassName("card-desc"));
+              $scope.showPanel = false;
+          }
+
+          $scope.goToProject = function() {
+            $location.path('/' + $scope.route);
+          }
         }
     }
   }])
