@@ -64,40 +64,56 @@ MyCtrl1.$inject = ['$location', '$scope', '$timeout'];
 
 function MyCtrl2($scope) {
     $scope.parallaxTitle = {
-        title: 'Project G2L',
-        color: 'pink'
+        title: 'About Me - Shelley Eang',
+        color: '#16a085'
     };
+    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
+    $scope.animateElementIn = function($el) {
+        //alert('in');
+        console.log($el);
+        var animateValue = $el.attr('value');
+        $el.removeClass('hide-item');
+        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        //alert("out");
+        var animateValue = $el.attr('value');
+        $el.addClass('hide-item');
+        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
     $scope.listOfImages = [
         {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Green-Apple-10-446x500.png',
+            imageUrl: 'https://i2.wp.com/bayareawebdesign.co/wp-content/uploads/2015/04/19-32-42_SHP-Edit.jpg',
             depth: '.10',
-            additionalStyles: 'background-position: top;'
-        },
-        {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Banana-27-500x408.png',
-            depth: '.40',
-            additionalStyles: 'background-position: right top;'
-        },
-        {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Cherry-47-500x490.png',
-            depth: '.50',
-            additionalStyles: 'background-position: left top;'
-        },
-        {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Orange-48-500x373.png',
-            depth: '.75',
-            additionalStyles: 'background-position: left bottom;'
-        },
-        {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Peach-42-276x500.png',
-            depth: '.10',
-            additionalStyles: 'background-position: bottom right'
-        },
-        {
-            imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Strawberry-38-500x394.png',
-            depth: '1.00',
-            additionalStyles: 'background-position: bottom center'
-        }                
+            additionalStyles: 'background-position: center;'
+        }
+        // {
+        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Banana-27-500x408.png',
+        //     depth: '.40',
+        //     additionalStyles: 'background-position: right top;'
+        // },
+        // {
+        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Cherry-47-500x490.png',
+        //     depth: '.50',
+        //     additionalStyles: 'background-position: left top;'
+        // },
+        // {
+        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Orange-48-500x373.png',
+        //     depth: '.75',
+        //     additionalStyles: 'background-position: left bottom;'
+        // },
+        // {
+        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Peach-42-276x500.png',
+        //     depth: '.10',
+        //     additionalStyles: 'background-position: bottom right'
+        // },
+        // {
+        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Strawberry-38-500x394.png',
+        //     depth: '1.00',
+        //     additionalStyles: 'background-position: bottom center'
+        // }                
     ];    
 }
 MyCtrl2.$inject = ['$scope'];

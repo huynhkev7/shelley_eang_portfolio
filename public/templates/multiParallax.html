@@ -1,4 +1,4 @@
 <div id="hero">
   <div id='parallax-title' style='color: {{parallaxTitle.color}}'>{{parallaxTitle.title}}</div>
-  <div ng-repeat="image in listOfImages" data-type="parallax" data-depth="{{image.depth}}" class="layer" style='background-image:url("{{image.imageUrl}}"); {{image.additionalStyles}}'></div>
+  <div ng-repeat="image in listOfImages" data-type="parallax" data-depth="{{image.depth}}" class="layer" style='background-image:url({{image.imageUrl}}); {{image.additionalStyles}}'></div>
 </div>
