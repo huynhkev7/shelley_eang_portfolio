@@ -1,28 +1,31 @@
 link(rel='stylesheet', href='/css/partial2.css')
-multi-parallax
-	.page-wrapper
-		.row
-			.col-lg-12
-				p This is the partial for view 2.
-				p
-					| Showing of 'interpolate' filter:
-					| {{ 'Current version is v%VERSION%.' | interpolate }}
-.container
-	.row
-		.col-lg-6.text-center
-			.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='tada').hide-item
-				h3 Hello, World!
-				p 
-					| My name is Shelley Savanary Eang! 
-					| I am an aspiring UX designer and Interaction Designer. 
-					| I am vegan and love to travel the world.
-					| In my spare time, I love taking strolls in a park.
-		.col-lg-6(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='swing').hide-item
-			img(src='http://career-intelligence.com/wp-content/uploads/2014/01/business-women-crisis.jpg').img-responsive.thumbnail
-				| this is some text
-	.row
-		h1.text-center Skills
-		p.text-center I am good at the following skills:
-		.col-lg-4(ng-repeat="skill in skills")
-			.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
-				h3 {{skill}}
+div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-meadow.jpg'", speed="10", reverse="true")
+	div
+		.container(style='padding:80px 0px;')
+			.col-lg-6.text-center
+				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50").hide-item
+					h3 Hello, World!
+					p 
+						| My name is Shelley Savanary Eang! 
+						| I am an aspiring UX designer and Interaction Designer. 
+						| I am vegan and love to travel the world.
+						| In my spare time, I love taking strolls in a park.
+			.col-lg-6(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='swing').hide-item
+				img(src='http://career-intelligence.com/wp-content/uploads/2014/01/business-women-crisis.jpg').img-responsive.thumbnail
+					| this is some text
+	div
+		.container(style='padding-bottom: 50px;')
+			h1.text-center Skills
+			p.text-center(style='font-size: 30pt') I am good at the following skills:
+			br
+			.col-lg-4(ng-repeat="skill in skills")
+				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
+					h3 {{skill}}
+	div
+		.container(style='padding-bottom: 50px;')
+			h1.text-center Hobbies
+			p.text-center(style='font-size: 30pt') These are my hobbies.
+			br
+			.col-lg-4(ng-repeat="skill in skills")
+				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
+					h3 {{skill}}

@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','ngRoute', 'ngAnimate', 'angularSlideables','angular-scroll-animate']).
+angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','ngRoute', 'ngAnimate', 'angularSlideables','angular-scroll-animate', 'ngParallax','snapscroll']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/view1', {templateUrl: 'partial/1', controller: MyCtrl1, css: 'css/partial1.css'});
     $routeProvider.when('/view2', {templateUrl: 'partial/2', controller: MyCtrl2, css: 'css/partial2.css'});
