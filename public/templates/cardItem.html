@@ -1,10 +1,12 @@
-<div class="col-lg-4 card" ng-mouseenter="slideIn($event.currentTarget); $event.stopPropagation();" ng-mouseleave="slideOut($event.currentTarget); $event.stopPropagation();">
-  <div class="card-image" style="background-image: url('{{url}}')"></div>
-  <div class="card-desc card-desc-animation" ng-class="{showPanel: showPanel}">
-    <p class="label"><span ng-repeat="tag in listOfTags">{{tag}} /</span></p>
-    <h3>{{title}}<span class="ic-arrow-right float-right"><i class="fa fa-arrow-right arrow-default" aria-hidden="true" ng-class="{highlightArrow: showPanel}" ng-click="goToProject()"></i></span></h3>
-    <div class="card-desc-panel" ng-class="{showText: showPanel}">
-      <p>{{description}}</p>
+<div class="col-lg-4 card-container">
+  <div class="card" ng-mouseenter="slideIn($event.currentTarget); $event.stopPropagation();" ng-mouseleave="slideOut($event.currentTarget); $event.stopPropagation();"> 
+    <div class="card-image" style="background-image: url('{{url}}')"></div>
+    <div class="card-desc card-desc-animation" ng-class="{showPanel: showPanel}">
+      <p class="label"><span ng-repeat="tag in listOfTags">{{tag}} /</span></p>
+      <h3>{{title}}<span class="ic-arrow-right float-right"><i class="fa fa-arrow-right arrow-default" aria-hidden="true" ng-class="{highlightArrow: showPanel}" ng-click="goToProject()"></i></span></h3>
+      <div class="card-desc-panel" ng-class="{showText: showPanel}">
+        <p>{{description}}</p>
+      </div>
     </div>
   </div>
 </div>

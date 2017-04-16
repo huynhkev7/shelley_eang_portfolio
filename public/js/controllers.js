@@ -121,6 +121,23 @@ MyCtrl2.$inject = ['$scope'];
 function Project1Ctrl($scope) {
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
     //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
+   
+    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
+    $scope.animateElementIn = function($el) {
+        //alert('in');
+        console.log($el);
+        var animateValue = $el.attr('value');
+        $el.removeClass('hide-item');
+        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        //alert("out");
+        var animateValue = $el.attr('value');
+        $el.addClass('hide-item');
+        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
     $scope.parallaxTitle = {
         title: 'Project AtomiC',
         color: 'dark-grey'

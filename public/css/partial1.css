@@ -23,8 +23,13 @@
     border-radius: 2px;
 }
 
+.card-container {
+  margin-top: 10px;
+}
+
 .card {
   padding: 0px;
+  position: relative;
 }
 
 .card-image {
@@ -48,6 +53,7 @@
     z-index: 1;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     
 }
 

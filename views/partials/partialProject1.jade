@@ -1,20 +1,56 @@
-//link(rel='stylesheet', href='/css/partialProject1.css')
-//multi-parallax
-//div(multi-parallax, imageUrls={{listOfImages}})
-//multi-parallax(imageUrls={{listOfImages}})
-//#hero
-    .layer-bg.layer(data-type='parallax', data-depth='.10')
-    .layer-1.layer(data-type='parallax', data-depth='.20')
-    .layer-2.layer(data-type='parallax', data-depth='.50')
-    .layer-3.layer(data-type='parallax', data-depth='.80')
-    .layer-overlay.layer(data-type='parallax', data-depth='.85')
-    .layer-4.laye(data-type='parallax', data-depth='1.00')
-div(snapscroll='', snap-height="200", prevent-double-snap-delay="2000", snap-duration="1200")
-  div hello
-  div 2
-  div 3
-
-  
+link(rel='stylesheet', href='/css/partialProject1.css')
+//- //multi-parallax
+//- //div(multi-parallax, imageUrls={{listOfImages}})
+//- //multi-parallax(imageUrls={{listOfImages}})
+//- //#hero
+//-     .layer-bg.layer(data-type='parallax', data-depth='.10')
+//-     .layer-1.layer(data-type='parallax', data-depth='.20')
+//-     .layer-2.layer(data-type='parallax', data-depth='.50')
+//-     .layer-3.layer(data-type='parallax', data-depth='.80')
+//-     .layer-overlay.layer(data-type='parallax', data-depth='.85')
+//-     .layer-4.laye(data-type='parallax', data-depth='1.00')
+div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-meadow.jpg'", speed="10", reverse="true")
+  .section.title-section
+    h1 Work
+  .section
+      swiper
+        slides
+          slide Slide1
+          slide Slide2
+          slide Slide3
+        prev prev
+        next next
+        pagination
+//- div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-meadow.jpg'", speed="10", reverse="true")
+//- 	div
+//- 		.container(style='padding:80px 0px;')
+//- 			.col-lg-6.text-center
+//- 				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50").hide-item
+//- 					h3 Hello, World!
+//- 					p 
+//- 						| My name is Shelley Savanary Eang! 
+//- 						| I am an aspiring UX designer and Interaction Designer. 
+//- 						| I am vegan and love to travel the world.
+//- 						| In my spare time, I love taking strolls in a park.
+//- 			.col-lg-6(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='swing').hide-item
+//- 				img(src='http://career-intelligence.com/wp-content/uploads/2014/01/business-women-crisis.jpg').img-responsive.thumbnail
+//- 					| this is some text
+//- 	div
+//- 		.container(style='padding-bottom: 50px;')
+//- 			h1.text-center Skills
+//- 			p.text-center(style='font-size: 30pt') I am good at the following skills:
+//- 			br
+//- 			.col-lg-4(ng-repeat="skill in skills")
+//- 				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
+//- 					h3 {{skill}}
+//- 	div
+//- 		.container(style='padding-bottom: 50px;')
+//- 			h1.text-center Hobbies
+//- 			p.text-center(style='font-size: 30pt') These are my hobbies.
+//- 			br
+//- 			.col-lg-4(ng-repeat="skill in skills")
+//- 				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
+//- 					h3 {{skill}}
 //- .banner
 //-     .banner-text AtomiC
 //-     div(ng-parallax pattern="'images/business_background.jpeg'", speed="10", reverse="true")

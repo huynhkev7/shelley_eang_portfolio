@@ -1,6 +1,6 @@
 link(rel='stylesheet', href='/css/partial2.css')
-div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-meadow.jpg'", speed="10", reverse="true")
-	div
+div#parallax-container(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-meadow.jpg'", speed="10", reverse="true")
+	.section
 		.container(style='padding:80px 0px;')
 			.col-lg-6.text-center
 				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50").hide-item
@@ -13,7 +13,7 @@ div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-
 			.col-lg-6(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='swing').hide-item
 				img(src='http://career-intelligence.com/wp-content/uploads/2014/01/business-women-crisis.jpg').img-responsive.thumbnail
 					| this is some text
-	div
+	.section
 		.container(style='padding-bottom: 50px;')
 			h1.text-center Skills
 			p.text-center(style='font-size: 30pt') I am good at the following skills:
@@ -21,7 +21,7 @@ div(ng-parallax pattern="'https://static.pexels.com/photos/625/field-summer-sun-
 			.col-lg-4(ng-repeat="skill in skills")
 				.jumbotron(when-visible="animateElementIn", when-not-visible="animateElementOut", delay-percent=".50", value='bounceInLeft').hide-item
 					h3 {{skill}}
-	div
+	.section
 		.container(style='padding-bottom: 50px;')
 			h1.text-center Hobbies
 			p.text-center(style='font-size: 30pt') These are my hobbies.
