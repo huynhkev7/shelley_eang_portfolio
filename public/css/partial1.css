@@ -30,6 +30,17 @@
 .card {
   padding: 0px;
   position: relative;
+  box-shadow: 0 0 20px rgba(236, 240, 241,1.0);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(149, 165, 166,1.0);
+    -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  /* ...and now for the proper property */
+  transition:1s;
 }
 
 .card-image {
@@ -40,7 +51,7 @@
   width: 100%;
   background-size: cover;
   background-position: center center;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
 }
 
 .card-desc {
@@ -51,9 +62,9 @@
     padding: 35px 25px;
     border-radius: 0 0 4px 4px;
     z-index: 1;
-    border-left: 1px solid #ddd;
+    /*border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;*/
     
 }
 
@@ -114,9 +125,9 @@
   width:100%;
   clear:both;
   /*position:absolute;*/
-  margin-bottom:200px;
+  margin-bottom:50px;
   text-align: center;
-  background:url('https://www.usnews.com/cmsmedia/d4/0a/f99e7b2e441989797d2850ffba33/seattle.jpg') no-repeat center center;
+  background:url('http://static-35.sinclairstoryline.com/resources/media/02c92a38-aac4-4a35-abb8-3a623b555d17-large16x9_seattle_sunset_0329_02.jpg') no-repeat center center;
   background-size:cover;
   
 }
@@ -185,3 +196,6 @@ a.btn {
   border-radius:5px;
 }
 
+#project-title {
+  font-size: 35pt;
+}

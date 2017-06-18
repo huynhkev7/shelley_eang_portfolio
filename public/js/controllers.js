@@ -24,6 +24,8 @@ function MyCtrl1($location, $scope, $timeout) {
                 onReady: function (myVivus) {
                     // `el` property is the SVG element
                     myVivus.el.setAttribute('height', '400px');
+                    myVivus.el.setAttribute('width', '400px');
+                    
                 },                
                  dashGap: 20}
                  , function () {
@@ -32,13 +34,14 @@ function MyCtrl1($location, $scope, $timeout) {
 					}
 				});
 			var hi2 = new Vivus('my-second-animation', {
-                file: 'images/third_animation.svg', 
+                file: 'images/third_animation_2.svg', 
                 type: 'sync', duration: 75, 
                 start: 'autostart', 
                 forceRender: false,
                 onReady: function (myVivus) {
                     // `el` property is the SVG element
-                    myVivus.el.setAttribute('height', '400px');
+                    myVivus.el.setAttribute('height', '100%')
+                    myVivus.el.setAttribute('width', '400px');
                 },                
                  dashGap: 20}
                  , function () {
