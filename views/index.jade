@@ -9,7 +9,7 @@ block body
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href="#")
-        img(src="/images/logo.png")
+        img(src="/images/name_logo.png", width='80', height='80')
       div.navbar-brand#logo-text
         |Shelley Eang
         |<br>
@@ -31,29 +31,29 @@ block body
       //.jumbotron  
         h1 Hello {{name}}
       div(ng-view).view-container
-    div.page-wrapper#footer
-      .row
-        .col-lg-4.footer-item
-            div.footer-title
-              | 	&copy; 2017 Shelley Eang                      
-        .col-lg-4.footer-item
-            div.footer-title
-              | SOCIAL
-            div
-              span.footer-sub-title Follow Me 
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-google" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-        .col-lg-4.footer-item
-            div.footer-title
-              | CONTACT
-            div.footer-description
-              span.footer-sub-title Email 
-              | sseang@uw.edu
-            div.footer-description
-              span.footer-sub-title Phone 
-              | (206) - 999 - 9999  
+  div.page-wrapper#footer
+    .row
+      .col-lg-4.footer-item
+          div.footer-title
+            | 	&copy; 2017 Shelley Eang                      
+      .col-lg-4.footer-item
+          div.footer-title
+            | SOCIAL
+          div
+            span.footer-sub-title Follow Me 
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-google" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+      .col-lg-4.footer-item
+          div.footer-title
+            | CONTACT
+          div.footer-description
+            span.footer-sub-title Email 
+            | sseang@uw.edu
+          div.footer-description
+            span.footer-sub-title Phone 
+            | (206) - 999 - 9999  
 
   script(src='js/lib/jquery/jquery-2.0.3.min.js')
   script(src='js/lib/angular/angular.js')
@@ -70,3 +70,5 @@ block body
   script(src='js/lib/angular-scroll-animate.js')
   script(src='js/lib/ngParallax.min.js')
   script(src='js/lib/angular-ui-swiper/dist/angular-ui-swiper.min.js')
+  script(src='js/lib/angular-video-bg/angular-video-bg.min.js')
+  script(src='js/lib/vivus/dist/vivus.min.js')

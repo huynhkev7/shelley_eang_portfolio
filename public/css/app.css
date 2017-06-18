@@ -1,4 +1,18 @@
 /* app css stylesheet */
+.hide-item {
+  visibility: hidden;
+}
+
+#landing-banner {
+  background-image: url('https://www.usnews.com/cmsmedia/d4/0a/f99e7b2e441989797d2850ffba33/seattle.jpg');
+  /*background-repeat:no-repeat;
+  background-size:contain;*/
+  background-position:center;  
+  text-align: center;
+}
+#landing-text {
+  font-size: 30pt;
+}
 
 body {
   padding-top:70px;
@@ -19,6 +33,7 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
 
 #logo-text {
   font-weight: bold;
+  padding-top: 32px;
 }
 
 div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {

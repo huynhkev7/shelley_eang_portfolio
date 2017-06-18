@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "name": "vivus",
+        "raw": "vivus",
+        "rawSpec": "",
+        "scope": null,
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Kevin/Desktop/angular-express-bootstrap-seed"
+    ]
+  ],
+  "_from": "vivus@latest",
+  "_id": "vivus@0.4.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/vivus",
+  "_nodeVersion": "6.9.5",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/vivus-0.4.1.tgz_1496873310340_0.980005529941991"
+  },
+  "_npmUser": {
+    "email": "duluc.maxime@gmail.com",
+    "name": "maxwellito"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "vivus",
+    "raw": "vivus",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/vivus/-/vivus-0.4.1.tgz",
+  "_shasum": "adee803aa6d00746abd8cbf5c851460947e4b79c",
+  "_shrinkwrap": null,
+  "_spec": "vivus",
+  "_where": "/Users/Kevin/Desktop/angular-express-bootstrap-seed",
+  "author": {
+    "name": "maxwellito"
+  },
+  "bugs": {
+    "url": "https://github.com/maxwellito/vivus/issues"
+  },
+  "dependencies": {},
+  "description": "JavaScript library to make drawing animation on SVG",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-concat": "^2.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-imports": "0.0.2",
+    "gulp-jshint": "^1.6.3",
+    "gulp-karma": "0.0.4",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^2.2.19",
+    "karma": "^0.12.17",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.6",
+    "karma-jasmine": "~0.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "adee803aa6d00746abd8cbf5c851460947e4b79c",
+    "tarball": "https://registry.npmjs.org/vivus/-/vivus-0.4.1.tgz"
+  },
+  "engine": {
+    "node": ">=0.10.22"
+  },
+  "gitHead": "4e1ea5f37054003c9b78e3a11747c02b2b1e5418",
+  "homepage": "https://github.com/maxwellito/vivus",
+  "license": "MIT",
+  "main": "dist/vivus.js",
+  "maintainers": [
+    {
+      "email": "duluc.maxime@gmail.com",
+      "name": "maxwellito"
+    }
+  ],
+  "name": "vivus",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxwellito/vivus.git"
+  },
+  "scripts": {
+    "serve": "python -m SimpleHTTPServer 8844",
+    "test": "karma start test/karma.conf.js"
+  },
+  "spm": {
+    "main": "dist/vivus.js"
+  },
+  "version": "0.4.1"
+}

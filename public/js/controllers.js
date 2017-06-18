@@ -13,14 +13,61 @@ function AppCtrl($scope, $http) {
 }
 
 function MyCtrl1($location, $scope, $timeout) {
+    function myCallback(){
+        console.log('calling vivus...');
+    }
+			var hi = new Vivus('my-animation', {
+                file: 'images/name_logo.svg', 
+                type: 'sync', duration: 75, 
+                start: 'autostart', 
+                forceRender: false,
+                onReady: function (myVivus) {
+                    // `el` property is the SVG element
+                    myVivus.el.setAttribute('height', '400px');
+                },                
+                 dashGap: 20}
+                 , function () {
+					if (window.console) {
+						console.log('Animation finished. [log triggered from callback]');
+					}
+				});
+			var hi2 = new Vivus('my-second-animation', {
+                file: 'images/third_animation.svg', 
+                type: 'sync', duration: 75, 
+                start: 'autostart', 
+                forceRender: false,
+                onReady: function (myVivus) {
+                    // `el` property is the SVG element
+                    myVivus.el.setAttribute('height', '400px');
+                },                
+                 dashGap: 20}
+                 , function () {
+					if (window.console) {
+						console.log('Animation finished. [log triggered from callback]');
+					}
+				});
+    $scope.animateElementIn = function($el) {
+        //alert('in');
+        console.log($el);
+        var animateValue = $el.attr('value');
+        $el.removeClass('hide-item');
+        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        //alert("out");
+        var animateValue = $el.attr('value');
+        $el.addClass('hide-item');
+        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
 
     $scope.listOfProjects = [
         {
-            url: 'http://www.logo-company.in/logo/171.jpg',
-            title: 'Cool Title',
+            url: 'images/recovery_logo.png',
+            title: 'Recovery',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project1',
-            tags: ['UX', 'Interaction']
+            tags: ['UX', 'Visual Design']
         },
         {
             url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
@@ -121,7 +168,57 @@ MyCtrl2.$inject = ['$scope'];
 function Project1Ctrl($scope) {
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
     //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
-   
+    $scope.video = {
+        id: 'clXBiR01kUM'
+    };   
+    $scope.team = [
+        {
+            name: 'Shelley Eang',
+            role: 'UX & Visual Designer',
+            image: 'images/shelley_avatar.png'
+        },
+        {
+            name: 'Michael Chen',
+            role: 'User Researcher',
+            image: 'images/michael_avatar.png'
+        },
+        {
+            name: 'Khalil Somani',
+            role: 'Liaison & User Researcher',
+            image: 'images/khalil_avatar.png'
+        },
+        {
+            name: 'Amy Tang',
+            role: 'Project Manager & UX Designer',
+            image: 'images/amy_avatar.png'
+        }               
+    ];
+    $scope.responsibilities = [
+        {
+            description: 'Conducting Web Research and Competitive Analysis',
+            image: 'fa-search'
+        },
+        {
+            description: 'Conducting Affinity Analysis',
+            image: 'fa-sticky-note-o'
+        },
+        {
+            description: 'Creating Persona and Scenarios',
+            image: 'fa-users'
+        },
+        {
+            description: 'Designing Low/High Fidelity Prototype',
+            image: 'fa-pencil'
+        },
+        {
+            description: 'Conduct and Record Usability Sessions',
+            image: 'fa-clipboard'
+        },            
+        {
+            description: 'Develop Product Video',
+            image: 'fa-video-camera'
+        }     
+    ]
     $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
     $scope.animateElementIn = function($el) {
         //alert('in');

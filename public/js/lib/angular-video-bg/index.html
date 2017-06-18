@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="angularVideoBg">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+</head>
+<body>
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <!-- JS from Bower Components -->
+  <script src="bower_components/angular/angular.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="angular-video-bg.js"></script>
+  <!-- Add New Component JS Above -->
+
+  <script type="text/javascript">
+      angular.module('angularVideoBg').controller('VideoCtrl', ['$scope', '$timeout', function($scope) {
+
+          $scope.videoId = 'nfWlot6h_JM';
+
+          $scope.videos = [{
+              videoId: 'nfWlot6h_JM',
+              start: 30,
+              end: 40
+          }];
+
+          $scope.callback = function(player) {
+              $scope.pauseVideo = function() {
+                  player.pauseVideo();
+              };
+              $scope.playVideo = function() {
+                  player.playVideo();
+              };
+          };
+
+          $scope.changeVideo = function() {
+              $scope.videoId = 'Xa0Q0J5tOP0';
+              $scope.videos.push({
+                  videoId: 'Xa0Q0J5tOP0',
+                  start: 30,
+                  end: 40
+              });
+          };
+
+          $scope.destroyVideo = function() {
+              $scope.videoDestroyed = !$scope.videoDestroyed;
+          };
+
+      }]);
+  </script>
+
+  <div ng-controller="VideoCtrl">
+      <video-bg ng-if="!videoDestroyed" playlist="videos" player-callback="callback(player)"></video-bg>
+      <p style="padding: 200px 0;">Testing transclude!</p>
+      <button type="button" ng-click="changeVideo()">Change Video</button>
+      <button type="button" ng-click="pauseVideo()" ng-show="pauseVideo">Pause Video</button>
+      <button type="button" ng-click="playVideo()" ng-show="playVideo">Play Video</button>
+      <button type="button" ng-click="destroyVideo()" ng-show="destroyVideo">Destroy Video</button>
+  </div>
+  <div>
+      <video-bg video-id="'cqcldOyEYRE'">
+          <p style="padding: 200px 0;">Testing transclude 2!</p>
+      </video-bg>
+  </div>
+
+</body>
+</html>

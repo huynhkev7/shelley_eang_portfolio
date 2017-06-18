@@ -1,3 +1,92 @@
+.box > .icon  {
+     text-align:  center;
+     position:  relative;
+ }
+
+.box > .icon > .image  {
+     position:  relative;
+     z-index:  2;
+     margin:  auto;
+     width:  88px;
+     height:  88px;
+     border:  8px solid white;
+     line-height:  88px;
+     border-radius:  50%;
+     background:  #63B76C;
+     vertical-align:  middle;
+ }
+
+.box > .icon > .image > i  {
+     font-size:  36px !important;
+     color:  #fff !important;
+ }
+
+.box > .icon > .info  {
+     margin-top:  -24px;
+     background:  rgba(0,  0,  0,  0.04);
+     border:  1px solid #e0e0e0;
+     padding:  15px 0 10px 0;
+     height: 100px;
+ }
+
+.box > .icon > .info > .title  {
+     font-size:  12pt;
+     color:  #222;
+     margin-top: 20px;
+     font-weight: 500;
+ }
+
+.box > .icon > .info > p  {
+     font-family:  "Robot", sans-serif !important;
+     font-size:  13px;
+     color:  #666;
+     line-height:  1.5em;
+     margin:  20px;
+}
+
+.box .space  {
+     height:  30px;
+ }
+
+
+.team-card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.team-card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.team-card-block {
+    font-size: 16pt;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+    background-color: white;
+}
+.team-card-footer {
+    font-size: 12pt;
+    position: static;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: .75em 1em;
+    color: rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    background: #fff;
+    white-space: nowrap;
+}
+
 .project-container {
     padding: 0 15%;
 }
@@ -87,14 +176,59 @@ p, li {
 
 .section {
   height: 500px;
+  padding: 10%;
 }
+#section-one{
+  background-color: rgba(236, 240, 241,1.0);
+}
+#section-two{
+  background-color: #fff;
+  height: auto;
+}
+/*.section-no-height {
+  height: 100%;
+}*/
 .title-section {
   position: relative;
 }
 
-.title-section > h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.title-section > div {
+  font-weight: bold;
+  font-size: 40pt;
+  padding-left: 5px;
+}
+
+.banner-section {
+  height: 400px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  background-image: url("../images/recovery_logo.png")
+}
+.banner-header-text {
+  font-weight: bold;
+  color: rgba(39, 174, 96,1.0);
+  font-size: 60pt;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* overwrite swipe */
+.swiper-slide {
+  text-align: inherit;
+}
+
+#slide-color-2{
+  background-color: rgba(155, 89, 182,1.0);
+}
+#slide-color-3 {
+  background-color: rgba(52, 152, 219,1.0);
+}
+#slide-color-4 {
+  background-color: rgba(46, 204, 113,1.0);
+}
+
+.section-header {
+  font-size: 40pt;
+  font-weight: bold;
 }
