@@ -32,8 +32,8 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
 }
 
 .navbar {
-  /*background-color: #fff;*/
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #fff;
+  /*background-color: rgba(255, 255, 255, 0);*/
   border-bottom: none;
 }
 
@@ -99,4 +99,30 @@ div.container {
 
 .footer-item {
   margin-bottom: 20px;
+}
+
+.blue-div{
+
+  background-color:blue;
+}
+
+.green-div{
+  background-color:green;
+}
+
+
+.navbar-animation {
+    -webkit-transition: .5s linear all;
+    -moz-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    transition: .5s linear all;
+    background-color: rgba(255, 255, 255, 0);
+    height: 100px;
+    
+}
+
+.displayNav {
+  height: 120px;
+  background-color: #fff;
 }

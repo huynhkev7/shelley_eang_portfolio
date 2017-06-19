@@ -10,6 +10,12 @@ function AppCtrl($scope, $http) {
   error(function(data, status, headers, config) {
     $scope.name = 'Error!'
   });
+
+    $scope.$parent.showNavbar = false;
+    // $scope.$apply();
+    // setInterval(function(){
+    //      $scope.$parent.showNavbar = true;
+    // }, 1000);
 }
 
 function MyCtrl1($location, $scope, $timeout) {
@@ -107,7 +113,7 @@ function MyCtrl1($location, $scope, $timeout) {
             route: 'project2',
             tags: ['TEST']
         }                    
-    ]
+    ];    
 }
 MyCtrl1.$inject = ['$location', '$scope', '$timeout'];
 

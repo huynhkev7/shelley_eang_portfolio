@@ -131,3 +131,24 @@ angular.module('myApp.directives', []).
         }
     }
   }])
+  .
+  directive('scroll', ['version', '$window', function(version, $window) {
+  return {
+      restrict: 'EA',
+      scope: true,
+      link: function($scope, $window, element){
+      angular.element(window).bind("scroll", function() {
+            console.log(window.scrollY);
+            console.log('element');
+            console.log(element.$$element['0'].offsetTop);     
+            var isMatch = window.scrollY >= element.$$element['0'].offsetTop;   
+            if (isMatch != undefined && isMatch)  {
+                  $scope.$parent.$parent.$parent.showNavbar = true;
+              } else {
+                  $scope.$parent.$parent.$parent.showNavbar = false;
+              }
+            $scope.$apply();
+        });
+      }
+  }
+}])
