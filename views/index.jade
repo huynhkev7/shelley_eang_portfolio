@@ -8,9 +8,9 @@ block body
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href="#")
+      a.navbar-brand.animate-show-hide(href="#", ng-show="showNavbar")
         img(src="/images/name_logo.png", width='80', height='80')
-      div.navbar-brand#logo-text
+      div.navbar-brand.animate-show-hide#logo-text(ng-show="showNavbar")
         |Shelley Eang
         |<br>
         |UX Designer
