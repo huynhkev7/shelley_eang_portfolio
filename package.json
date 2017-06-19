@@ -7,6 +7,6 @@
 		"jade": "~0.31.2"
 	},
 	"scripts": {
-		"start": "node index.js"
+		"start": "node app.js"
 	}
 }
