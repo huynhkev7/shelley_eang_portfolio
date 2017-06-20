@@ -2,7 +2,8 @@
 
 /* Controllers */
 
-function AppCtrl($scope, $http) {
+function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
+  console.log("in AppCtril");
   $http({method: 'GET', url: '/api/name'}).
   success(function(data, status, headers, config) {
     $scope.name = data.name;
@@ -10,51 +11,71 @@ function AppCtrl($scope, $http) {
   error(function(data, status, headers, config) {
     $scope.name = 'Error!'
   });
+  var isMobile = globalFunctions.getIsMobile();
 
-    $scope.$parent.showNavbar = false;
-    // $scope.$apply();
-    // setInterval(function(){
-    //      $scope.$parent.showNavbar = true;
-    // }, 1000);
+  if(globalFunctions.getIsMobile()){
+      $rootScope.showNavbar = true;
+  }else{
+      $rootScope.showNavbar = false;
+  };
+  $rootScope.currentBaseUrl = '/view1';
+
+  $scope.routeTo = function(route){
+      console.log(route);
+      angular.element( document.querySelector( '.navbar-collapse' ) ).addClass('collapse');
+      angular.element( document.querySelector( '.navbar-collapse' ) ).removeClass('in');
+    
+      $location.path('/' + route);
+  }
 }
+AppCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$location'];
 
-function MyCtrl1($location, $scope, $timeout) {
+function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
+    console.log($location.path());
+    $rootScope.currentBaseUrl =  $location.path();   
+    if(globalFunctions.getIsMobile()){
+        $rootScope.showNavbar = true;
+    }else{
+        $rootScope.showNavbar = false;
+    };
+
+    console.log("in MyCtrl1");
     function myCallback(){
         console.log('calling vivus...');
     }
-			var hi = new Vivus('my-animation', {
-                file: 'images/name_logo.svg', 
-                type: 'sync', duration: 75, 
-                start: 'autostart', 
-                forceRender: false,
-                onReady: function (myVivus) {
-                    // `el` property is the SVG element
-                    myVivus.el.setAttribute('height', '400px');
-                    myVivus.el.setAttribute('width', '400px');
-                    
-                },                
-                 dashGap: 20}
-                 , function () {
-					if (window.console) {
-						console.log('Animation finished. [log triggered from callback]');
-					}
-				});
-			var hi2 = new Vivus('my-second-animation', {
-                file: 'images/third_animation_2.svg', 
-                type: 'sync', duration: 75, 
-                start: 'autostart', 
-                forceRender: false,
-                onReady: function (myVivus) {
-                    // `el` property is the SVG element
-                    myVivus.el.setAttribute('height', '100%')
-                    myVivus.el.setAttribute('width', '400px');
-                },                
-                 dashGap: 20}
-                 , function () {
-					if (window.console) {
-						console.log('Animation finished. [log triggered from callback]');
-					}
-				});
+    var hi = new Vivus('my-animation', {
+        file: 'images/name_logo.svg', 
+        type: 'sync', duration: 75, 
+        start: 'autostart', 
+        forceRender: false,
+        onReady: function (myVivus) {
+            // `el` property is the SVG element
+            myVivus.el.setAttribute('height', '100%');
+            myVivus.el.setAttribute('width', '360px');
+            
+        },                
+            dashGap: 20}
+            , function () {
+            if (window.console) {
+                console.log('Animation finished. [log triggered from callback]');
+            }
+        });
+    var hi2 = new Vivus('my-second-animation', {
+        file: 'images/third_animation_2.svg', 
+        type: 'sync', duration: 75, 
+        start: 'autostart', 
+        forceRender: false,
+        onReady: function (myVivus) {
+            // `el` property is the SVG element
+            myVivus.el.setAttribute('height', '100%')
+            myVivus.el.setAttribute('width', '360px');
+        },                
+            dashGap: 20}
+            , function () {
+            if (window.console) {
+                console.log('Animation finished. [log triggered from callback]');
+            }
+        });
     $scope.animateElementIn = function($el) {
         //alert('in');
         console.log($el);
@@ -114,11 +135,35 @@ function MyCtrl1($location, $scope, $timeout) {
             tags: ['TEST']
         }                    
     ];    
+    
+    var $projectAnchor = document.getElementById('projects-content');
+
+    function monitorScrollPosition(){
+        console.log(window.scrollY);
+        console.log('element');
+        console.log($projectAnchor.offsetTop);   
+        console.log($scope);  
+        var isMatch = window.scrollY >= $projectAnchor.offsetTop;   
+        if (isMatch != undefined && isMatch || globalFunctions.getIsMobile())  {
+                $rootScope.showNavbar = true;
+            } else {
+                $rootScope.showNavbar = false;
+            }
+        $scope.$apply();
+    };
+    angular.element(window).on("scroll", monitorScrollPosition);  
+    $scope.$on('$destroy', function () {
+        angular.element(window).off('scroll', monitorScrollPosition);
+    });
 }
-MyCtrl1.$inject = ['$location', '$scope', '$timeout'];
+MyCtrl1.$inject = ['$location', '$scope', '$timeout', '$rootScope', 'globalFunctions'];
 
 
-function MyCtrl2($scope) {
+function MyCtrl2($scope, $rootScope, globalFunctions, $location) {
+    console.log($location.path());
+    $rootScope.currentBaseUrl =  $location.path();    
+    console.log("in MyCrtl2");
+    $rootScope.showNavbar = true;
     $scope.parallaxTitle = {
         title: 'About Me - Shelley Eang',
         color: '#16a085'
@@ -144,37 +189,14 @@ function MyCtrl2($scope) {
             imageUrl: 'https://i2.wp.com/bayareawebdesign.co/wp-content/uploads/2015/04/19-32-42_SHP-Edit.jpg',
             depth: '.10',
             additionalStyles: 'background-position: center;'
-        }
-        // {
-        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Banana-27-500x408.png',
-        //     depth: '.40',
-        //     additionalStyles: 'background-position: right top;'
-        // },
-        // {
-        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Cherry-47-500x490.png',
-        //     depth: '.50',
-        //     additionalStyles: 'background-position: left top;'
-        // },
-        // {
-        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Orange-48-500x373.png',
-        //     depth: '.75',
-        //     additionalStyles: 'background-position: left bottom;'
-        // },
-        // {
-        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Peach-42-276x500.png',
-        //     depth: '.10',
-        //     additionalStyles: 'background-position: bottom right'
-        // },
-        // {
-        //     imageUrl: 'http://nobacks.com/wp-content/uploads/2014/11/Strawberry-38-500x394.png',
-        //     depth: '1.00',
-        //     additionalStyles: 'background-position: bottom center'
-        // }                
-    ];    
+        }     
+    ]; 
 }
-MyCtrl2.$inject = ['$scope'];
+MyCtrl2.$inject = ['$scope', '$rootScope', 'globalFunctions', '$location'];
 
-function Project1Ctrl($scope) {
+function Project1Ctrl($scope, $rootScope, globalFunctions) {
+    $rootScope.showNavbar = true;
+    $rootScope.currentBaseUrl =  '/view1'  
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
     //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
     $scope.video = {
@@ -287,9 +309,12 @@ function Project1Ctrl($scope) {
     console.log($scope.listOfImages);
     console.log("entering project 1");  
 }
-Project1Ctrl.$inject = ['$scope'];
+Project1Ctrl.$inject = ['$scope', '$rootScope','globalFunctions', '$location'];
 
-function Project2Ctrl($scope) {
+function Project2Ctrl($scope, $rootScope, globalFunctions, $location) {   
+    console.log($location.path());
+    $rootScope.currentBaseUrl =  '/view1'   
+    $rootScope.showNavbar = true;
     $scope.parallaxTitle = {
         title: 'Project WTA',
         color: 'green'
@@ -331,4 +356,4 @@ function Project2Ctrl($scope) {
     ];    
     console.log("entering project 2");
 }
-Project2Ctrl.$inject = ['$scope'];
+Project2Ctrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location'];

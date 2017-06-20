@@ -1,60 +1,61 @@
 extends layout
 
 block body
-  .navbar.navbar-default.navbar-fixed-top.navbar-animation(role="navigation",ng-class="{displayNav: showNavbar}")
-    .navbar-header
-      button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse")
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand.animate-show-hide(href="#", ng-show="showNavbar")
-        img(src="/images/name_logo.png", width='80', height='80')
-      div.navbar-brand.animate-show-hide#logo-text(ng-show="showNavbar")
-        |Shelley Eang
-        |<br>
-        |UX Designer
-       
+  div(ng-controller='AppCtrl')
+    .navbar.navbar-default.navbar-fixed-top.navbar-animation(role="navigation",ng-class="{displayNav: $root.showNavbar}")
+      .navbar-header
+        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand.animate-show-hide(href="#", ng-show="$root.showNavbar")
+          img(src="/images/name_logo.png", width='80', height='80')
+        div.navbar-brand.animate-show-hide#logo-text(ng-show="$root.showNavbar")
+          |Shelley Eang
+          |<br>
+          |UX Designer
+        
 
-    .collapse.navbar-collapse.navbar-ex1-collapse
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href="view1") 
-            span PROJECTS
-        li  
-          a(href="view2")
-            span ABOUT 
-        li  
-          a(href="view3")
-            span BLOG        
-  .container#app-container   
-    div(ng-controller='AppCtrl')
-      //.jumbotron  
-        h1 Hello {{name}}
-      div(ng-view).view-container
-  div.page-wrapper#footer
-    .row
-      .col-lg-4.footer-item
-          div.footer-title
-            | 	&copy; 2017 Shelley Eang                      
-      .col-lg-4.footer-item
-          div.footer-title
-            | SOCIAL
-          div
-            span.footer-sub-title Follow Me 
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-google" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-      .col-lg-4.footer-item
-          div.footer-title
-            | CONTACT
-          div.footer-description
-            span.footer-sub-title Email 
-            | sseang@uw.edu
-          div.footer-description
-            span.footer-sub-title Phone 
-            | (206) - 999 - 9999  
+      .collapse.navbar-collapse.navbar-ex1-collapse(ng-class="{displayCollapseNav: $root.showNavbar}")
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(ng-click="routeTo('view1')") 
+              span(ng-class="{highlightNav: $root.currentBaseUrl === '/view1'}") Projects
+          li  
+            a(ng-click="routeTo('view2')")
+              span(ng-class="{highlightNav: $root.currentBaseUrl === '/view2'}") About 
+          li  
+            a(ng-click="routeTo('view3')")
+              span(ng-class="{highlightNav: $root.currentBaseUrl === '/view3'}") Resume        
+    .container#app-container   
+      div
+        //.jumbotron  
+          h1 Hello {{name}}
+        div(ng-view).view-container
+    div.page-wrapper#footer
+      .row
+        .col-lg-4.footer-item
+            div.footer-title
+              | 	&copy; 2017 Shelley Eang                      
+        .col-lg-4.footer-item
+            div.footer-title
+              | SOCIAL
+            div
+              span.footer-sub-title Follow Me 
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-google" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+        .col-lg-4.footer-item
+            div.footer-title
+              | CONTACT
+            div.footer-description
+              span.footer-sub-title Email 
+              | sseang@uw.edu
+            div.footer-description
+              span.footer-sub-title Phone 
+              | (206) - 999 - 9999  
 
   script(src='js/lib/jquery/jquery-2.0.3.min.js')
   script(src='js/lib/angular/angular.js')

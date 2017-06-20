@@ -1,7 +1,7 @@
 /* app css stylesheet */
 .navbar-nav span {
-  font-weight: 500;
-
+  font-weight: 200;
+  font-size: 14pt;
 }
 
 .hide-item {
@@ -38,18 +38,18 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
 }
 
 #logo-text {
-  font-weight: bold;
+  /*font-weight: bold;*/
   padding-top: 32px;
 }
 
 div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 12pt;
 }
 
-div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li > a > span:hover{
+/*div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li > a > span:hover{
   border-bottom: 3px solid black;
-}
+}*/
 
 div.container {
   padding-top: 30px;
@@ -118,13 +118,27 @@ div.container {
     -ms-transition: .5s linear all;
     transition: .5s linear all;
     background-color: rgba(255, 255, 255, 0);
-    height: 100px;
+    height: 80px;
     
 }
 
 .displayNav {
-  height: 120px;
+  height: 100px;
   background-color: #fff;
+}
+
+.displayCollapseNav {
+  background-color: #fff;
+}
+
+.highlightNav {
+  color: #962d22;
+  text-shadow: 0 0 1px #962d22;
+  /*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;*/
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
 }
 
 .animate-show-hide {
@@ -149,4 +163,8 @@ div.container {
 .animate-show-hide.ng-hide-add,
 .animate-show-hide.ng-hide-remove.ng-hide-remove-active {
   opacity:1;
+}
+
+.navbar-brand {
+  padding: 10px 10px;
 }

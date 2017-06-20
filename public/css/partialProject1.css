@@ -229,6 +229,11 @@ p, li {
 }
 
 .section-header {
-  font-size: 40pt;
+  font-size: 30pt;
   font-weight: bold;
+}
+
+.row {
+  padding-right: 0px;
+  padding-left: 0px;
 }
