@@ -2,6 +2,7 @@
 .navbar-nav span {
   font-weight: 200;
   font-size: 14pt;
+  cursor: pointer;
 }
 
 .hide-item {
@@ -40,6 +41,7 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
 #logo-text {
   /*font-weight: bold;*/
   padding-top: 32px;
+  cursor: pointer;
 }
 
 div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {
