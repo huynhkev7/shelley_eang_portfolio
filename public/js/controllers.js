@@ -24,7 +24,7 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
       console.log(route);
       angular.element( document.querySelector( '.navbar-collapse' ) ).addClass('collapse');
       angular.element( document.querySelector( '.navbar-collapse' ) ).removeClass('in');
-    
+      window.scrollTo(0, 0);
       $location.path('/' + route);
   }
 }
@@ -195,6 +195,7 @@ function MyCtrl2($scope, $rootScope, globalFunctions, $location) {
 MyCtrl2.$inject = ['$scope', '$rootScope', 'globalFunctions', '$location'];
 
 function Project1Ctrl($scope, $rootScope, globalFunctions) {
+    window.scrollTo(0, 0);
     $rootScope.showNavbar = true;
     $rootScope.currentBaseUrl =  '/view1'  
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
@@ -312,6 +313,7 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
 Project1Ctrl.$inject = ['$scope', '$rootScope','globalFunctions', '$location'];
 
 function Project2Ctrl($scope, $rootScope, globalFunctions, $location) {   
+    window.scrollTo(0, 0);
     console.log($location.path());
     $rootScope.currentBaseUrl =  '/view1'   
     $rootScope.showNavbar = true;
