@@ -44,11 +44,11 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
   cursor: pointer;
 }
 #logo-text:hover {
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;
+  /*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  */
 }
 
 div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {
@@ -57,11 +57,14 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li {
 }
 
 div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li > a > span:hover{
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;
+  /*text-shadow: 0 0 0px rgba(255,255,255,1) , 0 0 0px rgba(255,255,255,1) , 0 0 0px rgba(255,255,255,1) , 0 0 0px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;*/
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
+  border-bottom: 3px solid #962d22;
+
+  
 }
 
 div.container {
@@ -184,3 +187,4 @@ div.container {
 .navbar-brand {
   padding: 10px 10px;
 }
+
