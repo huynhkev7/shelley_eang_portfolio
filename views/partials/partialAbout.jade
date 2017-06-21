@@ -1,5 +1,5 @@
 link(rel='stylesheet', href='/css/about.css')
-.container-fluid
+.container-fluid#about-container
   figure.snip0057.red
     figcaption
       h2
@@ -18,8 +18,10 @@ link(rel='stylesheet', href='/css/about.css')
     .image
       img(src='images/combined_pic.jpg', alt='sample4')
      .position 
-.container-fluid.section
-  .container
+.container
+  .container#profile-container
+    img.img-circle.img-responsive(src='images/profile_pic.jpg')
+  .container#content-container
     .text-content
       span.emphasize Hello!
       |  My name is Shelley Eang (pronounced “Aye-ng”) and I am a graduating senior studying in Human Centered Design & Engineering at the University of Washington. My passion for user experience design grew after seeing my non tech-savvy family members grow closer and more connected through real time video calls. Through my professional pursuit, I can help bring a better experience to populations in overlooked communities and to those who want to gain connectivity through user-centered design.
@@ -39,3 +41,28 @@ link(rel='stylesheet', href='/css/about.css')
       | In my free time, I enjoy traveling, cooking, and crafting DIY projects. I have been vegan for a few years and I often visit communities and travel outside of Washington to see and become more aware of the local, organic, and vegan scene. In the past year, I visited Vietnam, Southern California, Oregon, and Canada. There are many places I still have not explored but plan to in the future! I also enjoy taking on new challenges in cooking healthy delicious meals for those who aren’t vegan and practicing sustainability through living minimal and lowering food waste. I also enjoy DIY projects that reuse, recycle, and focus on natural products.
     br
     br
+    .text-center#contact-me
+      | Contact Me 
+    .text-center#contact-info
+      | sseang@uw.edu | (206) - 999 - 9999 
+    .text-content.text-center
+      i.fa.fa-linkedin.fa-4(aria-hidden='true')
+      i.fa.fa-facebook(aria-hidden='true')
+      i.fa.fa-google(aria-hidden='true')
+      i.fa.fa-twitter(aria-hidden='true')
+    br
+  
+
+        //-   .row
+    //-     .col-lg-4.footer-item
+    //-         div.footer-title
+    //-           | 	&copy; 2017 Shelley Eang                      
+    //-     .col-lg-4.footer-item
+    //-         div.footer-title
+    //-           | SOCIAL
+    //-         div
+    //-           span.footer-sub-title Follow Me 
+    //-           <i class="fa fa-linkedin" aria-hidden="true"></i>
+    //-           <i class="fa fa-facebook" aria-hidden="true"></i>
+    //-           <i class="fa fa-google" aria-hidden="true"></i>
+    //-           <i class="fa fa-twitter" aria-hidden="true"></i>

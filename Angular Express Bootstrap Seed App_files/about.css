@@ -160,11 +160,11 @@ figure.snip0057.hover:before {
 }
 
 .text-content {
-  font-size: 12pt;
+  font-size: 15pt;
 }
 
 .emphasize {
-  font-size: 15pt;
+  font-size: 20pt;
   font-weight: 500;
 }
 
@@ -176,25 +176,4 @@ figure.snip0057.hover:before {
 .fa {
   font-size: 30pt;
   margin: 10px;
-}
-
-.fa:hover {
-  color: #962d22;
-    -o-transition:1s;
-  -ms-transition:1s;
-  -moz-transition:1s;
-  -webkit-transition:1s;
-  /* ...and now for the proper property */
-  transition:1s;
-  cursor: pointer;
-}
-
-#contact-me {
-  font-size: 20pt;
-}
-
-#contact-info {
-  font-size: 12pt;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
