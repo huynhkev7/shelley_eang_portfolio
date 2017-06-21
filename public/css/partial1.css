@@ -234,7 +234,7 @@ a.btn {
 
 				
 .profile-info {
-		color: #BDBDBD;
+		color: #ddd;
 		padding: 25px;
 	    position: relative;
 	    margin-top: 15px;
@@ -249,7 +249,7 @@ a.btn {
 .profile-info span {
 	/*display: block;*/
     font-size: 12px;
-    color: #fff;
+    color: #BDBDBD;
 	letter-spacing: 2px;
 			}
 

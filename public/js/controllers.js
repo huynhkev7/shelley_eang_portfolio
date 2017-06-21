@@ -97,48 +97,52 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     };
 
     $scope.listOfProjects = [
-        {
-            url: 'images/recovery_logo.png',
-            title: 'Recovery',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project1',
-            tags: ['UX', 'Visual Design']
-        },
-        {
-            url: 'images/atomic_logo.png',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
-            tags: ['User Research']
-        },
-        {
-            url: 'images/sight_seers_logo.png',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
-            tags: ['Videography']
-        },
-        {
-            url: 'images/g2l_logo.png',
-            title: 'Cool Title',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project1',
-            tags: ['Fun!', 'UX', 'UI']
-        },
-        {
-            url: 'images/avanade_logo.png',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
-            tags: ['Healthcare', 'Social Work']
-        },
-        {
-            url: 'images/test.jpeg',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
-            tags: ['TEST']
-        }                    
+        [
+            {
+                url: 'images/recovery_logo.png',
+                title: 'Recovery',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project1',
+                tags: ['UX', 'Visual Design']
+            },
+            {
+                url: 'images/atomic_logo.png',
+                title: '#2',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project2',
+                tags: ['User Research']
+            },
+            {
+                url: 'images/sight_seers_logo.png',
+                title: '#2',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project2',
+                tags: ['Videography']
+            }
+        ],
+        [
+            {
+                url: 'images/g2l_logo.png',
+                title: 'Cool Title',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project1',
+                tags: ['Fun!', 'UX', 'UI']
+            },
+            {
+                url: 'images/avanade_logo.png',
+                title: '#2',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project2',
+                tags: ['Healthcare', 'Social Work']
+            },
+            {
+                url: 'images/test.jpeg',
+                title: '#2',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+                route: 'project2',
+                tags: ['TEST']
+            }   
+        ]                 
     ];    
     
     var $projectAnchor = document.getElementById('projects-content');
