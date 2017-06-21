@@ -20,6 +20,7 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
   };
   $rootScope.currentBaseUrl = '/view1';
 
+
   $scope.routeTo = function(route){
       console.log(route);
       angular.element( document.querySelector( '.navbar-collapse' ) ).addClass('collapse');
@@ -202,6 +203,15 @@ function MyCtrl2($scope, $rootScope, globalFunctions, $location) {
     ]; 
 }
 MyCtrl2.$inject = ['$scope', '$rootScope', 'globalFunctions', '$location'];
+
+function ResumeCtrl($scope, $http, $rootScope, globalFunctions, $location) {
+    console.log("in ResumeCtrl");
+    window.scrollTo(0, 0);
+    $rootScope.showNavbar = true;
+    $rootScope.currentBaseUrl =  '/resume'
+}
+
+ResumeCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$location'];
 
 function Project1Ctrl($scope, $rootScope, globalFunctions) {
     window.scrollTo(0, 0);

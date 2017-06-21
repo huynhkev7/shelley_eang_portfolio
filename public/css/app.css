@@ -1,4 +1,27 @@
 /* app css stylesheet */
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: transparent;
+}
+
+.highlightBars {
+    -webkit-transition: .5s linear all;
+    -moz-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    transition: .5s linear all;
+    background-color: #962d22;
+}
+
+.navbar-default .navbar-toggle{
+  border: transparent;
+}
+.navbar-default .navbar-toggle {
+    background-color: transparent;
+}
+
 .navbar-nav span {
   font-weight: 200;
   font-size: 14pt;
