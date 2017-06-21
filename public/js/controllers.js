@@ -40,6 +40,11 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     };
 
     console.log("in MyCtrl1");
+
+    $scope.goToProject = function(route) {
+        $location.path('/' + route);
+    }
+
     function myCallback(){
         console.log('calling vivus...');
     }
@@ -100,35 +105,35 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             tags: ['UX', 'Visual Design']
         },
         {
-            url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
+            url: 'images/atomic_logo.png',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project2',
             tags: ['User Research']
         },
         {
-            url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
+            url: 'images/sight_seers_logo.png',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project2',
             tags: ['Videography']
         },
         {
-            url: 'http://www.logo-company.in/logo/171.jpg',
+            url: 'images/g2l_logo.png',
             title: 'Cool Title',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project1',
             tags: ['Fun!', 'UX', 'UI']
         },
         {
-            url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
+            url: 'images/avanade_logo.png',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project2',
             tags: ['Healthcare', 'Social Work']
         },
         {
-            url: 'https://s-media-cache-ak0.pinimg.com/736x/56/12/e0/5612e0dd052689b7ce9a68df31a1d1fa.jpg',
+            url: 'images/test.jpeg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'project2',

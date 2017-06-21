@@ -33,30 +33,32 @@ block body
         //.jumbotron  
           h1 Hello {{name}}
         div(ng-view).view-container
-    div.page-wrapper#footer
-      .row
-        .col-lg-4.footer-item
-            div.footer-title
-              | 	&copy; 2017 Shelley Eang                      
-        .col-lg-4.footer-item
-            div.footer-title
-              | SOCIAL
-            div
-              span.footer-sub-title Follow Me 
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-google" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-        .col-lg-4.footer-item
-            div.footer-title
-              | CONTACT
-            div.footer-description
-              span.footer-sub-title Email 
-              | sseang@uw.edu
-            div.footer-description
-              span.footer-sub-title Phone 
-              | (206) - 999 - 9999  
-
+    #footer
+      | &copy; 2017 Shelley Eang  
+    //- div.page-wrapper#footer
+    //-   .row
+    //-     .col-lg-4.footer-item
+    //-         div.footer-title
+    //-           | 	&copy; 2017 Shelley Eang                      
+    //-     .col-lg-4.footer-item
+    //-         div.footer-title
+    //-           | SOCIAL
+    //-         div
+    //-           span.footer-sub-title Follow Me 
+    //-           <i class="fa fa-linkedin" aria-hidden="true"></i>
+    //-           <i class="fa fa-facebook" aria-hidden="true"></i>
+    //-           <i class="fa fa-google" aria-hidden="true"></i>
+    //-           <i class="fa fa-twitter" aria-hidden="true"></i>
+    //-     .col-lg-4.footer-item
+    //-         div.footer-title
+    //-           | CONTACT
+    //-         div.footer-description
+    //-           span.footer-sub-title Email 
+    //-           | sseang@uw.edu
+    //-         div.footer-description
+    //-           span.footer-sub-title Phone 
+    //-           | (206) - 999 - 9999  
+  
   script(src='js/lib/jquery/jquery-2.0.3.min.js')
   script(src='js/lib/angular/angular.js')
   script(src='js/lib/angular/angular-route.js')
