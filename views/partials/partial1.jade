@@ -6,11 +6,36 @@ link(rel='stylesheet', href='/css/partial1.css')
 		.svg-container
 			#my-second-animation
 	.position
+br
 .page-wrapper#projects-content
 	.row
 		.col-lg-12.text-center
-			#project-title(style="font-family: Quicksand;") Latest Work
+			#project-title(style="font-family: Quicksand;") Latest Work Experiences
 	br
+.container
+	div
+		.row
+			.col-md-4(ng-repeat='project in workExperiences')
+				.profile-card.text-center(ng-click='goToProject(project.route)')
+					img.img-responsive(src='{{project.url}}')
+					.profile-info
+						//- img.profile-pic(src='https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg')
+						h2.hvr-underline-from-center {{project.title}}
+						div
+							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;/&nbsp;
+						div {{project.description}}
+						//- a(href='http://www.twitter.com/mike_youngg')
+						//- 	i.fa.fa-twitter.fa-2x
+						//- a(href='mailto:michael_y@live.co.uk')
+						//- 	i.fa.fa-envelope-o.fa-2x
+						//- a(href='http://www.linkedin.com')
+						//- 	i.fa.fa-linkedin.fa-2x	
+.position
+br
+.page-wrapper
+	.row
+		.col-lg-12.text-center
+			#project-title(style="font-family: Quicksand;") Latest Projects
 	br
 	//- .container
 	//- 	.col-lg-12
@@ -18,11 +43,10 @@ link(rel='stylesheet', href='/css/partial1.css')
 	//- br
 	//- br
 	//- br
-
 .container
-	.col-lg-12
-		.row(ng-repeat = 'projectRow in listOfProjects')
-			.col-md-4(ng-repeat='project in projectRow')
+	div
+		.row
+			.col-md-4(ng-repeat='project in listOfProjects')
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
