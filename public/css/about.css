@@ -177,7 +177,10 @@ figure.snip0057.hover:before {
   font-size: 30pt;
   margin: 10px;
 }
-
+ 
+a {
+  color: black;
+}
 .fa:hover {
   color: #962d22;
     -o-transition:1s;
