@@ -2,37 +2,160 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .banner-section
 //p.banner-header-text RECOVERY: Earthquake Edition
         //- video-bg(video-id='video.id')
+.position
 .section#section-one
-    .row.section-header Overview
-    .row
-        p For 2 quarters (20 weeks), I worked in a team of four undergraduate students to create a card game prototype to teach college students about earthquake recovery. The idea was proposed to my team by our sponsor, Scott Miles from The Center for Collaborative Systems for Security, Safety, and Regional Resilience (CoSSaR).
-    .row.alert.alert-success
-        | This project won 
-        strong People’s Choice Runner Up Award 
-        | at the Human-Centered Design & Engineering showcase where over 20 undergraduate and graduate capstone projects were featured. 
+    .container
+        .row.section-header Overview
+        .row
+            p For 2 quarters (20 weeks), I worked in a team of four undergraduate students to create a card game prototype to teach college students about earthquake recovery. The idea was proposed to my team by our sponsor, Scott Miles from The Center for Collaborative Systems for Security, Safety, and Regional Resilience (CoSSaR).
+        .row.alert.alert-success
+            | This project won 
+            strong People’s Choice Runner Up Award 
+            | at the Human-Centered Design & Engineering showcase where over 20 undergraduate and graduate capstone projects were featured. 
+.position
 .section#section-two
-    .row.section-header Team
-    .row
-        .col-sm-6.col-md-4.col-lg-3.mt-4(ng-repeat='member in team')
-            .team-card
-                img.team-card-img-top(src='{{member.image}}')
-                .team-card-block
-                    span {{member.name}}     
-                .team-card-footer
-                    span {{member.role}}
+    .container
+        .row.section-header Team
+        .row
+            .col-md-3.col-xs-12.col-sm-12.col-lg-3(ng-repeat='member in team')
+                .team-member-card
+                    .team-profile-image
+                        img.img-responsive.img-circle(src="{{member.image}}")
+                    .member-name
+                        |{{member.name}}
+                    .member-role
+                        |{{member.role}}
+    //- .row
+    //-     .col-sm-6.col-md-4.col-lg-3.mt-4(ng-repeat='member in team')
+    //-         .team-card
+    //-             img.team-card-img-top(src='{{member.image}}')
+    //-             .team-card-block
+    //-                 span {{member.name}}     
+    //-             .team-card-footer
+    //-                 span {{member.role}}
+.position
 .section#section-three
-    .row.section-header My Responsibilities
-    .row
-        .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in responsibilities')
-            .box
-                .icon
-                    .image
-                        i.fa(class='{{responsibility.image}}')
-                    .info
-                        .title {{responsibility.description}}
-                .space
-
+    .container
+        .row.section-header My Responsibilities
+        .row
+            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in responsibilities')
+                .box
+                    .icon
+                        .image
+                            i.fa(class='{{responsibility.image}}')
+                        .info
+                            .title {{responsibility.description}}
+                    .space
+.position
 .section#section-four
-    .row.section-header Problem Statement
-    .row
-        p Earthquake recovery is a probable threat in the Pacific Northwest. 
+    .container
+        .row.section-header Problem Statement
+        .row
+            p Earthquake recovery is a probable threat in the Pacific Northwest. 
+           
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
+                | Based on web research:
+                ul
+                    li recovery is long-term, lasting years (sometimes 10+ years)
+                    li recovery heavily involves collaboration and cooperation between emergency managers
+                    li recovery does not always mean building back to the normal state
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
+                | Based on user surveys:
+                ul
+                    li there is a lack of user knowledge on disaster recovery
+                    li participants defined recovery as short-term and survival
+                    li participants did not mention improvements in definition
+.position
+.section#section-five
+    .container
+        .row.section-header Design Questions
+        .container.design-question-statement
+            span “
+            | What does recovery look like after a disaster? What are real world examples of approaches and challenges to disaster recovery?
+            span ”
+        .container.design-question-statement
+            span “
+            | What types of existing board game mechanisms are there? 
+            span ”
+.position
+.section#section-six
+    .container
+        .row.section-header Research
+        .container.sub-container
+            .sub-section-header Literature Research
+            p We conducted literature research of over 70 peer reviewed and ACM research papers on disaster recovery and game mechanisms.
+        .container.sub-container
+            .sub-section-header Competitive Analysis
+            p We conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
+        .container.sub-container
+            .sub-section-header User Research
+            .row
+                p We conducted 2 structured usability test sessions with 7 participants in total. Results from both sessions are listed below
+            
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+                    ul
+                        li Participants in both test sessions mentioned wanting a trading card that allows players to trade resources between each other
+                        li Most participants displayed frustration or confusion with the game instruction
+                        li Most participants wanted more recovery context in the game 
+
+.position
+.section#section-seven
+    .container
+        .row.section-header Ideation
+        .container.sub-container
+            .sub-section-header Affinity Analysis
+            p We conducted affinity analysis of common themes on recovery and board games based on our literature research
+        .container.sub-container
+            .sub-section-header User Survey
+            .row
+                p We conducted a user survey and received 54 respondents, all of which were college students, to understand their knowledge on disaster recovery and interest in board games. Below are our main findings.
+            
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+                    ul
+                        li 23 out of 54 mentioned recovery takes 1-3 years
+                        li Respondents defined recovery as short-term, survival, and building back to the normal state
+                        li 43 out of 54 like card games
+                        li 42 out of 54 like competitive games, while 37 out of 54 like team/partner games
+        .container.sub-container
+            .sub-section-header Persona
+            
+.position
+.section#section-eight
+    .container
+        .row.section-header Low Fidelity Prototype
+        p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+.position
+.section#section-nine
+    .container
+        .row.section-header User Test &amp; Design Phase
+        .container.sub-container
+            .sub-section-header Usability Tests
+            .row
+                p My team and I conducted two structured usability test sessions that simulated real game play. The first session had a group of 3 players and the second session had a group of 4 players. Results from the usability test sessions were from the low fidelity prototypes.
+                p After conducting both usability tests, our team noticed both sessions reported wanting a card that signified a trade of cards, players were confused at the instructions of the game, and players noted that the game was too generalized and did not know it was recovery specific.
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+                    | A few positive findings:
+                    ul
+                        li All players enjoyed the game
+                        li Players (who originally were unacquainted) collaborated with each other
+        .container.sub-container
+            .sub-section-header High Fidelity Prototype
+            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+.position
+.section#section-ten
+    .container
+        .row.section-header Future Considerations
+        p In the future, our team would like to conduct more usability test sessions with actual emergency managers to gain a better understanding of how RECOVERY: Earthquake Edition would be used and evaluate the educational aspect. Our sponsor, Scott Miles, has expressed interest and has been willing to support us and meet with us to continue our project. In addition, all of our participants from our usability tests and participants from HCDE’s open house have expressed interest and enthusiasm for our game. Because of the high level of interest, our sponsor and our team decided it would be worthwhile to continue the project and potentially kickstart the game.
+        p A few goals we have for moving forward are to conduct more usability test sessions with emergency managers, refine the game and game instructions, and lastly, make the game easily changeable for different topics or cities. Conducting more usability test will help our team refine any further problems we may have missed during the last two usability tests. Furthermore, allowing the game to be interchangeable means keeping the same concept but specializing it in different topics or cities. For example, our final prototype is RECOVERY: Earthquake Edition, a future prototype may be RECOVERY: Tornado Edition or RECOVERY: Los Angeles Edition.
+        p Finally, if scheduling works in the future, our team would like to attend conferences and present our project. Our sponsor, Scott Miles, has express interests and informed us about multiple upcoming conferences. One conference for example would be The Natural Hazardous Workshop, where we would present our project and network with other people in the field.
+.position
+.section#section-eleven
+    .container
+        .row.section-header Additional Resources
+        .container.sub-container
+            .sub-section-header Product Video
+            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+            
+        .container.sub-container
+            .sub-section-header Process Book
+            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.

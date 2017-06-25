@@ -12,7 +12,7 @@
      border:  8px solid white;
      line-height:  88px;
      border-radius:  50%;
-     background:  #63B76C;
+     background:  #962d22;
      vertical-align:  middle;
  }
 
@@ -181,7 +181,7 @@ p, li {
   /*padding: 10%;*/
 }
 #section-one{
-  background-color: rgba(236, 240, 241,1.0);
+  /*background-color: rgba(236, 240, 241,1.0);*/
 }
 #section-two{
   background-color: #fff;
@@ -190,6 +190,22 @@ p, li {
 #section-three {
   height: auto;
 }
+
+#section-six {
+  height: auto;
+}
+
+#section-seven {
+  height: auto;
+}
+#section-nine {
+  height: auto;
+}
+
+#section-ten {
+  height: auto;
+}
+
 /*.section-no-height {
   height: 100%;
 }*/
@@ -204,11 +220,12 @@ p, li {
 }
 
 .banner-section {
-  height: 400px;
+  height: 500px;
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
-  background-image: url("../images/recovery_logo.png")
+  background-image: url("../images/recovery_logo.png");
+  margin-top: 25px;
 }
 .banner-header-text {
   font-weight: bold;
@@ -234,11 +251,91 @@ p, li {
 }
 
 .section-header {
-  font-size: 30pt;
-  font-weight: bold;
+  font-size: 35pt;
+  font-weight: 500px;
 }
 
 .row {
   margin-right: 0px;
   margin-left: 0px;
+}
+
+
+
+
+
+/********* team ***********/
+.team-member-card {
+
+}
+.team-profile-image, .team-profile-image img{
+
+}
+
+.team-profile-image img {
+  border: 2px solid rgba(236, 240, 241,1.0);
+}
+
+.member-name {
+  text-align: center;
+  font-weight: 350;
+  font-size: 20pt;
+  padding: 5px 0px;
+}
+
+.member-role {
+  text-align: center;
+  font-weight: 250;
+  font-size: 15pt;
+}
+
+.position {
+    background: #962d22;
+    width: 100%;
+    height: 30px;
+}
+
+/*
+.team-line {
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  background: #ddd;;
+
+}*/
+
+.section-title {
+  padding: 0px;
+  font-size: 15pt;
+}
+
+.section-title li, p {
+  font-size: 15pt;
+}
+
+.design-question-statement {
+  font-style: italic;
+  font-size: 20pt;
+}
+
+.design-question-statement span {
+  font-size: 30pt;
+  font-weight: 600;
+}
+
+.sub-section-header {
+  font-size: 25pt;
+  font-weight: 400px;
+}
+
+.sub-container {
+  padding-left: 0px;
+}
+
+@media (min-width:0px) and (max-width:640px) {
+  .section {
+    height: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
