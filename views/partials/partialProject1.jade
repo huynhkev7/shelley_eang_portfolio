@@ -52,7 +52,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.section-header Problem Statement
         .row
             p Earthquake recovery is a probable threat in the Pacific Northwest. 
-           
+        
             .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
                 | Based on web research:
                 ul
@@ -118,7 +118,23 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                         li 42 out of 54 like competitive games, while 37 out of 54 like team/partner games
         .container.sub-container
             .sub-section-header Persona
-            
+            .row
+                // Button trigger modal
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='images/persona_thumbnail.jpg', type='button', data-toggle='modal', data-target='#myModal')
+                // Modal
+                #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+                    .modal-dialog(role='document')
+                        .modal-content
+                            .modal-header
+                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                    span(aria-hidden='true') ×
+                                h4#myModalLabel.modal-title Persona
+                            .modal-body
+                                iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4R2lxMmUyZVduWlk/preview', width='100%', height='500')
+                            .modal-footer
+                                button.btn.btn-primary(type='button', data-dismiss='modal') Close
+
 .position
 .section#section-eight
     .container
@@ -159,3 +175,189 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .container.sub-container
             .sub-section-header Process Book
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+.section
+    .container
+        .col-xs-12  
+        #Carousel.carousel.slide
+          .carousel-inner
+            .item.active
+              ul.thumbnails
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+            // /Slide1
+            .item
+              ul.thumbnails
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+            // /Slide2
+            .item
+              ul.thumbnails
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+                |                         
+                li.col-sm-3
+                  .fff
+                    .thumbnail
+                      a(href='#')
+                        img(src='http://placehold.it/360x240', alt='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .caption
+                      h4 Praesent commodo
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      p Nullam Condimentum Nibh Etiam Sem
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      a.btn.btn-mini(href='#') &raquo; Read More
+            // /Slide3
+          |         
+          |        
+          | &#x9;   
+          nav
+            ul.control-box.pager
+              li
+                a(data-target="#Carousel", data-slide="prev")
+                  i.glyphicon.glyphicon-chevron-left
+              | &#x9;&#x9;&#x9;&#x9;
+              li
+                a(data-target="#Carousel", data-slide="next")
+                  i.glyphicon.glyphicon-chevron-right
+          // /.control-box
+        // /#myCarousel
+      // /.col-xs-12
+    // /.container
+
+
+

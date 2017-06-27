@@ -28,6 +28,24 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
       window.scrollTo(0, 0);
       $location.path('/' + route);
   }
+
+   //Bind the `$locationChangeSuccess` event on the rootScope, so that we dont need to 
+   //bind in induvidual controllers.
+   $rootScope.$on('$locationChangeSuccess', function() {
+        $rootScope.actualLocation = $location.path();
+    });        
+
+   $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+        if($rootScope.actualLocation === newLocation) {
+            //alert('Why did you use history back?');
+            var $modalBackDrop = document.getElementsByClassName('modal-backdrop fade in');
+            if($modalBackDrop){
+                angular.element($modalBackDrop).remove()
+                angular.element(document.getElementsByClassName('modal-open')).removeClass('modal-open');
+            }
+        }
+    });  
+    
 }
 AppCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$location'];
 
