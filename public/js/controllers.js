@@ -140,7 +140,7 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             url: 'images/sight_seers_logo.jpg',
             title: '#2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
+            route: 'SightSeers',
             tags: ['Videography']
         }             
     ];    
@@ -620,3 +620,208 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location) {
    
 }
 Project2Ctrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location'];
+
+function SightSeersCtrl($scope, $rootScope, globalFunctions, $location) {   
+    window.scrollTo(0, 0);
+    $rootScope.currentBaseUrl =  '/view1'   
+    $rootScope.showNavbar = true;
+    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
+    $scope.video = {
+        id: 'clXBiR01kUM'
+    };   
+    $scope.team = [
+        {
+            name: 'Shelley Eang',
+            role: 'UX Designer'
+        },
+        {
+            name: 'Michael Fernandes',
+            role: 'UX Designer'
+        },
+        {
+            name: 'Luis Gonzales',
+            role: 'UX Designer'
+        }            
+    ];
+    $scope.responsibilities = [
+        {
+            description: 'Conduct Web Research',
+            image: 'fa-search'
+        },
+        {
+            description: 'Create 2 Personas and Scenarios',
+            image: 'fa-sticky-note-o'
+        },
+        {
+            description: 'Create 2 Storyboards',
+            image: 'fa-users'
+        },
+        {
+            description: 'Develop a Sitemap',
+            image: 'fa-pencil'
+        },
+        {
+            description: 'Design Screens of the Mobile Prototype',
+            image: 'fa-clipboard'
+        },            
+        {
+            description: 'Edit and Finalize Lo and Hi-Fi Design Mockups',
+            image: 'fa-video-camera'
+        },
+        {
+            description: 'Facilitate, Moderate, and Note-take Usability Studies',
+            image: 'fa-video-camera'
+        },
+        {
+            description: 'Collaborate in Creating Group Presentations',
+            image: 'fa-video-camera'
+        }                    
+    ]
+
+    
+    $scope.lowFidelityPrototypes = [
+        [
+            {
+                title: 'Business Card',
+                src: 'images/city/business.jpg'
+            },
+            {
+                title: 'House Card',
+                src: 'images/city/house_card.jpg'
+            },
+            {
+                title: 'Fire Station Card',
+                src: 'images/city/police_fire_station.jpg'
+            },
+            {
+                title: 'School Card',
+                src: 'images/city/school.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Airport Card',
+                src: 'images/community/airport.jpg'
+            },
+            {
+                title: 'Light Rail Card',
+                src: 'images/community/light_rail.jpg'
+            },
+            {
+                title: 'Medical Center Card',
+                src: 'images/community/medical_center.jpg'
+            },
+            {
+                title: 'Sewage System Card',
+                src: 'images/community/sewage_system.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Performing Arts Card',
+                src: 'images/improvement/performing_arts.jpg'
+            },
+            {
+                title: 'Solar Panel Card',
+                src: 'images/improvement/solar_panel.jpg'
+            },
+            {
+                title: 'Stadium Card',
+                src: 'images/improvement/stadium_card.jpg'
+            },
+            {
+                title: 'Tourist Attraction Card',
+                src: 'images/improvement/tourist_attraction.jpg'
+            }            
+        ]        
+    ];
+
+    $scope.highFidelityPrototypes = [
+        [
+            {
+                title: 'Carbon ID Screen',
+                src: 'images/atomic/atomic_high_fidelity/carbon_id.jpg'
+            },
+            {
+                title: 'Create Account Screen',
+                src: 'images/atomic/atomic_high_fidelity/create_account.jpg'
+            },
+            {
+                title: 'Entering Atomic Screen',
+                src: 'images/atomic/atomic_high_fidelity/entering_atomic.jpg'
+            },
+            {
+                title: 'Food Data Screen',
+                src: 'images/atomic/atomic_high_fidelity/food_data.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Food Reports Screen',
+                src: 'images/atomic/atomic_high_fidelity/food_reports.jpg'
+            },
+            {
+                title: 'Food Screen',
+                src: 'images/atomic/atomic_high_fidelity/food.jpg'
+            },
+            {
+                title: 'Home Screen',
+                src: 'images/atomic/atomic_high_fidelity/home.jpg'
+            },
+            {
+                title: 'Item Selected Screen',
+                src: 'images/atomic/atomic_high_fidelity/item_selected.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Setting Screen',
+                src: 'images/atomic/atomic_high_fidelity/setting.jpg'
+            },
+            {
+                title: 'Trip Selected Screen',
+                src: 'images/atomic/atomic_high_fidelity/trip_selected.jpg'
+            },
+            {
+                title: 'User Agreement Screen',
+                src: 'images/atomic/atomic_high_fidelity/user_agreement.jpg'
+            }         
+        ]            
+    ];
+
+    $scope.currentPrototype = {
+        src: '',
+        title: ''
+    };
+
+    $scope.openModal = function(currentPrototype){
+        $scope.currentPrototype = currentPrototype;
+        $('#prototypeModal').modal('show');
+    };
+
+    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
+    $scope.animateElementIn = function($el) {
+        var animateValue = $el.attr('value');
+        $el.removeClass('hide-item');
+        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        var animateValue = $el.attr('value');
+        $el.addClass('hide-item');
+        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.parallaxTitle = {
+        title: 'Project AtomiC',
+        color: 'dark-grey'
+    };
+    $scope.listOfImages = [
+        {
+            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
+            additionalStyles: ''
+        }
+    ];     
+   
+}
+SightSeersCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location'];
