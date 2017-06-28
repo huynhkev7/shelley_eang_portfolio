@@ -175,7 +175,7 @@ p, li {
 }
 
 .section {
-  height: 500px;
+  height: auto;
   padding-right: 10px;
   padding-left: 10px;
   /*padding: 10%;*/
@@ -198,11 +198,20 @@ p, li {
 #section-seven {
   height: auto;
 }
+
+#section-eight {
+  height: auto;
+}
+
 #section-nine {
   height: auto;
 }
 
 #section-ten {
+  height: auto;
+}
+
+#section-eleven {
   height: auto;
 }
 
@@ -367,11 +376,8 @@ p, li {
 /* Global */
  
 
-#carousel-container img { max-width:100%; }
-
-.thumbnails li > .fff .caption { 
-    background:#fff !important; 
-    padding:10px
+.thumbnails img {
+  margin: 0 auto;
 }
 
 /* Page Header */
@@ -383,27 +389,12 @@ p, li {
     color: #999;
     text-transform: uppercase;
 }
-    
-#carousel-container .page-header h3 {
-    line-height: 0.88rem;
-    color: #000;
-}
 
 ul.thumbnails { 
     margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
-
-
-
-/* Thumbnail Box */
-.caption h4 {
-    color: #444;
-}
-
-.caption p {  
-    color: #999;
-}
-
 
 
 /* Carousel Control */
@@ -411,6 +402,7 @@ ul.thumbnails {
     text-align: right;
     width: 100%;
 }
+
 .carousel-control{
     background: #666;
     border: 0px;
@@ -426,22 +418,32 @@ ul.thumbnails {
     width: 15px;
 }
 
+#carousel-container .page-header, .control-box {
+    text-align: center;
+} 
 
-
-/* Mobile Only */
-@media (max-width: 767px) {
-    #carousel-container .page-header, .control-box {
-        text-align: center;
-    } 
-}
-@media (max-width: 479px) {
-    .caption {
-        word-break: break-all;
-    }
+.carousel-inner ul li { 
+  list-style-type:none;
+  margin-bottom: 10px;
 }
 
+.thumbnails img:hover {
+  box-shadow: 0 0 20px rgba(149, 165, 166,1.0);
+    -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  /* ...and now for the proper property */
+  transition:1s;
+  cursor: pointer;
+}
 
-#carousel-container li { list-style-type:none;}
+.btn-primary, .btn-primary:hover {
+  background-color: #962d22;
+  border: #962d22;
+}
 
-::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
-::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+i.glyphicon.glyphicon-chevron-right, i.glyphicon.glyphicon-chevron-left {
+  color: #962d22;
+}
+

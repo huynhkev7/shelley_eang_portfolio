@@ -278,6 +278,53 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
             image: 'fa-video-camera'
         }     
     ]
+
+    
+    $scope.lowFidelityPrototypes = [
+        [
+            {
+                title: '1',
+                src: 'http://placehold.it/360x240'
+            },
+            {
+                title: '2',
+                src: 'http://placehold.it/360x240'
+            },
+            {
+                title: '3',
+                src: 'http://placehold.it/360x240'
+            },
+            {
+                title: '4',
+                src: 'http://placehold.it/360x240'
+            }           
+        ],
+        [
+            {
+                title: '5',
+                src: 'http://placehold.it/360x240'
+            },
+            {
+                title: '6',
+                src: 'http://placehold.it/360x240'
+            },
+            {
+                title: '7',
+                src: 'http://placehold.it/360x240'
+            }
+        ]
+    ];
+    
+    $scope.currentPrototype = {
+        src: '',
+        title: ''
+    };
+    
+    $scope.openModal = function(currentPrototype){
+        $scope.currentPrototype = currentPrototype;
+        $('#prototypeModal').modal('show');
+    };
+
     $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
     $scope.animateElementIn = function($el) {
         //alert('in');
