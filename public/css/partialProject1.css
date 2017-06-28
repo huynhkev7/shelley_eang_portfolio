@@ -235,3 +235,8 @@ i.glyphicon.glyphicon-chevron-right, i.glyphicon.glyphicon-chevron-left {
   color: #962d22;
 }
 
+
+/******** PDF VIEWER *********/
+#pdf-container {
+    padding: 50px 100px;
+}

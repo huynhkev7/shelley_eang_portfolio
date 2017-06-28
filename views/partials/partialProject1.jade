@@ -140,6 +140,21 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                         li Players (who originally were unacquainted) collaborated with each other
         .row.sub-section-header High Fidelity Prototype
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+    .container
+        #CarouselHighFidelity.carousel.slide
+          .carousel-inner
+            .item(ng-repeat='prototypes in highFidelityPrototypes', ng-class='{active: $first}')
+              ul.thumbnails
+                li.col-sm-3(ng-repeat='prototype in prototypes')
+                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype)')                
+          nav
+            ul.control-box.pager
+              li
+                a(data-target="#CarouselHighFidelity", data-slide="prev")
+                  i.glyphicon.glyphicon-chevron-left
+              li
+                a(data-target="#CarouselHighFidelity", data-slide="next")
+                  i.glyphicon.glyphicon-chevron-right
 .position
 .section#section-ten
     .container
@@ -153,10 +168,13 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.section-header Additional Resources
         .row.sub-section-header Product Video
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
-            
+            ng-youtube-embed(video='videoURL', autoplay='true', color='white', disablekb='true', end='20', width='100%')
         .row.sub-section-header Process Book
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
-
+            #pdf-container.visible-lg.visible-md.visible-sm
+                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='700')
+            div.visible-xs
+                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='500')
 // Prototype Modal
 #prototypeModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')

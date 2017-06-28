@@ -225,7 +225,8 @@ ResumeCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$loca
 function Project1Ctrl($scope, $rootScope, globalFunctions) {
     window.scrollTo(0, 0);
     $rootScope.showNavbar = true;
-    $rootScope.currentBaseUrl =  '/view1'  
+    $rootScope.currentBaseUrl =  '/view1';
+    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
     // $scope.listOfImages = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png','https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png'];
     //$scope.listOfImages = ['http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png', 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Bubbles-PNG-Transparent-Image.png'];
     $scope.video = {
@@ -337,7 +338,66 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
             }            
         ]        
     ];
-    
+
+    $scope.highFidelityPrototypes = [
+        [
+            {
+                title: 'Business Card',
+                src: 'images/city_high_fidelity/business.jpg'
+            },
+            {
+                title: 'House Card',
+                src: 'images/city_high_fidelity/house_card.jpg'
+            },
+            {
+                title: 'Fire Station Card',
+                src: 'images/city_high_fidelity/police_fire_station.jpg'
+            },
+            {
+                title: 'School Card',
+                src: 'images/city_high_fidelity/school.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Airport Card',
+                src: 'images/community_high_fidelity/airport.jpg'
+            },
+            {
+                title: 'Light Rail Card',
+                src: 'images/community_high_fidelity/light_rail.jpg'
+            },
+            {
+                title: 'Medical Center Card',
+                src: 'images/community_high_fidelity/medical_center.jpg'
+            },
+            {
+                title: 'Sewage System Card',
+                src: 'images/community_high_fidelity/sewage_system.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Decision Reached Card',
+                src: 'images/solution/decision_reached.jpg'
+            },
+            {
+                title: 'Funds Acquired Card',
+                src: 'images/solution/funds_acquired.jpg'
+            },
+            {
+                title: 'Tow Truck Card',
+                src: 'images/solution/tow_truck.jpg'
+            }         
+        ],
+        [
+            {
+                title: 'Back of Card',
+                src: 'images/back_of_card.jpg'
+            }      
+        ]              
+    ];
+
     $scope.currentPrototype = {
         src: '',
         title: ''
@@ -403,7 +463,7 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
             additionalStyles: ''
         }
     ];
-
+    
     console.log($scope.listOfImages);
     console.log("entering project 1");  
 }

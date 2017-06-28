@@ -1,0 +1,105 @@
+{
+  "_args": [
+    [
+      {
+        "name": "ng-youtube-embed",
+        "raw": "ng-youtube-embed",
+        "rawSpec": "",
+        "scope": null,
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Kevin/Desktop/angular-express-bootstrap-seed"
+    ]
+  ],
+  "_from": "ng-youtube-embed@latest",
+  "_id": "ng-youtube-embed@1.7.10",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng-youtube-embed",
+  "_nodeVersion": "6.10.2",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ng-youtube-embed-1.7.10.tgz_1493415217425_0.8955597437452525"
+  },
+  "_npmUser": {
+    "email": "amdsouza92@gmail.com",
+    "name": "amdsouza92"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ng-youtube-embed",
+    "raw": "ng-youtube-embed",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-youtube-embed/-/ng-youtube-embed-1.7.10.tgz",
+  "_shasum": "cb9ffe8b806a70de127430c4cab4dca2d7206897",
+  "_shrinkwrap": null,
+  "_spec": "ng-youtube-embed",
+  "_where": "/Users/Kevin/Desktop/angular-express-bootstrap-seed",
+  "author": {
+    "email": "amdsouza92@gmail.com",
+    "name": "Arun Michael Dsouza"
+  },
+  "bugs": {
+    "url": "https://github.com/ArunMichaelDsouza/ng-youtube-embed/issues"
+  },
+  "dependencies": {},
+  "description": "AngularJS module to embed Youtube videos with support for Youtube player parameters and JavaScript API for iframe embeds. Superlight (less than 5KB) and easy to use! Supports Youtube video URLs and IDs. No 3rd party JS dependencies. ",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dist": {
+    "shasum": "cb9ffe8b806a70de127430c4cab4dca2d7206897",
+    "tarball": "https://registry.npmjs.org/ng-youtube-embed/-/ng-youtube-embed-1.7.10.tgz"
+  },
+  "gitHead": "04dad1d2ec4eec7076c575b5414cdfe4db55fca6",
+  "homepage": "https://github.com/ArunMichaelDsouza/ng-youtube-embed#readme",
+  "jshintConfig": {
+    "devel": true,
+    "expr": true,
+    "globals": {
+      "YT": false,
+      "angular": false
+    }
+  },
+  "keywords": [
+    "youtube",
+    "video",
+    "youtube api",
+    "js api",
+    "embed",
+    "iframe"
+  ],
+  "license": "MIT",
+  "main": "build/ng-youtube-embed.min.js",
+  "maintainers": [
+    {
+      "email": "amdsouza92@gmail.com",
+      "name": "amdsouza92"
+    }
+  ],
+  "name": "ng-youtube-embed",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunMichaelDsouza/ng-youtube-embed.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.7.10"
+}
