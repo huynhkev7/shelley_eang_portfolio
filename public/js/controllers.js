@@ -284,36 +284,58 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
     $scope.lowFidelityPrototypes = [
         [
             {
-                title: '1',
-                src: 'http://placehold.it/360x240'
+                title: 'Business Card',
+                src: 'images/city/business.jpg'
             },
             {
-                title: '2',
-                src: 'http://placehold.it/360x240'
+                title: 'House Card',
+                src: 'images/city/house_card.jpg'
             },
             {
-                title: '3',
-                src: 'http://placehold.it/360x240'
+                title: 'Fire Station Card',
+                src: 'images/city/police_fire_station.jpg'
             },
             {
-                title: '4',
-                src: 'http://placehold.it/360x240'
+                title: 'School Card',
+                src: 'images/city/school.jpg'
             }           
         ],
         [
             {
-                title: '5',
-                src: 'http://placehold.it/360x240'
+                title: 'Airport Card',
+                src: 'images/community/airport.jpg'
             },
             {
-                title: '6',
-                src: 'http://placehold.it/360x240'
+                title: 'Light Rail Card',
+                src: 'images/community/light_rail.jpg'
             },
             {
-                title: '7',
-                src: 'http://placehold.it/360x240'
-            }
-        ]
+                title: 'Medical Center Card',
+                src: 'images/community/medical_center.jpg'
+            },
+            {
+                title: 'Sewage System Card',
+                src: 'images/community/sewage_system.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Performing Arts Card',
+                src: 'images/improvement/performing_arts.jpg'
+            },
+            {
+                title: 'Solar Panel Card',
+                src: 'images/improvement/solar_panel.jpg'
+            },
+            {
+                title: 'Stadium Card',
+                src: 'images/improvement/stadium_card.jpg'
+            },
+            {
+                title: 'Tourist Attraction Card',
+                src: 'images/improvement/tourist_attraction.jpg'
+            }            
+        ]        
     ];
     
     $scope.currentPrototype = {
