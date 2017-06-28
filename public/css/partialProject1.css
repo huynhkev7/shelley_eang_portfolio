@@ -95,8 +95,15 @@
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
+  margin-top: 25px;  
+}
+
+#banner-section-recovery {
   background-image: url("../images/recovery_logo.png");
-  margin-top: 25px;
+}
+
+#banner-section-atomic {
+  background-image: url("../images/atomic/atomic_logo.jpg");
 }
 
 .section-header {
@@ -161,6 +168,11 @@
 .sub-section-header {
   font-size: 25pt;
   font-weight: 400px;
+}
+
+.sub-sub-section-header {
+  font-size: 17pt;
+  font-weight: 200px;
 }
 
 /******* MODAL ********/
