@@ -23,17 +23,17 @@
 
 .box > .icon > .info  {
      margin-top:  -24px;
-     background:  rgba(0,  0,  0,  0.04);
-     border:  1px solid #e0e0e0;
+     border: 1px solid #ddd;
+     box-shadow:0 0 20px rgba(236, 240, 241,1.0);
      padding:  15px 0 10px 0;
      height: 100px;
  }
 
 .box > .icon > .info > .title  {
-     font-size:  12pt;
+     font-size:  15pt;
      color:  #222;
      margin-top: 20px;
-     font-weight: 500;
+     font-weight: 200;
  }
 
 .box > .icon > .info > p  {
@@ -49,99 +49,24 @@
  }
 
 
-.team-card {
-    font-size: 1em;
-    overflow: hidden;
-    padding: 0;
-    border: none;
-    border-radius: .28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-}
-
-.team-card-img-top {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.team-card-block {
-    font-size: 16pt;
-    position: relative;
-    margin: 0;
-    padding: 1em;
-    border: none;
-    border-top: 1px solid rgba(34, 36, 38, .1);
-    box-shadow: none;
-    background-color: white;
-}
-.team-card-footer {
-    font-size: 12pt;
-    position: static;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    padding: .75em 1em;
-    color: rgba(0, 0, 0, .4);
-    border-top: 1px solid rgba(0, 0, 0, .05) !important;
-    background: #fff;
-    white-space: nowrap;
-}
-
 .project-container {
     padding: 0 15%;
 }
+
 .page-header {
     border-bottom: none;
 }
 
 .alert-success {
-    background-color: #f5f5f5;
-    border-color: #f5f5f5;
-    color: #777;
+    background: #962d22;
+    border-color: #962d22;
+    color: #fff;
 }
 
 .bold-text {
     font-size: 12pt;
     color: black;
     font-weight: 700;
-}
-
-
-@keyframes shake {
-  0% {transform: translateX(0);}
-  12.5% {transform: translateX(-6px) rotateY(-5deg)}
-  37.5% {transform: translateX(5px) rotateY(4deg)}
-  62.5% {transform: translateX(-3px) rotateY(-2deg)}
-  87.5% {transform: translateX(2px) rotateY(1deg)}
-  100% {transform: translateX(0)}
-}
-
-@-webkit-keyframes shake {
-  0% {-webkit-transform: translateX(0);}
-  12.5% {-webkit-transform: translateX(-6px) rotateY(-5deg)}
-  37.5% {-webkit-transform: translateX(5px) rotateY(4deg)}
-  62.5% {-webkit-transform: translateX(-3px) rotateY(-2deg)}
-  87.5% {-webkit-transform: translateX(2px) rotateY(1deg)}
-  100% {-webkit-transform: translateX(0)}
-}
-
-.shake:hover {
-  -o-animation: shake 400ms ease-in-out;
-  -webkit-animation: shake 400ms ease-in-out;
-  animation: shake 400ms ease-in-out;
-}
-
-.sub-item {
-  font-size: 13pt;
-  font-weight: 500;
-}
-
-.bottom-spacing {
-  margin-bottom: 10px;
-}
-
-p, li {
-  font-size: 12pt;
 }
 
 .video-container {
@@ -160,72 +85,9 @@ p, li {
     height: 100%;
 }
  
-.banner-text {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    font-size: 50pt;
-    width: 100%;
-    z-index: 1;
-    font-weight: bold;
-    color: white;
-}
-.banner {
-  height: 500px;
-}
-
 .section {
   height: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  /*padding: 10%;*/
-}
-#section-one{
-  /*background-color: rgba(236, 240, 241,1.0);*/
-}
-#section-two{
-  background-color: #fff;
-  height: auto;
-}
-#section-three {
-  height: auto;
-}
-
-#section-six {
-  height: auto;
-}
-
-#section-seven {
-  height: auto;
-}
-
-#section-eight {
-  height: auto;
-}
-
-#section-nine {
-  height: auto;
-}
-
-#section-ten {
-  height: auto;
-}
-
-#section-eleven {
-  height: auto;
-}
-
-/*.section-no-height {
-  height: 100%;
-}*/
-.title-section {
-  position: relative;
-}
-
-.title-section > div {
-  font-weight: bold;
-  font-size: 40pt;
-  padding-left: 5px;
+  padding: 10% 10px;
 }
 
 .banner-section {
@@ -236,28 +98,6 @@ p, li {
   background-image: url("../images/recovery_logo.png");
   margin-top: 25px;
 }
-.banner-header-text {
-  font-weight: bold;
-  color: rgba(39, 174, 96,1.0);
-  font-size: 60pt;
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* overwrite swipe */
-.swiper-slide {
-  text-align: inherit;
-}
-
-#slide-color-2{
-  background-color: rgba(155, 89, 182,1.0);
-}
-#slide-color-3 {
-  background-color: rgba(52, 152, 219,1.0);
-}
-#slide-color-4 {
-  background-color: rgba(46, 204, 113,1.0);
-}
 
 .section-header {
   font-size: 35pt;
@@ -267,19 +107,10 @@ p, li {
 .row {
   margin-right: 0px;
   margin-left: 0px;
+  margin-bottom: 10px;
 }
-
-
-
-
 
 /********* team ***********/
-.team-member-card {
-
-}
-.team-profile-image, .team-profile-image img{
-
-}
 
 .team-profile-image img {
   border: 2px solid rgba(236, 240, 241,1.0);
@@ -304,22 +135,17 @@ p, li {
     height: 30px;
 }
 
-/*
-.team-line {
-  height: 2px;
-  width: 80%;
-  margin: 0 auto;
-  background: #ddd;;
-
-}*/
-
 .section-title {
   padding: 0px;
   font-size: 15pt;
 }
 
-.section-title li, p {
+.section-title li, p, .section-tile {
   font-size: 15pt;
+}
+
+.section-tile {
+  padding-left: 0px;
 }
 
 .design-question-statement {
@@ -337,15 +163,11 @@ p, li {
   font-weight: 400px;
 }
 
-.sub-container {
-  padding-left: 0px;
-}
+/******* MODAL ********/
 
 @media (min-width:0px) and (max-width:640px) {
-  .section {
-    height: auto;
-    padding-right: 10px;
-    padding-left: 10px;
+  section {
+    padding: 5% 10px;
   }
 }
 
@@ -354,6 +176,7 @@ p, li {
     width: 80%;
   }
 }
+
 
 .thumbnail-modal:hover {
   box-shadow: 0 0 20px rgba(149, 165, 166,1.0);
@@ -373,49 +196,14 @@ p, li {
 
 /********* Carousel *************/
 
-/* Global */
- 
-
 .thumbnails img {
   margin: 0 auto;
-}
-
-/* Page Header */
-#carousel-container .page-header {
-    background: #f9f9f9;
-    margin: -30px -40px 40px;
-    padding: 20px 40px;
-    border-top: 4px solid #ccc;
-    color: #999;
-    text-transform: uppercase;
 }
 
 ul.thumbnails { 
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
-}
-
-
-/* Carousel Control */
-.control-box {
-    text-align: right;
-    width: 100%;
-}
-
-.carousel-control{
-    background: #666;
-    border: 0px;
-    border-radius: 0px;
-    display: inline-block;
-    font-size: 34px;
-    font-weight: 200;
-    line-height: 18px;
-    opacity: 0.5;
-    padding: 4px 10px 0px;
-    position: static;
-    height: 30px;
-    width: 15px;
 }
 
 #carousel-container .page-header, .control-box {

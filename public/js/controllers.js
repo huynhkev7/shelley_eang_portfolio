@@ -36,6 +36,7 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
     });        
 
    $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+       window.scrollTo(0, 0);
         if($rootScope.actualLocation === newLocation) {
             //alert('Why did you use history back?');
             var $modalBackDrop = document.getElementsByClassName('modal-backdrop fade in');
@@ -319,7 +320,7 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
         src: '',
         title: ''
     };
-    
+
     $scope.openModal = function(currentPrototype){
         $scope.currentPrototype = currentPrototype;
         $('#prototypeModal').modal('show');
