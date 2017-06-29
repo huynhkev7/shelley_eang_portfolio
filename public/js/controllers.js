@@ -599,14 +599,35 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         ]            
     ];
 
+    $scope.modalObjects = {
+        persona_1: {
+            localSrc: 'images/atomic/atomic_persona.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4OGlhbWlIVDNGc1U/preview',
+            title: 'Persona',
+            targetModal: '#modalIframeViewer'            
+        },
+        sitemap: {
+            localSrc: 'images/atomic/sitemap.jpg',
+            driveSrc: '',
+            title: 'Site Map',
+            targetModal: '#modalImageViewer'            
+        }
+    };
+
+    $scope.trustSrc = function(src) {
+        var newSrc = $sce.trustAsResourceUrl(src);
+        return newSrc;
+    }
+
     $scope.currentPrototype = {
         src: '',
         title: ''
     };
 
-    $scope.openModal = function(currentPrototype){
-        $scope.currentPrototype = currentPrototype;
-        $('#prototypeModal').modal('show');
+    $scope.openModal = function(src, title, modal){
+        $scope.currentPrototype.src = $scope.trustSrc(src);
+        $scope.currentPrototype.title = title;
+        $(modal).modal('show');
     };
 
     $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
