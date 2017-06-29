@@ -202,7 +202,7 @@ function ResumeCtrl($scope, $http, $rootScope, globalFunctions, $location) {
 
 ResumeCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$location'];
 
-function Project1Ctrl($scope, $rootScope, globalFunctions) {
+function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
     window.scrollTo(0, 0);
     $rootScope.showNavbar = true;
     $rootScope.currentBaseUrl =  '/view1';
@@ -376,14 +376,29 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
         ]              
     ];
 
+    $scope.modalObjects = {
+        persona_1: {
+            localSrc: 'images/persona_thumbnail.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4R2lxMmUyZVduWlk/preview',
+            title: 'Persona',
+            targetModal: '#modalIframeViewer'            
+        }
+    };
+
+    $scope.trustSrc = function(src) {
+        var newSrc = $sce.trustAsResourceUrl(src);
+        return newSrc;
+    }
+
     $scope.currentPrototype = {
         src: '',
         title: ''
     };
 
-    $scope.openModal = function(currentPrototype){
-        $scope.currentPrototype = currentPrototype;
-        $('#prototypeModal').modal('show');
+    $scope.openModal = function(src, title, modal){
+        $scope.currentPrototype.src = $scope.trustSrc(src);
+        $scope.currentPrototype.title = title;
+        $(modal).modal('show');
     };
 
     $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
@@ -410,9 +425,9 @@ function Project1Ctrl($scope, $rootScope, globalFunctions) {
         }
     ]; 
 }
-Project1Ctrl.$inject = ['$scope', '$rootScope','globalFunctions', '$location'];
+Project1Ctrl.$inject = ['$scope', '$rootScope','globalFunctions', '$location', '$sce'];
 
-function Project2Ctrl($scope, $rootScope, globalFunctions, $location) {   
+function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {   
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/view1'   
     $rootScope.showNavbar = true;
@@ -619,9 +634,9 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location) {
     ];     
    
 }
-Project2Ctrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location'];
+Project2Ctrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
 
-function SightSeersCtrl($scope, $rootScope, globalFunctions, $location) {   
+function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {   
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/view1'   
     $rootScope.showNavbar = true;
@@ -739,64 +754,142 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location) {
     $scope.highFidelityPrototypes = [
         [
             {
-                title: 'Carbon ID Screen',
-                src: 'images/atomic/atomic_high_fidelity/carbon_id.jpg'
+                title: 'High Fidelity #1',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_1.jpg' 
             },
             {
-                title: 'Create Account Screen',
-                src: 'images/atomic/atomic_high_fidelity/create_account.jpg'
+                title: 'High Fidelity #2',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_2.jpg' 
             },
             {
-                title: 'Entering Atomic Screen',
-                src: 'images/atomic/atomic_high_fidelity/entering_atomic.jpg'
+                title: 'High Fidelity #3',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_3.jpg' 
             },
             {
-                title: 'Food Data Screen',
-                src: 'images/atomic/atomic_high_fidelity/food_data.jpg'
+                title: 'High Fidelity #4',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_4.jpg' 
             }           
         ],
         [
             {
-                title: 'Food Reports Screen',
-                src: 'images/atomic/atomic_high_fidelity/food_reports.jpg'
+                title: 'High Fidelity #5',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_5.jpg'
+            }
+        ]          
+    ];
+
+    $scope.paperPrototypes = [
+        [
+            {
+                title: 'Paper Prototype #1',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_1.jpg' 
             },
             {
-                title: 'Food Screen',
-                src: 'images/atomic/atomic_high_fidelity/food.jpg'
+                title: 'Paper Prototype #2',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_2.jpg'
             },
             {
-                title: 'Home Screen',
-                src: 'images/atomic/atomic_high_fidelity/home.jpg'
+                title: 'Paper Prototype #3',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_3.jpg'
             },
             {
-                title: 'Item Selected Screen',
-                src: 'images/atomic/atomic_high_fidelity/item_selected.jpg'
+                title: 'Paper Prototype #4',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_4.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Paper Prototype #5',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_5.jpg' 
+            },
+            {
+                title: 'Paper Prototype #6',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_6.jpg'
+            },
+            {
+                title: 'Paper Prototype #7',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_7.jpg' 
+            },
+            {
+                title: 'Paper Prototype #8',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_8.jpg'
             }            
         ],
         [
             {
-                title: 'Setting Screen',
-                src: 'images/atomic/atomic_high_fidelity/setting.jpg'
+                title: 'Paper Prototype #9',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_9.jpg' 
             },
             {
-                title: 'Trip Selected Screen',
-                src: 'images/atomic/atomic_high_fidelity/trip_selected.jpg'
+                title: 'Paper Prototype #10',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_10.jpg' 
             },
             {
-                title: 'User Agreement Screen',
-                src: 'images/atomic/atomic_high_fidelity/user_agreement.jpg'
+                title: 'Paper Prototype #11',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_11.jpg'
             }         
         ]            
     ];
+
+    $scope.modalObjects = {
+        persona_1: {
+            localSrc: 'images/sight_seers/persona_1.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4QTFTR0RjUU1GTG8/preview',
+            title: 'Al - Persona',
+            targetModal: '#modalIframeViewer'            
+        },
+        persona_2: {
+            localSrc: 'images/sight_seers/persona_2.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4WU9ZRDEwU2dJeUU/preview',
+            title: 'Allison - Persona',
+            targetModal: '#modalIframeViewer'            
+        },
+        sitemap: {
+            localSrc: 'images/sight_seers/sitemap.jpg',
+            driveSrc: '',
+            title: 'Site Map',
+            targetModal: '#modalImageViewer'            
+        },
+        al_storyboard: {
+            localSrc: 'images/sight_seers/storyboards/al_storyboard.jpg',
+            driveSrc: '',
+            title: 'Al Storyboard',
+            targetModal: '#modalImageViewer'
+        },
+        allison_storyboard: {
+            localSrc: 'images/sight_seers/storyboards/allison.jpg',
+            driveSrc: '',
+            title: 'Allison Storyboard',
+            targetModal: '#modalImageViewer'
+        },
+        amy_storyboard: {
+            localSrc: 'images/sight_seers/storyboards/amy_storyboard.jpg',
+            driveSrc: '',
+            title: 'Amy Storyboard',
+            targetModal: '#modalImageViewer'
+        },
+        s3_storyboard_complete: {
+            localSrc: 'images/sight_seers/storyboards/s3_storyboard_complete.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4UW40eFhGUmp1dXc/preview',
+            title: 'Complete Storyboard',
+            targetModal: '#modalIframeViewer'
+        }
+    };
+
+    $scope.trustSrc = function(src) {
+        var newSrc = $sce.trustAsResourceUrl(src);
+        return newSrc;
+    }
 
     $scope.currentPrototype = {
         src: '',
         title: ''
     };
 
-    $scope.openModal = function(currentPrototype){
-        $scope.currentPrototype = currentPrototype;
-        $('#prototypeModal').modal('show');
+    $scope.openModal = function(src, title, modal){
+        $scope.currentPrototype.src = $scope.trustSrc(src);
+        $scope.currentPrototype.title = title;
+        $(modal).modal('show');
     };
 
     $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
@@ -824,4 +917,4 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location) {
     ];     
    
 }
-SightSeersCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location'];
+SightSeersCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];

@@ -103,7 +103,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                         li 42 out of 54 like competitive games, while 37 out of 54 like team/partner games
         .row.sub-section-header Persona
                 div.text-center
-                    img.img-responsive.thumbnail-modal(src='images/persona_thumbnail.jpg', type='button', data-toggle='modal', data-target='#myModal')
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.persona_1.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.persona_1.driveSrc, modalObjects.persona_1.title, modalObjects.persona_1.targetModal)')
 
 .position
 .section#section-eight
@@ -116,7 +116,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
             .item(ng-repeat='prototypes in lowFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails
                 li.col-sm-3(ng-repeat='prototype in prototypes')
-                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype)')                
+                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
           nav
             ul.control-box.pager
               li
@@ -146,7 +146,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
             .item(ng-repeat='prototypes in highFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails
                 li.col-sm-3(ng-repeat='prototype in prototypes')
-                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype)')                
+                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
           nav
             ul.control-box.pager
               li
@@ -175,8 +175,8 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='700')
             div.visible-xs
                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='500')
-// Prototype Modal
-#prototypeModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+// Gallery Modal
+#galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')
         .modal-content
             .modal-header
@@ -184,18 +184,30 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                     span(aria-hidden='true') ×
                 h4#myModalLabel.modal-title {{currentPrototype.title}}
             .modal-body.text-center
-                img(src='{{currentPrototype.src}}', width='50%', height='50%')
+                img(ng-src='{{currentPrototype.src}}', width='100%', height='100%')
             .modal-footer
                 button.btn.btn-primary(type='button', data-dismiss='modal') Close
-// Modal
-#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+// Iframe Viewer Modal
+#modalIframeViewer.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')
         .modal-content
             .modal-header
                 button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
-                h4#myModalLabel.modal-title Persona
+                h4#myModalLabel.modal-title {{currentPrototype.title}}
             .modal-body
-                iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4R2lxMmUyZVduWlk/preview', width='100%', height='500')
+                iframe(ng-src='{{currentPrototype.src}}', width='100%', height='500')
+            .modal-footer
+                button.btn.btn-primary(type='button', data-dismiss='modal') Close         
+// Image Viewer Modal
+#modalImageViewer.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#myModalLabel.modal-title {{currentPrototype.title}}
+            .modal-body.text-center
+                img(ng-src='{{currentPrototype.src}}', width='100%', height='100%')
             .modal-footer
                 button.btn.btn-primary(type='button', data-dismiss='modal') Close
