@@ -111,6 +111,10 @@
   background-image: url("../images/sight_seers_logo.jpg");
 }
 
+#banner-section-wta {
+  background-image: url("../images/wta/wta.jpg");
+}
+
 .section-header {
   font-size: 35pt;
   font-weight: 500px;

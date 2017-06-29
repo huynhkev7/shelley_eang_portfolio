@@ -10,6 +10,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','
     $routeProvider.when('/project1', {templateUrl: 'partial/Project1', controller: Project1Ctrl});
     $routeProvider.when('/project2', {templateUrl: 'partial/Project2', controller: Project2Ctrl});   
     $routeProvider.when('/SightSeers', {templateUrl: 'partial/SightSeers', controller: SightSeersCtrl });  
+    $routeProvider.when('/Wta', {templateUrl: 'partial/Wta', controller: WtaCtrl });      
     $routeProvider.otherwise({redirectTo: '/view1'});
     $locationProvider.html5Mode(true);
   }]);

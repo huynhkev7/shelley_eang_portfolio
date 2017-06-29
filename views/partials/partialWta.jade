@@ -1,0 +1,116 @@
+link(rel='stylesheet', href='/css/partialProject1.css')
+#banner-section-wta.banner-section
+.position
+.section
+    .container
+        .row.section-header Overview
+        .row
+            p HCDE 308 is 10-week course that focuses on the foundations of visual communication in the Human Centered Design & Engineering department. The purpose of this class was to individually re-design the aesthetics and information architecture of a website. Out of many preselected client options given by my professor, Daniela Rosner, I selected the Washington Trails Association (WTA) to redesign. The client was not a real client but an example for exploratory learning purposes.
+            p I had to identify the clients organization and business goals in order to make the website as user-friendly as possible. I was able to iterate on design mockups through milestone assignments such as visual hierarchy, typography, color scheme, and brand design. My redesign uses visual communication design principles to enhance the client’s communication goals, as well as improving the overall visual design.
+.position
+.section
+    .container
+        .row.section-header My Responsibilities
+        .row
+            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in responsibilities')
+                .box
+                    .icon
+                        .image
+                            i.fa(class='{{responsibility.image}}')
+                        .info
+                            .title {{responsibility.description}}
+                    .space
+        .row
+            .sub-sub-section-header TOOLS: Adobe Illustrator, paper sketches
+.position
+.section
+    .container
+        .row.section-header Design Questions
+        .container.design-question-statement
+            span “
+            | How could redesign the current website to best communicate the three main goals of nature, exploration, and community?
+            span ”
+.position
+.section
+    .container
+        .row.section-header Hueristic Evaluation
+            p Based from Nielsen’s Heuristics
+            .row
+                p We conducted 3 usability test sessions with 3 college students. Results from all sessions are listed below. 
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+                    ul
+                        li Lack of visibility of system status due to cluttering of visual elements
+                        li Lack of minimalistic and aesthetic design due to cluttering of visual elements
+                        li Poor recognition rather than recall
+                        li Poor information hierarchy 
+.position
+.section#section-seven
+    .container
+        .row.section-header Project Milestones
+            p The following project milestones capture the process I did throughout the 10-week redesign for WTA’s visual system. The milestones include: Type & Hierarchy, Color & Emotion, Text w/ Image, Logo Sketching, Logo Prototyping, and Mobile & Web Design Mock-Ups
+        .row.sub-section-header TEXT WITH IMAGE (Week 1, 2)
+            div.text-center
+                img.img-responsive.thumbnail-modal(src='{{modalObjects.text_with_image.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.text_with_image.driveSrc, modalObjects.text_with_image.title, modalObjects.text_with_image.targetModal)')               
+        .row.sub-section-header TYPOGRAPHY & VISUAL HIERARCHY (Week 3, 4)
+            div.text-center
+                img.img-responsive.thumbnail-modal(src='{{modalObjects.type_hierarchy.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.type_hierarchy.driveSrc, modalObjects.type_hierarchy.title, modalObjects.type_hierarchy.targetModal)')               
+        .row.sub-section-header COLOR & EMOTION (Week 4, 5)
+            div.text-center
+                img.img-responsive.thumbnail-modal(src='{{modalObjects.color_and_emotion.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.color_and_emotion.driveSrc, modalObjects.color_and_emotion.title, modalObjects.color_and_emotion.targetModal)')               
+        .row.sub-section-header LOGO SKETCHING (Week 6)
+            .row
+                .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_1.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_1.localSrc, modalObjects.sketch_1.title, modalObjects.sketch_1.targetModal)')    
+                .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_2.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_2.localSrc, modalObjects.sketch_2.title, modalObjects.sketch_2.targetModal)')         
+        .row.sub-section-header LOGO PROTOTYPING (Week 7, 8)
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.logo_prototyping.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.logo_prototyping.localSrc, modalObjects.logo_prototyping.title, modalObjects.logo_prototyping.targetModal)')        
+        .row.sub-section-header WEB DESIGN MOCK-UPS (Week 8, 9, 10)
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
+.position
+.section#section-eight
+    .container
+        .row.section-header Final Deliverable
+.position
+.section#section-ten
+    .container
+        .row.section-header Future Considerations
+            p The main objective of Sightseers is to help college students of Washington document their travel experiences before forgetting. Future development on our project would largely focus on conducting more research of our target users, more usability tests, and further refining our product. 
+// Gallery Modal
+#galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#myModalLabel.modal-title {{currentPrototype.title}}
+            .modal-body.text-center
+                img(ng-src='{{currentPrototype.src}}', width='100%', height='100%')
+            .modal-footer
+                button.btn.btn-primary(type='button', data-dismiss='modal') Close
+// Iframe Viewer Modal
+#modalIframeViewer.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#myModalLabel.modal-title {{currentPrototype.title}}
+            .modal-body
+                iframe(ng-src='{{currentPrototype.src}}', width='100%', height='500')
+            .modal-footer
+                button.btn.btn-primary(type='button', data-dismiss='modal') Close         
+// Image Viewer Modal
+#modalImageViewer.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#myModalLabel.modal-title {{currentPrototype.title}}
+            .modal-body.text-center
+                img(ng-src='{{currentPrototype.src}}', width='100%', height='100%')
+            .modal-footer
+                button.btn.btn-primary(type='button', data-dismiss='modal') Close

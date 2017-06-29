@@ -54,7 +54,9 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
         $rootScope.showNavbar = false;
     };
     $scope.goToProject = function(route) {
-        $location.path('/' + route);
+        if(route.length > 0 || route !== ''){
+            $location.path('/' + route);
+        }
     }
 
     function myCallback(){
@@ -108,16 +110,16 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     $scope.workExperiences = [
         {
             url: 'images/g2l_logo.jpg',
-            title: 'Cool Title',
+            title: 'G2L',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project1',
+            route: '',
             tags: ['Fun!', 'UX', 'UI']
         },
         {
             url: 'images/avanade_logo.jpg',
-            title: '#2',
+            title: 'Avanade',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
-            route: 'project2',
+            route: '',
             tags: ['Healthcare', 'Social Work']
         }          
     ]
@@ -142,7 +144,14 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
             route: 'SightSeers',
             tags: ['Videography']
-        }             
+        },
+        {
+            url: 'images/wta/wta_logo.jpg',
+            title: 'WTA',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            route: 'Wta',
+            tags: ['Videography']
+        }                     
     ];    
     
     var $projectAnchor = document.getElementById('projects-content');
@@ -939,3 +948,287 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
    
 }
 SightSeersCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
+
+
+function WtaCtrl($scope, $rootScope, globalFunctions, $location, $sce) {   
+    window.scrollTo(0, 0);
+    $rootScope.currentBaseUrl =  '/view1'   
+    $rootScope.showNavbar = true;
+    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
+    $scope.video = {
+        id: 'clXBiR01kUM'
+    };   
+    $scope.team = [
+        {
+            name: 'Shelley Eang',
+            role: 'UX Designer'
+        },
+        {
+            name: 'Michael Fernandes',
+            role: 'UX Designer'
+        },
+        {
+            name: 'Luis Gonzales',
+            role: 'UX Designer'
+        }            
+    ];
+    $scope.responsibilities = [
+        {
+            description: 'Identify Client Goals',
+            image: 'fa-search'
+        },
+        {
+            description: 'Conduct Heuristic Evaluation',
+            image: 'fa-sticky-note-o'
+        },
+        {
+            description: 'Explore Typography and Visual Hierarchy',
+            image: 'fa-users'
+        },
+        {
+            description: 'Select Brand Colors',
+            image: 'fa-pencil'
+        },
+        {
+            description: 'Design New Logo',
+            image: 'fa-clipboard'
+        },            
+        {
+            description: 'Develop Sitemap',
+            image: 'fa-video-camera'
+        },
+        {
+            description: 'Design Interfaces of the Mobile and Web Prototype',
+            image: 'fa-video-camera'
+        },
+        {
+            description: 'Summarize All Design and Branding Choices in Brand Book',
+            image: 'fa-video-camera'
+        }                    
+    ]
+
+    
+    $scope.lowFidelityPrototypes = [
+        [
+            {
+                title: 'Business Card',
+                src: 'images/city/business.jpg'
+            },
+            {
+                title: 'House Card',
+                src: 'images/city/house_card.jpg'
+            },
+            {
+                title: 'Fire Station Card',
+                src: 'images/city/police_fire_station.jpg'
+            },
+            {
+                title: 'School Card',
+                src: 'images/city/school.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Airport Card',
+                src: 'images/community/airport.jpg'
+            },
+            {
+                title: 'Light Rail Card',
+                src: 'images/community/light_rail.jpg'
+            },
+            {
+                title: 'Medical Center Card',
+                src: 'images/community/medical_center.jpg'
+            },
+            {
+                title: 'Sewage System Card',
+                src: 'images/community/sewage_system.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Performing Arts Card',
+                src: 'images/improvement/performing_arts.jpg'
+            },
+            {
+                title: 'Solar Panel Card',
+                src: 'images/improvement/solar_panel.jpg'
+            },
+            {
+                title: 'Stadium Card',
+                src: 'images/improvement/stadium_card.jpg'
+            },
+            {
+                title: 'Tourist Attraction Card',
+                src: 'images/improvement/tourist_attraction.jpg'
+            }            
+        ]        
+    ];
+
+    $scope.highFidelityPrototypes = [
+        [
+            {
+                title: 'High Fidelity #1',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_1.jpg' 
+            },
+            {
+                title: 'High Fidelity #2',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_2.jpg' 
+            },
+            {
+                title: 'High Fidelity #3',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_3.jpg' 
+            },
+            {
+                title: 'High Fidelity #4',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_4.jpg' 
+            }           
+        ],
+        [
+            {
+                title: 'High Fidelity #5',
+                src: 'images/sight_seers/high_fidelity/high_fidelity_5.jpg'
+            }
+        ]          
+    ];
+
+    $scope.paperPrototypes = [
+        [
+            {
+                title: 'Paper Prototype #1',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_1.jpg' 
+            },
+            {
+                title: 'Paper Prototype #2',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_2.jpg'
+            },
+            {
+                title: 'Paper Prototype #3',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_3.jpg'
+            },
+            {
+                title: 'Paper Prototype #4',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_4.jpg'
+            }           
+        ],
+        [
+            {
+                title: 'Paper Prototype #5',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_5.jpg' 
+            },
+            {
+                title: 'Paper Prototype #6',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_6.jpg'
+            },
+            {
+                title: 'Paper Prototype #7',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_7.jpg' 
+            },
+            {
+                title: 'Paper Prototype #8',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_8.jpg'
+            }            
+        ],
+        [
+            {
+                title: 'Paper Prototype #9',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_9.jpg' 
+            },
+            {
+                title: 'Paper Prototype #10',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_10.jpg' 
+            },
+            {
+                title: 'Paper Prototype #11',
+                src: 'images/sight_seers/paper_prototypes/Paper Prototype_11.jpg'
+            }         
+        ]            
+    ];
+
+    $scope.modalObjects = {
+        text_with_image: {
+            localSrc: 'images/wta/text_with_image.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4WUJmUVdETHlxbUE/preview',
+            title: 'Text w/ Image',
+            targetModal: '#modalIframeViewer'            
+        },
+        type_hierarchy: {
+            localSrc: 'images/wta/type_hierarchy.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZUI0MExONTRvazg/preview',
+            title: 'Typography and Hierarchy',
+            targetModal: '#modalIframeViewer'            
+        },
+        color_and_emotion: {
+            localSrc: 'images/wta/color_and_emotion.jpg',
+            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZjdNcjFPWm1sd2c/preview',
+            title: 'Color and Emotion',
+            targetModal: '#modalIframeViewer'            
+        },
+        sketch_1: {
+            localSrc: 'images/wta/sketches/sketch_1.jpg',
+            driveSrc: '',
+            title: 'Sketch #1',
+            targetModal: '#modalImageViewer'
+        },
+        sketch_2: {
+            localSrc: 'images/wta/sketches/sketch_2.jpg',
+            driveSrc: '',
+            title: 'Sketch #2',
+            targetModal: '#modalImageViewer'
+        },
+        logo_prototyping: {
+            localSrc: 'images/wta/logo_prototyping/wta_logo_black.jpg',
+            driveSrc: '',
+            title: 'Logo',
+            targetModal: '#modalImageViewer'
+        },
+        home_screen: {
+            localSrc: 'images/wta/home_screen.jpg',
+            title: 'Home Screen',
+            targetModal: '#modalImageViewer'
+        }
+    };
+
+    $scope.trustSrc = function(src) {
+        var newSrc = $sce.trustAsResourceUrl(src);
+        return newSrc;
+    }
+
+    $scope.currentPrototype = {
+        src: '',
+        title: ''
+    };
+
+    $scope.openModal = function(src, title, modal){
+        $scope.currentPrototype.src = $scope.trustSrc(src);
+        $scope.currentPrototype.title = title;
+        $(modal).modal('show');
+    };
+
+    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
+    $scope.animateElementIn = function($el) {
+        var animateValue = $el.attr('value');
+        $el.removeClass('hide-item');
+        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        var animateValue = $el.attr('value');
+        $el.addClass('hide-item');
+        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
+    };
+
+    $scope.parallaxTitle = {
+        title: 'Project AtomiC',
+        color: 'dark-grey'
+    };
+    $scope.listOfImages = [
+        {
+            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
+            additionalStyles: ''
+        }
+    ];     
+   
+}
+
+WtaCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
