@@ -15,7 +15,7 @@ br
 .container
 	div
 		.row
-			.col-md-4(ng-repeat='project in workExperiences')
+			.col-md-4(ng-repeat='project in ::workExperiences')
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
@@ -46,7 +46,7 @@ br
 .container
 	div
 		.row
-			.col-md-4(ng-repeat='project in listOfProjects')
+			.col-md-4(ng-repeat='project in ::listOfProjects')
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info

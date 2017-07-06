@@ -11,7 +11,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         .row.section-header Team
         .row
-            .col-md-4.col-xs-12.col-sm-12.col-lg-4(ng-repeat='member in team')
+            .col-md-4.col-xs-12.col-sm-12.col-lg-4(ng-repeat='member in ::team')
                 .team-member-card
                     .member-name
                         |{{member.name}}
@@ -22,7 +22,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         .row.section-header My Responsibilities
         .row
-            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in responsibilities')
+            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
                 .box
                     .icon
                         .image
@@ -95,9 +95,9 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         #CarouselPaperPrototypes.carousel.slide
           .carousel-inner
-            .item(ng-repeat='prototypes in paperPrototypes', ng-class='{active: $first}')
+            .item(ng-repeat='prototypes in ::paperPrototypes', ng-class='{active: $first}')
               ul.thumbnails
-                li.col-sm-3(ng-repeat='prototype in prototypes')
+                li.col-sm-3(ng-repeat='prototype in ::prototypes')
                     img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
           nav
             ul.control-box.pager
@@ -130,9 +130,9 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         #CarouselHighFidelity.carousel.slide
           .carousel-inner
-            .item(ng-repeat='prototypes in highFidelityPrototypes', ng-class='{active: $first}')
+            .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails
-                li.col-sm-3(ng-repeat='prototype in prototypes')
+                li.col-sm-3(ng-repeat='prototype in ::prototypes')
                     img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
           nav
             ul.control-box.pager

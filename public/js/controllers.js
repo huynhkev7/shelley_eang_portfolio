@@ -44,7 +44,9 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
     });  
     
 }
+
 AppCtrl.$inject = ['$scope', '$http', '$rootScope', 'globalFunctions', '$location'];
+angular.module('myApp').controller('AppCtrl', AppCtrl);
 
 function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     $rootScope.currentBaseUrl =  $location.path();   
