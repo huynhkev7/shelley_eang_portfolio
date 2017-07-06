@@ -31,7 +31,7 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
         $rootScope.actualLocation = $location.path();
     });        
 
-   $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+   $rootScope.$watchCollection(function () {return $location.path()}, function (newLocation, oldLocation) {
        window.scrollTo(0, 0);
         if($rootScope.actualLocation === newLocation) {
             //alert('Why did you use history back?');
@@ -98,17 +98,6 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
                 console.log('Animation finished. [log triggered from callback]');
             }
         });
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
     $scope.workExperiences = [
         {
             url: 'images/g2l_logo.jpg',
@@ -178,30 +167,6 @@ MyCtrl1.$inject = ['$location', '$scope', '$timeout', '$rootScope', 'globalFunct
 function MyCtrl2($scope, $rootScope, globalFunctions, $location) {
     $rootScope.currentBaseUrl =  $location.path();    
     $rootScope.showNavbar = true;
-    $scope.parallaxTitle = {
-        title: 'About Me - Shelley Eang',
-        color: '#16a085'
-    };
-    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.listOfImages = [
-        {
-            imageUrl: 'https://i2.wp.com/bayareawebdesign.co/wp-content/uploads/2015/04/19-32-42_SHP-Edit.jpg',
-            depth: '.10',
-            additionalStyles: 'background-position: center;'
-        }     
-    ]; 
 }
 MyCtrl2.$inject = ['$scope', '$rootScope', 'globalFunctions', '$location'];
 
@@ -218,29 +183,26 @@ function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
     $rootScope.showNavbar = true;
     $rootScope.currentBaseUrl =  '/view1';
     $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
-    $scope.video = {
-        id: 'clXBiR01kUM'
-    };   
     $scope.team = [
         {
             name: 'Shelley Eang',
             role: 'UX & Visual Designer',
-            image: 'images/shelley_avatar.png'
+            image: 'images/shelley_avatar.jpg'
         },
         {
             name: 'Michael Chen',
             role: 'User Researcher',
-            image: 'images/michael_avatar.png'
+            image: 'images/michael_avatar.jpg'
         },
         {
             name: 'Khalil Somani',
             role: 'Liaison & User Researcher',
-            image: 'images/khalil_avatar.png'
+            image: 'images/khalil_avatar.jpg'
         },
         {
             name: 'Amy Tang',
             role: 'Project Manager & UX Designer',
-            image: 'images/amy_avatar.png'
+            image: 'images/amy_avatar.jpg'
         }               
     ];
     $scope.responsibilities = [
@@ -411,30 +373,6 @@ function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         $scope.currentPrototype.title = title;
         $(modal).modal('show');
     };
-
-    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.parallaxTitle = {
-        title: 'Project AtomiC',
-        color: 'dark-grey'
-    };
-    $scope.listOfImages = [
-        {
-            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
-            additionalStyles: ''
-        }
-    ]; 
 }
 Project1Ctrl.$inject = ['$scope', '$rootScope','globalFunctions', '$location', '$sce'];
 
@@ -442,10 +380,6 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/view1'   
     $rootScope.showNavbar = true;
-    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
-    $scope.video = {
-        id: 'clXBiR01kUM'
-    };   
     $scope.team = [
         {
             name: 'Shelley Eang',
@@ -639,43 +573,14 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         $scope.currentPrototype.src = $scope.trustSrc(src);
         $scope.currentPrototype.title = title;
         $(modal).modal('show');
-    };
-
-    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.parallaxTitle = {
-        title: 'Project AtomiC',
-        color: 'dark-grey'
-    };
-    $scope.listOfImages = [
-        {
-            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
-            additionalStyles: ''
-        }
-    ];     
-   
+    };   
 }
 Project2Ctrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
 
 function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {   
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/view1'   
-    $rootScope.showNavbar = true;
-    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
-    $scope.video = {
-        id: 'clXBiR01kUM'
-    };   
+    $rootScope.showNavbar = true; 
     $scope.team = [
         {
             name: 'Shelley Eang',
@@ -922,32 +827,7 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
         $scope.currentPrototype.src = $scope.trustSrc(src);
         $scope.currentPrototype.title = title;
         $(modal).modal('show');
-    };
-
-    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.parallaxTitle = {
-        title: 'Project AtomiC',
-        color: 'dark-grey'
-    };
-    $scope.listOfImages = [
-        {
-            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
-            additionalStyles: ''
-        }
-    ];     
-   
+    };   
 }
 SightSeersCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
 
@@ -956,10 +836,6 @@ function WtaCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/view1'   
     $rootScope.showNavbar = true;
-    $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
-    $scope.video = {
-        id: 'clXBiR01kUM'
-    };   
     $scope.team = [
         {
             name: 'Shelley Eang',
@@ -1205,32 +1081,7 @@ function WtaCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
         $scope.currentPrototype.src = $scope.trustSrc(src);
         $scope.currentPrototype.title = title;
         $(modal).modal('show');
-    };
-
-    $scope.skills = ['UX Design', 'Interaction Design', 'Prototyping'];
-    $scope.animateElementIn = function($el) {
-        var animateValue = $el.attr('value');
-        $el.removeClass('hide-item');
-        $el.addClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.animateElementOut = function($el) {
-        var animateValue = $el.attr('value');
-        $el.addClass('hide-item');
-        $el.removeClass('animated ' + animateValue); // this example leverages animate.css classes
-    };
-
-    $scope.parallaxTitle = {
-        title: 'Project AtomiC',
-        color: 'dark-grey'
-    };
-    $scope.listOfImages = [
-        {
-            imageUrl: 'http://www.daanelabs.com/wp-content/uploads/2015/02/Chemistry-Background-Light.jpg',
-            additionalStyles: ''
-        }
-    ];     
-   
+    };   
 }
 
 WtaCtrl.$inject = ['$scope','$rootScope', 'globalFunctions', '$location', '$sce'];
