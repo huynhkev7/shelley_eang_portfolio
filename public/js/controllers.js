@@ -111,46 +111,46 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
         {
             url: 'images/g2l_logo.jpg',
             title: 'G2L',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
-            tags: ['Fun!', 'UX', 'UI']
+            tags: ['Volunteer', 'UX']
         },
         {
             url: 'images/avanade_logo.jpg',
             title: 'Avanade',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            description: 'I interned at Avanade, an IT consulting company focused on the Microsfot platform. I helped design and develop the interface of a multi-million dollar application.',
             route: '',
-            tags: ['Healthcare', 'Social Work']
+            tags: ['Internship', 'UX', 'UI']
         }          
     ]
     $scope.listOfProjects = [
         {
             url: 'images/recovery_logo.jpg',
             title: 'Recovery',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            description: 'Using a culminiation of my skills in the user-centered design process, I helped develop Recovery, a board game to educate the public about disaster relief.',
             route: 'project1',
-            tags: ['UX', 'Visual Design']
+            tags: ['UX', 'Visual Design', 'Capstone']
         },
         {
             url: 'images/atomic_logo.jpg',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            title: 'atomiC',
+            description: 'Using my skills in UX design and user research, I helped develop a mobile prototype application aimed to track carbon foot print, impose carbon taxes, and improve overall sustainability.',
             route: 'project2',
-            tags: ['User Research']
+            tags: ['User Research', 'UX', 'Visual Design']
         },
         {
             url: 'images/sight_seers_logo.jpg',
-            title: '#2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            title: 'Sight Seers',
+            description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
             route: 'SightSeers',
-            tags: ['Videography']
+            tags: ['UX', 'User Research', 'Usability Testing']
         },
         {
             url: 'images/wta/wta_logo.jpg',
             title: 'WTA',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laboriosam voluptatem necessitatibus cum, tenetur repellat, eaque eos debitis! Quaerat.',
+            description: 'Applying core principles of visual design, I developed a high-fidelity web design mock-up of a potentially improved Washington Trails Association website.',
             route: 'Wta',
-            tags: ['Videography']
+            tags: ['Visual Design', 'Information Architecture']
         }                     
     ];    
     
