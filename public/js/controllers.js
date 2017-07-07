@@ -104,44 +104,44 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             title: 'G2L',
             description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
-            tags: ['Volunteer', 'UX']
+            tags: ['Volunteer /', 'UX ']
         },
         {
             url: 'images/avanade_logo.jpg',
             title: 'Avanade',
-            description: 'I interned at Avanade, an IT consulting company focused on the Microsfot platform. I helped design and develop the interface of a multi-million dollar application.',
+            description: 'I interned at Avanade, an IT consulting company focused on the Microsoft platform, where I helped design and develop the interface of a multi-million dollar application.',
             route: '',
-            tags: ['Internship', 'UX', 'UI']
+            tags: ['Internship /', 'UX /', 'UI']
         }          
     ]
     $scope.listOfProjects = [
         {
             url: 'images/recovery_logo.jpg',
             title: 'Recovery',
-            description: 'Using a culminiation of my skills in the user-centered design process, I helped develop Recovery, a board game to educate the public about disaster relief.',
+            description: 'Using a culmination of my skills in the user-centered design process, I helped design RECOVERY: Earthquake Edition, a board game that educates players about disaster recovery.',
             route: 'project1',
-            tags: ['UX', 'Visual Design', 'Capstone']
+            tags: ['UX /', 'Visual Design /', 'Capstone']
         },
         {
             url: 'images/atomic_logo.jpg',
             title: 'atomiC',
-            description: 'Using my skills in UX design and user research, I helped develop a mobile prototype application aimed to track carbon foot print, impose carbon taxes, and improve overall sustainability.',
+            description: 'Using my skills in UX design and user research, I helped design a mobile prototype application aimed to track carbon foot print, impose carbon taxes, and improve overall sustainability.',
             route: 'project2',
-            tags: ['User Research', 'UX', 'Visual Design']
+            tags: ['User Research /', 'UX /', 'Visual Design']
         },
         {
             url: 'images/sight_seers_logo.jpg',
-            title: 'Sight Seers',
+            title: 'Sightseers',
             description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
             route: 'SightSeers',
-            tags: ['UX', 'User Research', 'Usability Testing']
+            tags: ['UX /', 'User Research /', 'Usability Testing']
         },
         {
             url: 'images/wta/wta_logo.jpg',
             title: 'WTA',
-            description: 'Applying core principles of visual design, I developed a high-fidelity web design mock-up of a potentially improved Washington Trails Association website.',
+            description: 'Applying core principles of visual design, I developed a high-fidelity web design and mobile design mock up of a potentially improved Washington Trails Association website.',
             route: 'Wta',
-            tags: ['Visual Design', 'Information Architecture']
+            tags: ['Visual Design /', 'Information Architecture ']
         }                     
     ];    
     
@@ -187,47 +187,43 @@ function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         {
             name: 'Shelley Eang',
             role: 'UX & Visual Designer',
-            image: 'images/shelley_avatar.jpg'
         },
         {
             name: 'Michael Chen',
             role: 'User Researcher',
-            image: 'images/michael_avatar.jpg'
         },
         {
             name: 'Khalil Somani',
             role: 'Liaison & User Researcher',
-            image: 'images/khalil_avatar.jpg'
         },
         {
             name: 'Amy Tang',
-            role: 'Project Manager & UX Designer',
-            image: 'images/amy_avatar.jpg'
+            role: 'Project Manager'
         }               
     ];
     $scope.responsibilities = [
         {
-            description: 'Conducting Web Research and Competitive Analysis',
+            description: 'Conducted Web Research and Competitive Analysis',
             image: 'fa-search'
         },
         {
-            description: 'Conducting Affinity Analysis',
+            description: 'Conducted Affinity Analysis',
             image: 'fa-sticky-note-o'
         },
         {
-            description: 'Creating Persona and Scenarios',
+            description: 'Created Persona and Scenarios',
             image: 'fa-users'
         },
         {
-            description: 'Designing Low/High Fidelity Prototype',
+            description: 'Designed Low/High Fidelity Prototype',
             image: 'fa-pencil'
         },
         {
-            description: 'Conduct and Record Usability Sessions',
+            description: 'Conducted and Recorded Usability Sessions',
             image: 'fa-clipboard'
         },            
         {
-            description: 'Develop Product Video',
+            description: 'Developed Product Video',
             image: 'fa-video-camera'
         }     
     ]

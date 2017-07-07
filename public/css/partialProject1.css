@@ -99,7 +99,8 @@
 }
 
 #banner-section-recovery {
-  background-image: url("../images/recovery_logo.jpg");
+  margin-top: 50px;
+  background-image: url("../images/recovery_logo_2.jpg");
 }
 
 #banner-section-atomic {

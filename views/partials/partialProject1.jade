@@ -19,8 +19,6 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row
             .col-md-3.col-xs-12.col-sm-12.col-lg-3(ng-repeat='member in ::team')
                 .team-member-card
-                    .team-profile-image
-                        img.img-responsive.img-circle(src="{{member.image}}")
                     .member-name
                         |{{member.name}}
                     .member-role
@@ -48,14 +46,14 @@ link(rel='stylesheet', href='/css/partialProject1.css')
             .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
                 | Based on web research:
                 ul
-                    li recovery is long-term, lasting years (sometimes 10+ years)
+                    li recovery is long-term, sometimes lasting 10+ years
                     li recovery heavily involves collaboration and cooperation between emergency managers
                     li recovery does not always mean building back to the normal state
             .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
                 | Based on user surveys:
                 ul
                     li there is a lack of user knowledge on disaster recovery
-                    li participants defined recovery as short-term and survival
+                    li participants defined recovery as short-term and focused on survival
                     li participants did not mention improvements in definition
 .position
 .section
@@ -73,10 +71,11 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .section
     .container
         .row.section-header Research
+            p In the Research phase, I helped my team conduct literature research and competitive analysis. 
         .row.sub-section-header Literature Research
-            p We conducted literature research of over 70 peer reviewed and ACM research papers on disaster recovery and game mechanisms.
+            p My team and I conducted literature research of over 70 peer reviewed and Association for Computer Machinery (ACM) research papers on disaster recovery and game mechanisms.
         .row.sub-section-header Competitive Analysis
-            p We conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
+            p My team and I conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
         //- .row.sub-section-header User Research
         //-     .row
         //-         p We conducted 2 structured usability test sessions with 7 participants in total. Results from both sessions are listed below
@@ -90,6 +89,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .section#section-seven
     .container
         .row.section-header Ideation
+            p In the Ideation phase, I helped my team conduct affinity analysis, user surveys, and design a persona based on results from the survey. 
         .row.sub-section-header Affinity Analysis
             p We conducted affinity analysis of common themes on recovery and board games based on our literature research
         .row.sub-section-header User Survey
@@ -102,6 +102,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                         li 43 out of 54 like card games
                         li 42 out of 54 like competitive games, while 37 out of 54 like team/partner games
         .row.sub-section-header Persona
+                p We designed a persona based on our user survey results. 
                 div.text-center
                     img.img-responsive.thumbnail-modal(src='{{modalObjects.persona_1.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.persona_1.driveSrc, modalObjects.persona_1.title, modalObjects.persona_1.targetModal)')
 
@@ -109,7 +110,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .section#section-eight
     .container
         .row.section-header Low Fidelity Prototype
-            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
     .container
         #Carousel.carousel.slide
           .carousel-inner
@@ -129,6 +130,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .section#section-nine
     .container
         .row.section-header User Test &amp; Design Phase
+            p In this phase, I helped my team conduct usability tests and design our high fidelity prototype.
         .row.sub-section-header Usability Tests
             .row
                 p My team and I conducted two structured usability test sessions that simulated real game play. The first session had a group of 3 players and the second session had a group of 4 players. Results from the usability test sessions were from the low fidelity prototypes.
@@ -139,7 +141,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                         li All players enjoyed the game
                         li Players (who originally were unacquainted) collaborated with each other
         .row.sub-section-header High Fidelity Prototype
-            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+            p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. We made changes based on the results of our usability test sessions. In addition to design changes, we added a TRADE card. 
     .container
         #CarouselHighFidelity.carousel.slide
           .carousel-inner
