@@ -167,16 +167,17 @@ link(rel='stylesheet', href='/css/partialProject1.css')
 .position
 .section#section-eleven
     .container
-        .row.section-header Additional Resources
+        .row.section-header Additional Resources         
         .row.sub-section-header Product Video
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
-            ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', end='20', width='100%', height='500px')
+            ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', end='20', width='100%', height='500px')         
         .row.sub-section-header Process Book
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My team and I designed the images for the cards. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
-            #pdf-container.visible-lg.visible-md.visible-sm
-                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='700')
-            div.visible-xs
-                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4b3RWemMxTkgzemc/preview', width='100%', height='500')
+            br
+            .row.text-center
+                a(href="https://drive.google.com/file/d/0B3CGwXp9ak2aZl9fWEpDa1pGUVU/view?usp=sharing",  target="_blank")
+                    .button(type="submit") View Process Book   
+
 // Gallery Modal
 #galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')
