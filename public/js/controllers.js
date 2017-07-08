@@ -107,7 +107,7 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             title: 'G2L',
             description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
-            tags: ['Volunteer /', 'UX ']
+            tags: ['Internship /', 'UX ']
         },
         {
             url: 'images/avanade_logo.jpg',
@@ -342,6 +342,40 @@ function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         ],
         [
             {
+                title: 'Coordinate Card',
+                src: 'images/recovery_high_fidelity/go/coordinate_card.jpg'
+            },
+            {
+                title: 'Freeway Card',
+                src: 'images/recovery_high_fidelity/go/freeway_card.jpg'
+            }       
+        ],
+        [
+            {
+                title: 'Protect Card',
+                src: 'images/recovery_high_fidelity/other/protect.jpg'
+            },
+            {
+                title: 'Trade Card',
+                src: 'images/recovery_high_fidelity/other/trade.jpg'
+            }       
+        ],  
+        [
+            {
+                title: 'Remove Business Card',
+                src: 'images/recovery_high_fidelity/removal/remove_business.jpg'
+            },
+            {
+                title: 'Remove Police Station Card',
+                src: 'images/recovery_high_fidelity/removal/remove_police_station.jpg'
+            },
+            {
+                title: 'Remove School Card',
+                src: 'images/recovery_high_fidelity/removal/remove_school.jpg'
+            }                  
+        ],                      
+        [
+            {
                 title: 'Back of Card',
                 src: 'images/back_of_card.jpg'
             }      
@@ -404,11 +438,11 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         },
         {
             description: 'Create Persona and Scenarios',
-            image: 'fa-sticky-note-o'
+            image: 'fa-users'
         },
         {
             description: 'Develop Sitemap',
-            image: 'fa-users'
+            image: 'fa-map'
         },
         {
             description: 'Design Screens of the Mobile Prototype',
@@ -416,19 +450,19 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         },
         {
             description: 'Edit and Finalize Lo and Hi-Fi Design Mockups',
-            image: 'fa-clipboard'
+            image: 'fa-wrench'
         },            
         {
             description: 'Facilitate, Moderate, and Note-take Usability Studies',
-            image: 'fa-video-camera'
+            image: 'fa-clipboard'
         },
         {
             description: 'Collaborate in Creating Group Presentations',
-            image: 'fa-video-camera'
+            image: 'fa-file-powerpoint-o'
         },
         {
             description: 'Contribute and Finalize Final Report',
-            image: 'fa-video-camera'
+            image: 'fa-book'
         }                    
     ]
 
@@ -601,31 +635,31 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
         },
         {
             description: 'Create 2 Personas and Scenarios',
-            image: 'fa-sticky-note-o'
-        },
-        {
-            description: 'Create 2 Storyboards',
             image: 'fa-users'
         },
         {
+            description: 'Create 2 Storyboards',
+            image: 'fa-film'
+        },
+        {
             description: 'Develop a Sitemap',
-            image: 'fa-pencil'
+            image: 'fa-map'
         },
         {
             description: 'Design Screens of the Mobile Prototype',
-            image: 'fa-clipboard'
+            image: 'fa-pencil'
         },            
         {
             description: 'Edit and Finalize Lo and Hi-Fi Design Mockups',
-            image: 'fa-video-camera'
+            image: 'fa-wrench'
         },
         {
             description: 'Facilitate, Moderate, and Note-take Usability Studies',
-            image: 'fa-video-camera'
+            image: 'fa-clipboard'
         },
         {
             description: 'Collaborate in Creating Group Presentations',
-            image: 'fa-video-camera'
+            image: 'fa-file-powerpoint-o'
         }                    
     ]
 
@@ -856,31 +890,31 @@ function WtaCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
         },
         {
             description: 'Conduct Heuristic Evaluation',
-            image: 'fa-sticky-note-o'
+            image: 'fa-clipboard'
         },
         {
             description: 'Explore Typography and Visual Hierarchy',
-            image: 'fa-users'
+            image: 'fa-text-height'
         },
         {
             description: 'Select Brand Colors',
-            image: 'fa-pencil'
+            image: 'fa-hand-o-up'
         },
         {
             description: 'Design New Logo',
-            image: 'fa-clipboard'
+            image: 'fa-pencil'
         },            
         {
             description: 'Develop Sitemap',
-            image: 'fa-video-camera'
+            image: 'fa-map'
         },
         {
             description: 'Design Interfaces of the Mobile and Web Prototype',
-            image: 'fa-video-camera'
+            image: 'fa-wrench'
         },
         {
             description: 'Summarize All Design and Branding Choices in Brand Book',
-            image: 'fa-video-camera'
+            image: 'fa-book'
         }                    
     ]
 

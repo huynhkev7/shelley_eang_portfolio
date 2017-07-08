@@ -112,9 +112,9 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.section-header Low Fidelity Prototype
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. My contributions included designing all three AFTERSHOCK cards, BUSINESS card, FIRE STATION card, SCHOOL card, TRADE card, EARTHQUAKE INSURANCE card, and team avatar cards. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
     .container
-        #Carousel.carousel.slide
+        #Carousel.carousel.slide(data-interval="false")
           .carousel-inner
-            .item(ng-repeat='prototypes in ::lowFidelityPrototypes', ng-class='{active: $first}')
+            .item(ng-repeat='prototypes in ::lowFidelityPrototypes', ng-class='{active: $first}', data='{{::$index}}')
               ul.thumbnails
                 li.col-sm-3(ng-repeat='prototype in ::prototypes')
                     img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
@@ -143,7 +143,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.sub-section-header High Fidelity Prototype
             p Design layouts were largely inspired by the existing card game called TOURING from Winning Moves Inc. We made changes based on the results of our usability test sessions. In addition to design changes, we added a TRADE card. 
     .container
-        #CarouselHighFidelity.carousel.slide
+        #CarouselHighFidelity.carousel.slide(data-interval="false")
           .carousel-inner
             .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails

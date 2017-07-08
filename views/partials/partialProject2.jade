@@ -80,8 +80,8 @@ link(rel='stylesheet', href='/css/partialProject1.css')
                 p Our persona was created based on our target group and user research
                 div.text-center
                     img.img-responsive.thumbnail-modal(src='{{modalObjects.persona_1.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.persona_1.driveSrc, modalObjects.persona_1.title, modalObjects.persona_1.targetModal)')        
-        .row.sub-section-header Storyboard
-            p Still waiting on images....
+        //- .row.sub-section-header Storyboard
+        //-     p Still waiting on images....
         .row.sub-section-header Sitemap
                 div.text-center
                     img.img-responsive.thumbnail-modal(src='{{modalObjects.sitemap.localSrc}}', type='button', data-toggle='modal', width='80%',height='80%', ng-click='openModal(modalObjects.sitemap.localSrc, modalObjects.sitemap.title, modalObjects.sitemap.targetModal)')        
@@ -108,7 +108,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         .row.section-header High Fidelity Prototypes
     .container
-        #CarouselHighFidelity.carousel.slide
+        #CarouselHighFidelity.carousel.slide(data-interval="false")
           .carousel-inner
             .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails

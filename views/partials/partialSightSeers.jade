@@ -94,7 +94,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.sub-section-header Paper Prototype
             p Using the sitemap, my team divided sections of the system to allow each member to create designs for the paper prototype. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
     .container
-        #CarouselPaperPrototypes.carousel.slide
+        #CarouselPaperPrototypes.carousel.slide(data-interval="false")
           .carousel-inner
             .item(ng-repeat='prototypes in ::paperPrototypes', ng-class='{active: $first}')
               ul.thumbnails
@@ -129,7 +129,7 @@ link(rel='stylesheet', href='/css/partialProject1.css')
     .container
         .row.section-header High Fidelity Prototypes
     .container
-        #CarouselHighFidelity.carousel.slide
+        #CarouselHighFidelity.carousel.slide(data-interval="false")
           .carousel-inner
             .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
               ul.thumbnails
