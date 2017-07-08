@@ -31,6 +31,9 @@ block body
     .container#app-container   
       div
         div(ng-view).view-container
+    .container#button-up-container
+      #back-to-top
+        i.fa.fa-arrow-circle-up.fa-6(ng-click='scrollToTop()')
     #footer
       | &copy; 2017 Shelley Eang  
   

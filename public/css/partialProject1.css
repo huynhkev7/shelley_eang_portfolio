@@ -109,7 +109,7 @@
 
 #banner-section-sight-seers {
   margin-top: 80px;
-  background-image: url("../images/sight_seers_logo.jpg");
+  background-image: url("../images/sightseers-seers_logo_2.jpg");
 }
 
 #banner-section-wta {
@@ -134,14 +134,14 @@
 }
 
 .member-name {
-  text-align: center;
+  /*text-align: center;*/
   font-weight: 350;
   font-size: 20pt;
   padding: 5px 0px;
 }
 
 .member-role {
-  text-align: center;
+  /*text-align: center;*/
   font-weight: 250;
   font-size: 15pt;
 }

@@ -1,5 +1,28 @@
 /* app css stylesheet */
+.fa:hover {
+  color: #962d22;
+    -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  /* ...and now for the proper property */
+  transition:1s;
+  cursor: pointer;
+}
 
+#back-to-top{
+  float: right;
+}
+
+#back-to-top .fa {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+#button-up-container {
+  height: 60px;
+  padding-top: 0px;
+}
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: transparent;
     border: transparent;

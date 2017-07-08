@@ -25,6 +25,9 @@ function AppCtrl($scope, $http, $rootScope, globalFunctions, $location) {
       $location.path('/' + route);
   }
 
+  $scope.scrollToTop = function(){
+      window.scrollTo(0, 0);
+  }
    //Bind the `$locationChangeSuccess` event on the rootScope, so that we dont need to 
    //bind in induvidual controllers.
    $rootScope.$on('$locationChangeSuccess', function() {
