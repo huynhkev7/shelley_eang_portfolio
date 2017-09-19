@@ -115,16 +115,16 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             description: 'I interned at Avanade, an IT consulting company focused on the Microsoft platform, where I helped design and develop the interface of a multi-million dollar application.',
             route: '',
             tags: ['Internship /', 'UX /', 'UI']
-        },
+        }           
+    ]
+    $scope.listOfProjects = [
         {
             url: 'images/recovery_logo.jpg',
             title: 'Recovery',
             description: 'Using a culmination of my skills in the user-centered design process, I helped design RECOVERY: Earthquake Edition, a board game that educates players about disaster recovery.',
             route: 'project1',
             tags: ['UX /', 'Visual Design /', 'Capstone']
-        }            
-    ]
-    $scope.listOfProjects = [
+        }, 
         {
             url: 'images/atomic_logo.jpg',
             title: 'atomiC',

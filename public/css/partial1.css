@@ -199,7 +199,10 @@ a.btn {
   font-size: 35pt;
 }
 
-
+#project-sub-title {
+  font-size: 11pt;
+  font-style: italic;
+}
 
 .profile-card {
     /*background-color: #222222;*/
