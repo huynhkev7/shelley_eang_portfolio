@@ -8,6 +8,9 @@
   padding-right: 10%;
   padding-left:10%;
 }
+#diagonal-container {
+  width: 80%;
+}
 figure.snip0057 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
@@ -35,7 +38,7 @@ figure.snip0057 .image {
 figure.snip0057 .image img {
   position: relative;
   display: block;
-  left: -15%;
+  /* left: -15%; */
   z-index: 1;
   -webkit-transform: skew(15deg);
   transform: skew(15deg);
@@ -111,7 +114,9 @@ figure.snip0057.blue .position {
   background: #20638f;
 }
 figure.snip0057.red .position {
-  background: #962d22;
+  background: #ddd;
+  padding:0px;
+  height: 1px;
 }
 figure.snip0057.yellow .position {
   background: #bf6516;
@@ -174,7 +179,7 @@ figure.snip0057.hover:before {
 }
 
 .fa {
-  font-size: 30pt;
+  font-size: 25pt;
   margin: 10px;
 }
  
@@ -193,11 +198,11 @@ a {
 }
 
 #contact-me {
-  font-size: 20pt;
+  font-size: 30pt;
 }
 
 #contact-info {
-  font-size: 12pt;
+  font-size: 20pt;
   padding-top: 10px;
   padding-bottom: 10px;
 }

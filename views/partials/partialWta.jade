@@ -1,5 +1,7 @@
 link(rel='stylesheet', href='/css/partialProject1.css')
-#banner-section-wta.banner-section
+div
+    img.img-responsive(src='images/banners/wta.jpg')
+//- #banner-section-wta.banner-section
 .position
 .section
     .container
@@ -72,25 +74,25 @@ link(rel='stylesheet', href='/css/partialProject1.css')
         .row.section-header Final Deliverable
             p I created high fidelity web and mobile mock ups, and a business card. I also included my brand book and video. 
         .row
-            .col-md-4.col-lg-4.col-xs-12.col-sm-12
+            .col-md-6.col-lg-6.col-xs-12.col-sm-12
                 .row.sub-section-header WEB DESIGN MOCK-UPS
                         div.text-center
-                            img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
-            .col-md-4.col-lg-4.col-xs-12.col-sm-12
-                .row.sub-section-header MOBILE DESIGN MOCK-UPS
-                        div.text-center
-                            img.img-responsive.thumbnail-modal(src='{{modalObjects.wta_home.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.wta_home.localSrc, modalObjects.wta_home.title, modalObjects.wta_home.targetModal)')        
-            .col-md-4.col-lg-4.col-xs-12.col-sm-12
+                            img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
+            //- .col-md-4.col-lg-4.col-xs-12.col-sm-12
+            //-     .row.sub-section-header MOBILE DESIGN MOCK-UPS
+            //-             div.text-center
+            //-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.wta_home.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.wta_home.localSrc, modalObjects.wta_home.title, modalObjects.wta_home.targetModal)')        
+            .col-md-6.col-lg-6.col-xs-12.col-sm-12
                 .row.sub-section-header BUSINESS CARD
                         div.text-center
-                            img.img-responsive.thumbnail-modal(src='{{modalObjects.business_card.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.business_card.localSrc, modalObjects.business_card.title, modalObjects.business_card.targetModal)') 
+                            img.img-responsive.thumbnail-modal(src='{{modalObjects.business_card.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.business_card.localSrc, modalObjects.business_card.title, modalObjects.business_card.targetModal)') 
         .row.sub-section-header Brand Book
             #pdf-container.visible-lg.visible-md.visible-sm
                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='700')
             div.visible-xs
                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='500') 
         .row.sub-section-header WTA PRODUCT VIDEO
-                ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', end='20', width='100%', height='500px')
+                ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', width='100%', height='500px')
 
 // Gallery Modal
 #galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')

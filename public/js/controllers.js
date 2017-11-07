@@ -103,14 +103,42 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
         });
     $scope.workExperiences = [
         {
-            url: 'images/g2l_logo.jpg',
+            url: 'images/portfolio_headers/g2l.jpg',
+            title: 'Sustainability Guild International',
+            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            route: '',
+            tags: ['Internship /', 'UX ']
+        },
+        {
+            url: 'images/portfolio_headers/g2l.jpg',
+            title: 'Freedom Project',
+            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            route: '',
+            tags: ['Internship /', 'UX ']
+        },
+        {
+            url: 'images/portfolio_headers/g2l.jpg',
+            title: 'Asian Law Alliance',
+            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            route: '',
+            tags: ['Internship /', 'UX ']
+        },
+        {
+            url: 'images/portfolio_headers/g2l.jpg',
+            title: 'Boston Shakespeare Project',
+            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            route: '',
+            tags: ['Internship /', 'UX ']
+        },
+        {
+            url: 'images/portfolio_headers/g2l.jpg',
             title: 'G2L',
             description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
             tags: ['Internship /', 'UX ']
         },
         {
-            url: 'images/avanade_logo.jpg',
+            url: 'images/portfolio_headers/avanade_logo.jpg',
             title: 'Avanade',
             description: 'I interned at Avanade, an IT consulting company focused on the Microsoft platform, where I helped design and develop the interface of a multi-million dollar application.',
             route: '',
@@ -119,33 +147,33 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     ]
     $scope.listOfProjects = [
         {
-            url: 'images/recovery_logo.jpg',
-            title: 'Recovery',
+            url: 'images/portfolio_headers/recovery.jpg',
+            title: 'RECOVERY',
             description: 'Using a culmination of my skills in the user-centered design process, I helped design RECOVERY: Earthquake Edition, a board game that educates players about disaster recovery.',
             route: 'project1',
             tags: ['UX /', 'Visual Design /', 'Capstone']
         }, 
         {
-            url: 'images/atomic_logo.jpg',
+            url: 'images/portfolio_headers/atomic_logo.jpg',
             title: 'atomiC',
             description: 'Using my skills in UX design and user research, I helped design a mobile prototype application aimed to track carbon foot print, impose carbon taxes, and improve overall sustainability.',
             route: 'project2',
             tags: ['User Research /', 'UX /', 'Visual Design']
         },
         {
-            url: 'images/sight_seers_logo.jpg',
-            title: 'Sightseers',
-            description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
-            route: 'SightSeers',
-            tags: ['UX /', 'User Research /', 'Usability Testing']
-        },
-        {
-            url: 'images/wta/wta_logo.jpg',
+            url: 'images/portfolio_headers/wta.jpg',
             title: 'WTA',
             description: 'Applying principles of visual design, I developed a high-fidelity web design and mobile design mock up of a potentially improved Washington Trails Association website.',
             route: 'Wta',
             tags: ['Visual Design /', 'Information Architecture']
-        }                     
+        },   
+        {
+            url: 'images/portfolio_headers/sightseers.jpg',
+            title: 'Sightseers',
+            description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
+            route: 'SightSeers',
+            tags: ['UX /', 'User Research /', 'Usability Testing']
+        }                  
     ];    
     
     var $projectAnchor = document.getElementById('projects-content');

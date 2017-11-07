@@ -19,7 +19,6 @@ br
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
-						//- img.profile-pic(src='https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg')
 						h2.hvr-underline-from-center {{project.title}}
 						div
 							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
@@ -37,34 +36,7 @@ br
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
-						//- img.profile-pic(src='https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg')
 						h2.hvr-underline-from-center {{project.title}}
 						div
 							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
 						div {{project.description}}
-//- br
-//- br
-//- .page-wrapper
-//- 	.row
-//- 		.col-lg-12.text-center
-//- 			#project-title(style="font-family: Quicksand;") Latest Projects
-//- 	br
-//- 	//- .container
-//- 	//- 	.col-lg-12
-//- 	//- 		card-item(ng-repeat='project in listOfProjects', url='{{project.url}}', title='{{project.title}}', description='{{project.description}}', route='{{project.route}}', tags="{{project.tags}}")
-//- 	//- br
-//- 	//- br
-//- 	//- br
-//- .container
-//- 	div
-//- 		.row
-//- 			.col-md-4(ng-repeat='project in ::listOfProjects')
-//- 				.profile-card.text-center(ng-click='goToProject(project.route)')
-//- 					img.img-responsive(src='{{project.url}}')
-//- 					.profile-info
-//- 						//- img.profile-pic(src='https://pbs.twimg.com/profile_images/711000557742395396/jzm8hqwW.jpg')
-//- 						h2.hvr-underline-from-center {{project.title}}
-//- 						div
-//- 							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
-//- 						div {{project.description}}
-
