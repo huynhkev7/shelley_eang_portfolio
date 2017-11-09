@@ -103,46 +103,52 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
         });
     $scope.workExperiences = [
         {
-            url: 'images/portfolio_headers/g2l.jpg',
+            url: 'images/portfolio_headers/guild.jpg',
             title: 'Sustainability Guild International',
-            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            description: 'Through a user centered design process, I designed a new website for a non-profit aiming to provide programs and resources to communities in Boston.',
             route: '',
-            tags: ['Internship /', 'UX ']
+            tags: ['Internship /', 'UX /', 'UI'],
+            class: 'guild'
         },
         {
-            url: 'images/portfolio_headers/g2l.jpg',
+            url: 'images/portfolio_headers/freedom.jpg',
             title: 'Freedom Project',
-            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            description: 'As part of the 12-hour \“Design Like Mad\” event, I helped designed logos and collaterals for a non-profit to promote to non violent communication, mindfulness, and racial equity.',
             route: '',
-            tags: ['Internship /', 'UX ']
+            tags: ['Design Marathon /', 'Graphic Design'],
+            class: ''
         },
         {
-            url: 'images/portfolio_headers/g2l.jpg',
+            url: 'images/portfolio_headers/ala.jpg',
             title: 'Asian Law Alliance',
-            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
+            description: 'Appling core visual design concepts, I designed event flyers, letters, and social media banners for a non-profit focused in providing access to basic human and legal rights.',
             route: '',
-            tags: ['Internship /', 'UX ']
+            tags: ['Internship /', 'Graphic Design '],
+            class: ''
         },
-        {
-            url: 'images/portfolio_headers/g2l.jpg',
-            title: 'Boston Shakespeare Project',
-            description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
-            route: '',
-            tags: ['Internship /', 'UX ']
-        },
+        // {
+        //     url: 'images/portfolio_headers/g2l.jpg',
+        //     title: 'Boston Shakespeare Project',
+        //     description: 'Designed infographic to communicate key indicators and outcomes to prospective donors for a non-profit focused in providing art and humanity programs to under-resourced youth.',
+        //     route: '',
+        //     tags: ['Internship /', 'Visual Design '],
+        //     class: 'boston'
+        // },
         {
             url: 'images/portfolio_headers/g2l.jpg',
             title: 'G2L',
             description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
-            tags: ['Internship /', 'UX ']
+            tags: ['Internship /', 'UX '],
+            class: ''
         },
         {
-            url: 'images/portfolio_headers/avanade_logo.jpg',
+            url: 'images/portfolio_headers/avanade.jpg',
             title: 'Avanade',
             description: 'I interned at Avanade, an IT consulting company focused on the Microsoft platform, where I helped design and develop the interface of a multi-million dollar application.',
             route: '',
-            tags: ['Internship /', 'UX /', 'UI']
+            tags: ['Internship /', 'UX /', 'UI'],
+            class: ''
         }           
     ]
     $scope.listOfProjects = [
@@ -151,28 +157,32 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             title: 'RECOVERY',
             description: 'Using a culmination of my skills in the user-centered design process, I helped design RECOVERY: Earthquake Edition, a board game that educates players about disaster recovery.',
             route: 'project1',
-            tags: ['UX /', 'Visual Design /', 'Capstone']
+            tags: ['UX Design /', 'User Research /', 'Capstone'],
+            class: ''
         }, 
         {
-            url: 'images/portfolio_headers/atomic_logo.jpg',
+            url: 'images/portfolio_headers/atomic.jpg',
             title: 'atomiC',
             description: 'Using my skills in UX design and user research, I helped design a mobile prototype application aimed to track carbon foot print, impose carbon taxes, and improve overall sustainability.',
             route: 'project2',
-            tags: ['User Research /', 'UX /', 'Visual Design']
+            tags: ['UX Design /', 'User Research'],
+            class: ''
         },
         {
             url: 'images/portfolio_headers/wta.jpg',
             title: 'WTA',
             description: 'Applying principles of visual design, I developed a high-fidelity web design and mobile design mock up of a potentially improved Washington Trails Association website.',
             route: 'Wta',
-            tags: ['Visual Design /', 'Information Architecture']
+            tags: ['Redesign /', 'Visual Design /', 'Branding'],
+            class: ''
         },   
         {
             url: 'images/portfolio_headers/sightseers.jpg',
             title: 'Sightseers',
             description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
             route: 'SightSeers',
-            tags: ['UX /', 'User Research /', 'Usability Testing']
+            tags: ['UX Design /', 'User Research '],
+            class: ''
         }                  
     ];    
     

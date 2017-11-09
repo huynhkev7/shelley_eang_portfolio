@@ -10,6 +10,9 @@
   cursor: pointer;
 }
 
+.banner-image {
+  margin-top: 100px;
+}
 #back-to-top{
   float: right;
 }

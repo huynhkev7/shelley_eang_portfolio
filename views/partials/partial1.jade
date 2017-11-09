@@ -19,7 +19,7 @@ br
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
-						h2.hvr-underline-from-center {{project.title}}
+						h2(class="{{project.class}}").hvr-underline-from-center {{project.title}}
 						div
 							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
 						div {{project.description}}
@@ -27,7 +27,7 @@ br
 	.row
 		.col-lg-12.text-center
 			#project-title(style="font-family: Quicksand;") Work Experiences 
-			#project-sub-title Note: Work items are non-clickable. Work experience details are confidential due to signed non-disclosure agreements (NDA).
+			#project-sub-title Note: Work items are non-clickable at the moment. More details for work experiences will be provided by end of November 2017.
 	br
 .container
 	div
@@ -36,7 +36,7 @@ br
 				.profile-card.text-center(ng-click='goToProject(project.route)')
 					img.img-responsive(src='{{project.url}}')
 					.profile-info
-						h2.hvr-underline-from-center {{project.title}}
+						h2(class="{{project.class}}").hvr-underline-from-center {{project.title}}
 						div
 							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
 						div {{project.description}}
