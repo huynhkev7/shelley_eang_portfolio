@@ -1,3 +1,10 @@
+.borderBlack {
+  border: 1px solid black;
+}
+.borderBlue {
+  border: 1px solid blue;
+}
+
 /* app css stylesheet */
 .fa:hover {
   color: #962d22;
@@ -244,3 +251,38 @@ div.container {
   padding: 10px 10px;
 }
 
+
+/** Common CSS **/
+.list-not-decorated {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15pt;
+}
+
+.section-container-10-0 {
+  padding: 10% 0%;
+}
+.section-container-10-10 {
+  padding: 10% 10%;
+}
+.alert-success {
+  font-size: 30pt;
+  text-align: center;
+} 
+.stats-contaner {
+  margin: 1%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.stats-value {
+  font-size: 50pt;
+  font-weight: bold;
+}
+.stats-line {
+  font-size: 15pt;
+  font-weight: bold;
+}
+.stats-description {
+  font-size: 15pt;
+}

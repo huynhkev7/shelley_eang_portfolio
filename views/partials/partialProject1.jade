@@ -1,50 +1,14 @@
 link(rel='stylesheet', href='/css/partialProject1.css')
 div
     img.banner-image.img-responsive(src='images/banners/recovery.jpg')
-//- #banner-section-recovery.banner-section
-//p.banner-header-text RECOVERY: Earthquake Edition
-        //- video-bg(video-id='video.id')
 .position
-.section
-    .container
-        .row.section-header Overview
-        .row
-            p For 2 quarters (20 weeks), I worked in a team of four undergraduate students to create a card game prototype to teach college students about earthquake recovery. The idea was proposed to my team by our sponsor, Scott Miles from The Center for Collaborative Systems for Security, Safety, and Regional Resilience (CoSSaR).
-        .row.alert.alert-success
-            | This project won 
-            strong People’s Choice Runner Up Award 
-            | at the Human-Centered Design & Engineering showcase where over 20 undergraduate and graduate capstone projects were featured. 
-.position
-.section
-    .container
-        .row.section-header Team
-        .row
-            .col-md-3.col-xs-12.col-sm-12.col-lg-3(ng-repeat='member in ::team')
-                .team-member-card
-                    .member-name
-                        |{{member.name}}
-                    .member-role
-                        |{{member.role}}
-.position
-.section
-    .container
-        .row.section-header My Responsibilities
-        .row
-            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
-                .box
-                    .icon
-                        .image
-                            i.fa(class='{{responsibility.image}}')
-                        .info
-                            .title {{responsibility.description}}
-                    .space
-.position
-.section
-    .container
+//Introduction Section
+.container
+    .col-md-9.col-lg-9.col-sm-9.borderBlack
+        h1 RECOVERY: Earthquake Edition
         .row.section-header Problem Statement
         .row
             p Earthquake recovery is a probable threat in the Pacific Northwest. 
-        
             .col-lg-6.col-md-6.col-sm-12.col-xs-12.section-tile
                 | Based on web research:
                 ul
@@ -56,23 +20,115 @@ div
                 ul
                     li there is a lack of user knowledge on disaster recovery
                     li participants defined recovery as short-term and focused on survival
-                    li participants did not mention improvements in definition
-.position
-.section
-    .container
+                    li participants did not mention improvements in definition    
         .row.section-header Design Questions
-        .container.design-question-statement
-            span “
-            | What does recovery look like after a disaster? What are real world examples of approaches and challenges to disaster recovery?
-            span ”
-        .container.design-question-statement
-            span “
-            | What types of existing board game mechanisms are there? 
-            span ”
+            .design-question-statement
+                span “
+                | What does recovery look like after a disaster? What are real world examples of approaches and challenges to disaster recovery?
+                span ”
+            .design-question-statement
+                span “
+                | What types of existing board game mechanisms are there? 
+                span ”   
+        .row.section-header Solution
+            p RECOVERY: Earthquake Edition is an educational card game adapted from the existing card game called TOURING from Winning Moves Inc. RECOVERY edu- cates its players on earthquake recovery. In this 3-4 player game, each player takes on the role of an emergency manager of their own city, all of which have been struck by an earthquake. The goal of the game is to rebuild your city in- cluding houses, businesses, fire stations, and schools.                     
+    .col-md-3.col-lg-3.com-sm-3.borderBlue
+        h3 Duration
+        p 20 weeks
+        h3 Team
+        ul.list-not-decorated 
+            li Shelley Eang
+            li Michael Chen
+            li Khalil Somani
+            li Amy Tang
+        h3 My Role
+        ul.list-not-decorated 
+            li UX/UI
+            li Visual Designer
+            li User Researcher
+        h3 Skills
+        ul.list-not-decorated 
+            li Illustrator
+            li Figma             
+//Details Section
+.position
+.container 
+    .col-md-12.col-lg-12.col-sm-12.borderBlack
+        .section-container-10-0
+            .row.section-header Overview
+            .row
+                p For 2 quarters (20 weeks), I worked in a team of four undergraduate students to create a card game prototype to teach college students about earthquake recovery. The idea was proposed to my team by our sponsor, Scott Miles from The Center for Collaborative Systems for Security, Safety, and Regional Resilience (CoSSaR).
+//Impact Section
+.row.alert.alert-success
+    .section-container-10-10
+        | This project won 
+        strong People’s Choice Runner Up Award 
+        | at the Human-Centered Design & Engineering showcase where over 20 undergraduate and graduate capstone projects were featured. 
+//Details Section
+.position
+.container 
+    .col-md-12.col-lg-12.col-sm-12.borderBlack
+        .section-container-10-0
+            .row.section-header My Responsibilities
+            .row
+                .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
+                    .box
+                        .icon
+                            .image
+                                i.fa(class='{{responsibility.image}}')
+                            .info
+                                .title {{responsibility.description}}
+                        .space
+//Details Section
+.position
+.container 
+    .col-md-12.col-lg-12.col-sm-12.borderBlack
+        .section-container-10-0
+            .row.section-header Research
+            .row
+                p My team and I conducted literature research of over 70 peer reviewed and Association for Computer Machinery (ACM) research papers on disaster recovery and game mechanisms.
+                p(style='font-weight: bold') Email me for the articles I read.
+            .row.sub-section-header Existing Competitive Games
+                p My team and I conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
+            .row
+                .col-md-12.col-lg-12.col-sm-12
+                //to add games
+//Details Section
+.position
+.container 
+    .col-md-12.col-lg-12.col-sm-12.borderBlack
+        .section-container-10-0
+            .row.section-header Ideation
+            .row
+                p Disaster recovery is a complex process that many college students often do not know about or have little understanding of. My team and I conducted user research in the form of user surveys at the University of Washington to gain a better understanding of our target audience.
+            .row.sub-section-header User Survey Results
+            .row
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-value 65%
+                        .stats-line of Respondents
+                        .stats-description believed recovery was about returning to “normal"
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-value 65%
+                        .stats-line of Respondents
+                        .stats-description believed recovery was about returning to “normal"                
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-value 65%
+                        .stats-line of Respondents
+                        .stats-description believed recovery was about returning to “normal"                
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-value 65%
+                        .stats-line of Respondents
+                        .stats-description believed recovery was about returning to “normal"                
+
+
 .position
 .section
     .container
-        .row.section-header Research
+        .row.section-header Ideation
             p In the Research phase, I helped my team conduct literature research and competitive analysis. 
         .row.sub-section-header Literature Research
             p My team and I conducted literature research of over 70 peer reviewed and Association for Computer Machinery (ACM) research papers on disaster recovery and game mechanisms.
