@@ -1,37 +1,131 @@
 link(rel='stylesheet', href='/css/partialProject1.css')
 div
     img.banner-image.img-responsive(src='images/banners/wta.jpg')
-//- #banner-section-wta.banner-section
-.position
-.section
-    .container
-        .row.section-header Overview
-        .row
-            p HCDE 308 is 10-week course that focuses on the foundations of visual communication in the Human Centered Design & Engineering department. The purpose of this class was to individually re-design the aesthetics and information architecture of a website. Out of many preselected client options given by my professor, Daniela Rosner, I selected the Washington Trails Association (WTA) to redesign. The client was not a real client but an example for exploratory learning purposes.
-            p I had to identify the clients organization and business goals in order to make the website as user-friendly as possible. I was able to iterate on design mockups through milestone assignments such as visual hierarchy, typography, color scheme, and brand design. My redesign uses visual communication design principles to enhance the client’s communication goals, as well as improving the overall visual design.
-.position
-.section
-    .container
-        .row.section-header My Responsibilities
-        .row
-            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
-                .box
-                    .icon
-                        .image
-                            i.fa(class='{{responsibility.image}}')
-                        .info
-                            .title {{responsibility.description}}
-                    .space
-        .row
-            .sub-sub-section-header TOOLS: Adobe Illustrator, paper sketches
-.position
-.section
-    .container
+//Introduction Section
+.container
+    .col-md-9.col-lg-9.col-sm-9
+        .project-title Washington Trails Association (WTA)
         .row.section-header Design Questions
-        .container.design-question-statement
-            span “
-            | How could redesign the current website to best communicate the three main goals of nature, exploration, and community?
-            span ”
+            .design-question-statement
+                span “
+                | How could redesign the current website to best communicate the three main goals of nature, exploration, and community?
+                span ”   
+    .col-md-3.col-lg-3.com-sm-3
+        h3 Duration
+        p 10 weeks
+        //- h3 Team
+        //- ul.list-not-decorated 
+        //-     li Shelley Eang
+        //-     li Sean Hoon
+        //-     li Michael Kozlowski
+        //-     li Lacey Peil
+        h3 My Role
+        ul.list-not-decorated 
+            li Visual Designer
+        h3 Skills
+        ul.list-not-decorated 
+            li Adobe Illustrator
+            li Paper Sketches
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Overview
+            .row
+                p HCDE 308 is 10-week course that focuses on the foundations of visual communication in the Human Centered Design & Engineering department. The purpose of this class was to individually re-design the aesthetics and information architecture of a website. Out of many preselected client options given by my professor, Daniela Rosner, I selected the Washington Trails Association (WTA) to redesign. The client was not a real client but an example for exploratory learning purposes.
+                p I had to identify the clients organization and business goals in order to make the website as user-friendly as possible. I was able to iterate on design mockups through milestone assignments such as visual hierarchy, typography, color scheme, and brand design. My redesign uses visual communication design principles to enhance the client’s communication goals, as well as improving the overall visual design.
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header My Responsibilities
+            .row
+                .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
+                    .box
+                        .icon
+                            .image
+                                i.fa(class='{{responsibility.image}}')
+                            .info
+                                .title {{responsibility.description}}
+                        .space
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Project Milestones
+                p The following project milestones capture the process I did throughout the 10-week redesign for WTA’s visual system. The milestones include: Type & Hierarchy, Color & Emotion, Text w/ Image, Logo Sketching, Logo Prototyping, and Mobile & Web Design Mock-Ups
+            .row.sub-section-header TEXT WITH IMAGE (Week 1, 2)
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.text_with_image.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.text_with_image.driveSrc, modalObjects.text_with_image.title, modalObjects.text_with_image.targetModal)')               
+            .row.sub-section-header TYPOGRAPHY & VISUAL HIERARCHY (Week 3, 4)
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.type_hierarchy.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.type_hierarchy.driveSrc, modalObjects.type_hierarchy.title, modalObjects.type_hierarchy.targetModal)')               
+            .row.sub-section-header COLOR & EMOTION (Week 4, 5)
+                div.text-center
+                    img.img-responsive.thumbnail-modal(src='{{modalObjects.color_and_emotion.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.color_and_emotion.driveSrc, modalObjects.color_and_emotion.title, modalObjects.color_and_emotion.targetModal)')               
+            .row.sub-section-header LOGO SKETCHING (Week 6)
+                .row
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                        img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_1.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_1.localSrc, modalObjects.sketch_1.title, modalObjects.sketch_1.targetModal)')    
+                    .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                        img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_2.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_2.localSrc, modalObjects.sketch_2.title, modalObjects.sketch_2.targetModal)')         
+            .row.sub-section-header LOGO PROTOTYPING (Week 7, 8)
+                    div.text-center
+                        img.img-responsive.thumbnail-modal(src='{{modalObjects.logo_prototyping.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.logo_prototyping.localSrc, modalObjects.logo_prototyping.title, modalObjects.logo_prototyping.targetModal)')        
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Final Deliverable
+                p I created high fidelity web and mobile mock ups, and a business card. I also included my brand book and video. 
+            .row
+                .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                    .row.sub-section-header WEB DESIGN MOCK-UPS
+                            div.text-center
+                                img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
+                .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                    .row.sub-section-header BUSINESS CARD
+                            div.text-center
+                                img.img-responsive.thumbnail-modal(src='{{modalObjects.business_card.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.business_card.localSrc, modalObjects.business_card.title, modalObjects.business_card.targetModal)') 
+            .row.sub-section-header Brand Book
+                #pdf-container.visible-lg.visible-md.visible-sm
+                        iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='700')
+                div.visible-xs
+                        iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='500') 
+            .row.sub-section-header WTA PRODUCT VIDEO
+                    ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', width='100%', height='500px')
+
+
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Overview
+//-         .row
+//-             p HCDE 308 is 10-week course that focuses on the foundations of visual communication in the Human Centered Design & Engineering department. The purpose of this class was to individually re-design the aesthetics and information architecture of a website. Out of many preselected client options given by my professor, Daniela Rosner, I selected the Washington Trails Association (WTA) to redesign. The client was not a real client but an example for exploratory learning purposes.
+//-             p I had to identify the clients organization and business goals in order to make the website as user-friendly as possible. I was able to iterate on design mockups through milestone assignments such as visual hierarchy, typography, color scheme, and brand design. My redesign uses visual communication design principles to enhance the client’s communication goals, as well as improving the overall visual design.
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header My Responsibilities
+//-         .row
+//-             .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
+//-                 .box
+//-                     .icon
+//-                         .image
+//-                             i.fa(class='{{responsibility.image}}')
+//-                         .info
+//-                             .title {{responsibility.description}}
+//-                     .space
+//-         .row
+//-             .sub-sub-section-header TOOLS: Adobe Illustrator, paper sketches
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Design Questions
+//-         .container.design-question-statement
+//-             span “
+//-             | How could redesign the current website to best communicate the three main goals of nature, exploration, and community?
+//-             span ”
 //- .position
 //- .section
 //-     .container
@@ -45,54 +139,54 @@ div
 //-                         li Lack of minimalistic and aesthetic design due to cluttering of visual elements
 //-                         li Poor recognition rather than recall
 //-                         li Poor information hierarchy 
-.position
-.section#section-seven
-    .container
-        .row.section-header Project Milestones
-            p The following project milestones capture the process I did throughout the 10-week redesign for WTA’s visual system. The milestones include: Type & Hierarchy, Color & Emotion, Text w/ Image, Logo Sketching, Logo Prototyping, and Mobile & Web Design Mock-Ups
-        .row.sub-section-header TEXT WITH IMAGE (Week 1, 2)
-            div.text-center
-                img.img-responsive.thumbnail-modal(src='{{modalObjects.text_with_image.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.text_with_image.driveSrc, modalObjects.text_with_image.title, modalObjects.text_with_image.targetModal)')               
-        .row.sub-section-header TYPOGRAPHY & VISUAL HIERARCHY (Week 3, 4)
-            div.text-center
-                img.img-responsive.thumbnail-modal(src='{{modalObjects.type_hierarchy.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.type_hierarchy.driveSrc, modalObjects.type_hierarchy.title, modalObjects.type_hierarchy.targetModal)')               
-        .row.sub-section-header COLOR & EMOTION (Week 4, 5)
-            div.text-center
-                img.img-responsive.thumbnail-modal(src='{{modalObjects.color_and_emotion.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.color_and_emotion.driveSrc, modalObjects.color_and_emotion.title, modalObjects.color_and_emotion.targetModal)')               
-        .row.sub-section-header LOGO SKETCHING (Week 6)
-            .row
-                .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_1.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_1.localSrc, modalObjects.sketch_1.title, modalObjects.sketch_1.targetModal)')    
-                .col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_2.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_2.localSrc, modalObjects.sketch_2.title, modalObjects.sketch_2.targetModal)')         
-        .row.sub-section-header LOGO PROTOTYPING (Week 7, 8)
-                div.text-center
-                    img.img-responsive.thumbnail-modal(src='{{modalObjects.logo_prototyping.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.logo_prototyping.localSrc, modalObjects.logo_prototyping.title, modalObjects.logo_prototyping.targetModal)')        
-.position
-.section#section-eight
-    .container
-        .row.section-header Final Deliverable
-            p I created high fidelity web and mobile mock ups, and a business card. I also included my brand book and video. 
-        .row
-            .col-md-6.col-lg-6.col-xs-12.col-sm-12
-                .row.sub-section-header WEB DESIGN MOCK-UPS
-                        div.text-center
-                            img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
-            //- .col-md-4.col-lg-4.col-xs-12.col-sm-12
-            //-     .row.sub-section-header MOBILE DESIGN MOCK-UPS
-            //-             div.text-center
-            //-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.wta_home.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.wta_home.localSrc, modalObjects.wta_home.title, modalObjects.wta_home.targetModal)')        
-            .col-md-6.col-lg-6.col-xs-12.col-sm-12
-                .row.sub-section-header BUSINESS CARD
-                        div.text-center
-                            img.img-responsive.thumbnail-modal(src='{{modalObjects.business_card.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.business_card.localSrc, modalObjects.business_card.title, modalObjects.business_card.targetModal)') 
-        .row.sub-section-header Brand Book
-            #pdf-container.visible-lg.visible-md.visible-sm
-                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='700')
-            div.visible-xs
-                    iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='500') 
-        .row.sub-section-header WTA PRODUCT VIDEO
-                ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', width='100%', height='500px')
+//- .position
+//- .section#section-seven
+//-     .container
+//-         .row.section-header Project Milestones
+//-             p The following project milestones capture the process I did throughout the 10-week redesign for WTA’s visual system. The milestones include: Type & Hierarchy, Color & Emotion, Text w/ Image, Logo Sketching, Logo Prototyping, and Mobile & Web Design Mock-Ups
+//-         .row.sub-section-header TEXT WITH IMAGE (Week 1, 2)
+//-             div.text-center
+//-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.text_with_image.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.text_with_image.driveSrc, modalObjects.text_with_image.title, modalObjects.text_with_image.targetModal)')               
+//-         .row.sub-section-header TYPOGRAPHY & VISUAL HIERARCHY (Week 3, 4)
+//-             div.text-center
+//-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.type_hierarchy.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.type_hierarchy.driveSrc, modalObjects.type_hierarchy.title, modalObjects.type_hierarchy.targetModal)')               
+//-         .row.sub-section-header COLOR & EMOTION (Week 4, 5)
+//-             div.text-center
+//-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.color_and_emotion.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%',ng-click='openModal(modalObjects.color_and_emotion.driveSrc, modalObjects.color_and_emotion.title, modalObjects.color_and_emotion.targetModal)')               
+//-         .row.sub-section-header LOGO SKETCHING (Week 6)
+//-             .row
+//-                 .col-lg-6.col-md-6.col-sm-12.col-xs-12
+//-                     img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_1.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_1.localSrc, modalObjects.sketch_1.title, modalObjects.sketch_1.targetModal)')    
+//-                 .col-lg-6.col-md-6.col-sm-12.col-xs-12
+//-                     img.img-responsive.thumbnail-modal(src='{{modalObjects.sketch_2.localSrc}}', type='button', data-toggle='modal', width='50%', height='50%', ng-click='openModal(modalObjects.sketch_2.localSrc, modalObjects.sketch_2.title, modalObjects.sketch_2.targetModal)')         
+//-         .row.sub-section-header LOGO PROTOTYPING (Week 7, 8)
+//-                 div.text-center
+//-                     img.img-responsive.thumbnail-modal(src='{{modalObjects.logo_prototyping.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.logo_prototyping.localSrc, modalObjects.logo_prototyping.title, modalObjects.logo_prototyping.targetModal)')        
+//- .position
+//- .section#section-eight
+//-     .container
+//-         .row.section-header Final Deliverable
+//-             p I created high fidelity web and mobile mock ups, and a business card. I also included my brand book and video. 
+//-         .row
+//-             .col-md-6.col-lg-6.col-xs-12.col-sm-12
+//-                 .row.sub-section-header WEB DESIGN MOCK-UPS
+//-                         div.text-center
+//-                             img.img-responsive.thumbnail-modal(src='{{modalObjects.home_screen.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.home_screen.localSrc, modalObjects.home_screen.title, modalObjects.home_screen.targetModal)')        
+//-             //- .col-md-4.col-lg-4.col-xs-12.col-sm-12
+//-             //-     .row.sub-section-header MOBILE DESIGN MOCK-UPS
+//-             //-             div.text-center
+//-             //-                 img.img-responsive.thumbnail-modal(src='{{modalObjects.wta_home.localSrc}}', type='button', data-toggle='modal', width='25%',height='25%', ng-click='openModal(modalObjects.wta_home.localSrc, modalObjects.wta_home.title, modalObjects.wta_home.targetModal)')        
+//-             .col-md-6.col-lg-6.col-xs-12.col-sm-12
+//-                 .row.sub-section-header BUSINESS CARD
+//-                         div.text-center
+//-                             img.img-responsive.thumbnail-modal(src='{{modalObjects.business_card.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.business_card.localSrc, modalObjects.business_card.title, modalObjects.business_card.targetModal)') 
+//-         .row.sub-section-header Brand Book
+//-             #pdf-container.visible-lg.visible-md.visible-sm
+//-                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='700')
+//-             div.visible-xs
+//-                     iframe(src='https://drive.google.com/file/d/0B02JzOinFmv4ZnNHbXpjWTFqTnM/preview', width='100%', height='500') 
+//-         .row.sub-section-header WTA PRODUCT VIDEO
+//-                 ng-youtube-embed(video='videoURL', autoplay='false', color='white', disablekb='true', width='100%', height='500px')
 
 // Gallery Modal
 #galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')

@@ -208,7 +208,8 @@ a.btn {
     /*background-color: #222222;*/
     background-color: #30343f;
     margin-bottom: 20px;
-	  box-shadow: 0 0 20px rgba(236, 240, 241,1.0);
+    box-shadow: 0 0 20px rgba(236, 240, 241,1.0);
+    height: 100%;
 }
 
 .profile-card:hover {

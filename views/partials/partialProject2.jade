@@ -1,153 +1,321 @@
 link(rel='stylesheet', href='/css/partialProject1.css')
 div
     img.banner-image.img-responsive(src='images/banners/atomic.jpg')
-//- #banner-section-atomic.banner-section
-.position
-.section
-    .container
-        .row.section-header Overview
-        .row
-            p For 12 weeks, I worked in a team of four undergraduate students to create a prototype for a carbon tracking application assuming that Washington State will be implementing a carbon tax on each household in 2020. This topic was assigned to my team by our professor, Thomas A. Furness III, who is the Grandfather of Virtual Reality.
-        .row.alert.alert-success
-            | 6 judges from the professional VR industry critiqued our project. Out of 18 teams in the class, my team won 
-            strong 3rd place in overall project 
-            |&nbsp;based on the solution, presentation, and report.
-.position
-.section
-    .container
-        .row.section-header Team
-        .row
-            .col-md-3.col-xs-12.col-sm-12.col-lg-3(ng-repeat='member in ::team')
-                .team-member-card
-                    .member-name
-                        |{{member.name}}
-                    .member-role
-                        |{{member.role}}
-.position
-.section
-    .container
-        .row.section-header My Responsibilities
-        .row
-            .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
-                .box
-                    .icon
-                        .image
-                            i.fa(class='{{responsibility.image}}')
-                        .info
-                            .title {{responsibility.description}}
-                    .space
-.position
-.section
-    .container
+//Introduction Section
+.container
+    .col-md-9.col-lg-9.col-sm-9
+        .project-title atomiC
         .row.section-header Problem Statement
         .row
-            p Although there are many campaigns and advertisements on sustainability and eco-friendly practices, many do not engage in sustainable practices.
-        
             .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-tile
+                | Although there are many campaigns and advertisements on sustainability and eco-friendly practices, many do not engage in sustainable practices. 
                 | Based on web research, there is a:
                 ul
                     li a lack of user awareness of their emissions
                     li a lack of knowledge on how to improve their efficiency
-                    li   a general feeling of overwhelm
-.position
-.section
-    .container
+                    li a general feeling of overwhelm
         .row.section-header Design Questions
-        .container.design-question-statement
-            span “
-            | How can we help residents in Washington live sustainably within their carbon allotment and increase awareness and user efficiency without overwhelming them across a diverse spectrum?
-            span ”
-.position
-.section
-    .container
-        .row.section-header Research
-            p In this Research phase, I helped my team conduct competitive analysis and user research. 
-        .row.sub-section-header Competitive Analysis
-            p We discovered that many existing carbon calculator’s estimates user’s carbon footprint level based off of the required and extensive manual user data input. This current method of gathering data is inaccurate and can disempower the user, which is the opposite focus of our project.
-        .row.sub-section-header User Research
+            .design-question-statement
+                span “
+                | How can we help residents in Washington live sustainably within their carbon allotment and increase awareness and user efficiency without overwhelming them across a diverse spectrum?
+                span ”
+        .row.section-header Solution
+            p Washington State will be implementing a carbon tax on each household in the year 2020. In response to the demand for monitoring carbon emission, my team and i have created atomiC, an intuitive mobile system that helps users increase wareness of their emissions, and improve their carbon efficiency through tracking and coaching.                   
+    .col-md-3.col-lg-3.com-sm-3
+        h3 Duration
+        p 12 weeks
+        h3 Team
+        ul.list-not-decorated 
+            li Shelley Eang
+            li Sean Hoon
+            li Michael Kozlowski
+            li Lacey Peil
+        h3 My Role
+        ul.list-not-decorated 
+            li Visual Designer
+            li UX Designer
+        h3 Skills
+        ul.list-not-decorated 
+            li Illustrator
+            li Sketch
+            li Figma
+            li POP
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Overview
             .row
-                p We talked to 6 potential users, 4 men 2 women, to understand their experiences, frustrations, and needs with tracking carbon emissions. Below are our main findings.
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
-                    ul
-                        li 5 out of the 6 were supportive of a carbon tax
-                        li 3 of the 6 people would not pay for an application that tracks their carbon output and the maximum amount one of our participants would pay was $50
-                        li Participants noted most useful features were the credit card tracker that calculated carbon output based on itemized credit statements and notifications about your carbon allotment.
-
-.position
-.section#section-seven
-    .container
-        .row.section-header Ideation
-            p In the Ideation phase, I helped my team create a persona, storyboard, and sitemap.
-        .row.sub-section-header Persona
+                p For 12 weeks, I worked in a team of four undergraduate students to create a prototype for a carbon tracking application assuming that Washington State will be implementing a carbon tax on each household in 2020. This topic was assigned to my team by our professor, Thomas A. Furness III, who is the Grandfather of Virtual Reality.
+//Impact Section
+.row.alert.alert-success
+    .section-container-10-10
+        | 6 judges from the professional VR industry critiqued our project. Out of 18 teams in the class, my team won 
+        strong 3rd place in overall project  
+        |&nbsp;based on the solution, presentation, and report.
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header My Responsibilities
+            .row
+                .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
+                    .box
+                        .icon
+                            .image
+                                i.fa(class='{{responsibility.image}}')
+                            .info
+                                .title {{responsibility.description}}
+                        .space
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Research
+            .row
+                p My team and I discovered that many existing carbon calculator’s estimates user’s carbon footprint level based off of the required and extensive manual user data input. This current method of gathering data is inaccurate and can disempower the user, which is the opposite focus of our project.
+            .row.sub-section-header Cons of Existing Carbon Trackers
+            .row
+                ul 
+                    li require extensive manual user input, focusing on the following three categories: home energy, transportation, and waste
+                    li Other factors that determine a user's carbon footprint are location, habits, and personal choices
+                    li estimate the user's carbon footprint level based off of the user’s estimated data input
+            .row.sub-section-header User Research
+            .row
+                p My team and I talked to 6 potential users, 4 men 2 women, to understand their experiences, frustrations, and needs with tracking carbon emissions. Below are our main findings.
+                ul 
+                    li 5 out of the 6 were supportive of a carbon tax
+                    li 3 of the 6 people would not pay for an application that tracks their carbon output and the maximum amount one of our participants would pay was $50
+                    li Participants noted most useful features were the credit card tracker that calculated carbon output based on itemized credit statements and notifications about your carbon allotment.
+            .row.box-row
+                .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='respondent in ::listOfRespondents')
+                    .stats-contaner
+                        .stats-value {{respondent.percentage}}
+                        .stats-description {{respondent.desc}}
+                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-description Useful features were the credit card tracker that calculated carbon output based on itemized credit statements and notification about carbon allotment
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Ideation
+            .row
+                p In the Ideation phase, I helped my team create a persona, storyboard, and sitemap.
+            .row.sub-section-header Persona
+            .row
                 p Our persona was created based on our target group and user research
                 div.text-center
                     img.img-responsive.thumbnail-modal(src='{{modalObjects.persona_1.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.persona_1.driveSrc, modalObjects.persona_1.title, modalObjects.persona_1.targetModal)')        
-        //- .row.sub-section-header Storyboard
-        //-     p Still waiting on images....
-        .row.sub-section-header Sitemap
-                div.text-center
-                    img.img-responsive.thumbnail-modal(src='{{modalObjects.sitemap.localSrc}}', type='button', data-toggle='modal', width='80%',height='80%', ng-click='openModal(modalObjects.sitemap.localSrc, modalObjects.sitemap.title, modalObjects.sitemap.targetModal)')        
-
-.position
-.section#section-eight
-    .container
-        .row.section-header Prototype
-            p In the prototype phase, I helped my team create paper prototypes and conduct usability tests.
-        .row.sub-section-header Paper Prototype
-            p Using the sitemap, my team divided sections of the system to allow each member to create designs for the paper prototype. My contributions included the administrative screen interfaces, such as the settings and getting started with atomiC. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
-        .row.sub-section-header Usability Tests
+            .row.sub-section-header Sitemap
+                    div.text-center
+                        img.img-responsive.thumbnail-modal(src='{{modalObjects.sitemap.localSrc}}', type='button', data-toggle='modal', width='80%',height='80%', ng-click='openModal(modalObjects.sitemap.localSrc, modalObjects.sitemap.title, modalObjects.sitemap.targetModal)')        
+            .row.sub-section-header Design Sketches
+            .row
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12(ng-repeat='brainstormSketch in ::modalObjects.brainstorm')
+                    img.img-responsive.thumbnail-modal(src='{{brainstormSketch.localSrc}}', type='button', data-toggle='modal', width='80%',height='80%', ng-click='openModal(brainstormSketch.localSrc, brainstormSketch.title, brainstormSketch.targetModal)')        
+//Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Prototype
+            .row.sub-section-header Usability Tests
             .row
                 p Results from the first usability test sessions were from the paper prototypes while the second was gathered using the high fidelity digital prototypes.
                 p After conducting both usability tests, our team noticed a significant drop in average task time and mistakes along with a significant increase in usability and likeability rankings in the digital prototypes compared to the paper prototypes. My team used sticky notes and hand drawn prototypes to showcase our paper prototype. For our high fidelity designs, we designed our prototypes on Figma and used the POP app to showcase interactions.
                 p A few positive findings:
-                .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
-                    ul
-                        li Easy use due to simplicity in screen design
-                        li Covers all basic features given example problem
-                        li Both micro and macro analysis of emissions are included
-.position
-.section#section-nine
-    .container
-        .row.section-header High Fidelity Prototypes
-    .container
-        #CarouselHighFidelity.carousel.slide(data-interval="false")
-          .carousel-inner
+            .row.box-row
+                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-description Easy use due to simplicity in screen design
+                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-description Covers all basic features given example problem
+                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                    .stats-contaner
+                        .stats-description Both micro and macro analysis of emissions are included
+ //Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header High Fidelity Prototypes
+.row.carousel-row
+    #CarouselHighFidelity.carousel.slide(data-interval="false")
+        .carousel-inner
             .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
-              ul.thumbnails
-                li.col-sm-3(ng-repeat='prototype in ::prototypes')
-                    img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
-          nav
+                ul.thumbnails
+                    li.col-sm-3(ng-repeat='prototype in ::prototypes')
+                        img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
+        nav
             ul.control-box.pager
-              li
-                a(data-target="#CarouselHighFidelity", data-slide="prev")
-                  i.glyphicon.glyphicon-chevron-left
-              li
-                a(data-target="#CarouselHighFidelity", data-slide="next")
-                  i.glyphicon.glyphicon-chevron-right    
+                li
+                    a(data-target="#CarouselHighFidelity", data-slide="prev")
+                        i.glyphicon.glyphicon-chevron-left
+                li
+                    a(data-target="#CarouselHighFidelity", data-slide="next")
+                        i.glyphicon.glyphicon-chevron-right               
+ //Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Final Report
+            .row
+                p Final report available upon request, please email me.
+ //Details Section
+.container 
+    .col-md-12.col-lg-12.col-sm-12
+        .section-container-0-0
+            .row.section-header Future Considerations
+            .row
+                p The main objective of atomiC is to help residents of Washington track their carbon emissions. Future development on our project would largely focus on how to automatically track carbon emissions through different platforms outside of a mobile application. One way to do this is to monitor utility emissions through home appliances and allow users to control the power from their mobile application if they are near their carbon emissions.
+                p Going forward, my team and I would like to add more tracking capabilities outside of a mobile application, although keep with our initial goal of tracking carbon emissions and not overwhelming our users.
+        
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Overview
+//-         .row
+//-             p For 12 weeks, I worked in a team of four undergraduate students to create a prototype for a carbon tracking application assuming that Washington State will be implementing a carbon tax on each household in 2020. This topic was assigned to my team by our professor, Thomas A. Furness III, who is the Grandfather of Virtual Reality.
+//-         .row.alert.alert-success
+//-             | 6 judges from the professional VR industry critiqued our project. Out of 18 teams in the class, my team won 
+//-             strong 3rd place in overall project 
+//-             |&nbsp;based on the solution, presentation, and report.
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Team
+//-         .row
+//-             .col-md-3.col-xs-12.col-sm-12.col-lg-3(ng-repeat='member in ::team')
+//-                 .team-member-card
+//-                     .member-name
+//-                         |{{member.name}}
+//-                     .member-role
+//-                         |{{member.role}}
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header My Responsibilities
+//-         .row
+//-             .col-xs-12.col-sm-6.col-lg-4(ng-repeat='responsibility in ::responsibilities')
+//-                 .box
+//-                     .icon
+//-                         .image
+//-                             i.fa(class='{{responsibility.image}}')
+//-                         .info
+//-                             .title {{responsibility.description}}
+//-                     .space
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Problem Statement
+//-         .row
+//-             p Although there are many campaigns and advertisements on sustainability and eco-friendly practices, many do not engage in sustainable practices.
+        
+//-             .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-tile
+//-                 | Based on web research, there is a:
+//-                 ul
+//-                     li a lack of user awareness of their emissions
+//-                     li a lack of knowledge on how to improve their efficiency
+//-                     li   a general feeling of overwhelm
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Design Questions
+//-         .container.design-question-statement
+//-             span “
+//-             | How can we help residents in Washington live sustainably within their carbon allotment and increase awareness and user efficiency without overwhelming them across a diverse spectrum?
+//-             span ”
+//- .position
+//- .section
+//-     .container
+//-         .row.section-header Research
+//-             p In this Research phase, I helped my team conduct competitive analysis and user research. 
+//-         .row.sub-section-header Competitive Analysis
+//-             p We discovered that many existing carbon calculator’s estimates user’s carbon footprint level based off of the required and extensive manual user data input. This current method of gathering data is inaccurate and can disempower the user, which is the opposite focus of our project.
+//-         .row.sub-section-header User Research
+//-             .row
+//-                 p We talked to 6 potential users, 4 men 2 women, to understand their experiences, frustrations, and needs with tracking carbon emissions. Below are our main findings.
+//-                 .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+//-                     ul
+//-                         li 5 out of the 6 were supportive of a carbon tax
+//-                         li 3 of the 6 people would not pay for an application that tracks their carbon output and the maximum amount one of our participants would pay was $50
+//-                         li Participants noted most useful features were the credit card tracker that calculated carbon output based on itemized credit statements and notifications about your carbon allotment.
 
-        .row.sub-section-header The Solution
-            p Through our competitive analysis and interviews, we were able to identify the following features that would meet the needs of our users:
-            .row.sub-sub-section-header Accurate and automated data
-                p By utilizing an individual’s Carbon Identification Number, atomiC will be able to provide the user with accurate data about their carbon emissions, without the hassle of manual inputs.
-            .row.sub-sub-section-header Data analysis
-                p Our system will present the user’s data to them in a meaningful, digestible way. Users will be able to utilize data visualizations, micro level reports, and macro level themes to learn about their carbon externalities.
-            .row.sub-sub-section-header A breakdown of carbon externalities
-                p Users will be able to learn about their overall carbon emissions, as well as their emissions within the four categories of food, goods, transit, and utilities. Within these categories, they can also see a breakdown of items within each category, such as gasoline for their personal vehicle.
-            .row.sub-sub-section-header In-app notifications
-                p Our system provides the user with notifications on how they can reduce their carbon output, as well as notifications for when they are nearing their allotment limit.
-            .row.sub-sub-section-header Progress tracking
-                p Our system allows users to track their weekly or monthly progress within the data section of atomiC to help increment their goal of reducing carbon emissions, making this daunting task feel manageable.
-            .row.sub-sub-section-header Improvement coaching
-                p Our system customizes suggestions for how the user can reduce their carbon emissions. Suggests range from the micro to macro level.
-            .row.sub-sub-section-header Social Media
-                p For externally motivated users, atomiC offers a social media component wherein they can compare their progress and emissions to the average or their friends.
+//- .position
+//- .section#section-seven
+//-     .container
+//-         .row.section-header Ideation
+//-             p In the Ideation phase, I helped my team create a persona, storyboard, and sitemap.
+//-         .row.sub-section-header Persona
+//-                 p Our persona was created based on our target group and user research
+//-                 div.text-center
+//-                     img.img-responsive.thumbnail-modal(src='{{modalObjects.persona_1.localSrc}}', type='button', data-toggle='modal', ng-click='openModal(modalObjects.persona_1.driveSrc, modalObjects.persona_1.title, modalObjects.persona_1.targetModal)')        
+//-         //- .row.sub-section-header Storyboard
+//-         //-     p Still waiting on images....
+//-         .row.sub-section-header Sitemap
+//-                 div.text-center
+//-                     img.img-responsive.thumbnail-modal(src='{{modalObjects.sitemap.localSrc}}', type='button', data-toggle='modal', width='80%',height='80%', ng-click='openModal(modalObjects.sitemap.localSrc, modalObjects.sitemap.title, modalObjects.sitemap.targetModal)')        
 
-.position
-.section#section-ten
-    .container
-        .row.section-header Future Considerations
-            p The main objective of atomiC is to help residents of Washington track their carbon emissions. Future development on our project would largely focus on how to automatically track carbon emissions through different platforms outside of a mobile application. One way to do this is to monitor utility emissions through home appliances and allow users to control the power from their mobile application if they are near their carbon emissions.
-            p Going forward, we would like to add more tracking capabilities outside of a mobile application, although keep with our initial goal of tracking carbon emissions and not overwhelming our users.
+//- .position
+//- .section#section-eight
+//-     .container
+//-         .row.section-header Prototype
+//-             p In the prototype phase, I helped my team create paper prototypes and conduct usability tests.
+//-         .row.sub-section-header Paper Prototype
+//-             p Using the sitemap, my team divided sections of the system to allow each member to create designs for the paper prototype. My contributions included the administrative screen interfaces, such as the settings and getting started with atomiC. After sharing and discussing our sketches, we improved upon the designs to create a consistent look and feel for our concept.
+//-         .row.sub-section-header Usability Tests
+//-             .row
+//-                 p Results from the first usability test sessions were from the paper prototypes while the second was gathered using the high fidelity digital prototypes.
+//-                 p After conducting both usability tests, our team noticed a significant drop in average task time and mistakes along with a significant increase in usability and likeability rankings in the digital prototypes compared to the paper prototypes. My team used sticky notes and hand drawn prototypes to showcase our paper prototype. For our high fidelity designs, we designed our prototypes on Figma and used the POP app to showcase interactions.
+//-                 p A few positive findings:
+//-                 .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
+//-                     ul
+//-                         li Easy use due to simplicity in screen design
+//-                         li Covers all basic features given example problem
+//-                         li Both micro and macro analysis of emissions are included
+//- .position
+//- .section#section-nine
+//-     .container
+//-         .row.section-header High Fidelity Prototypes
+//-     .container
+//-         #CarouselHighFidelity.carousel.slide(data-interval="false")
+//-           .carousel-inner
+//-             .item(ng-repeat='prototypes in ::highFidelityPrototypes', ng-class='{active: $first}')
+//-               ul.thumbnails
+//-                 li.col-sm-3(ng-repeat='prototype in ::prototypes')
+//-                     img.img-responsive(src='{{prototype.src}}', alt='', ng-click='openModal(prototype.src, prototype.title, "#galleryModal")')                
+//-           nav
+//-             ul.control-box.pager
+//-               li
+//-                 a(data-target="#CarouselHighFidelity", data-slide="prev")
+//-                   i.glyphicon.glyphicon-chevron-left
+//-               li
+//-                 a(data-target="#CarouselHighFidelity", data-slide="next")
+//-                   i.glyphicon.glyphicon-chevron-right    
+
+//-         .row.sub-section-header The Solution
+//-             p Through our competitive analysis and interviews, we were able to identify the following features that would meet the needs of our users:
+//-             .row.sub-sub-section-header Accurate and automated data
+//-                 p By utilizing an individual’s Carbon Identification Number, atomiC will be able to provide the user with accurate data about their carbon emissions, without the hassle of manual inputs.
+//-             .row.sub-sub-section-header Data analysis
+//-                 p Our system will present the user’s data to them in a meaningful, digestible way. Users will be able to utilize data visualizations, micro level reports, and macro level themes to learn about their carbon externalities.
+//-             .row.sub-sub-section-header A breakdown of carbon externalities
+//-                 p Users will be able to learn about their overall carbon emissions, as well as their emissions within the four categories of food, goods, transit, and utilities. Within these categories, they can also see a breakdown of items within each category, such as gasoline for their personal vehicle.
+//-             .row.sub-sub-section-header In-app notifications
+//-                 p Our system provides the user with notifications on how they can reduce their carbon output, as well as notifications for when they are nearing their allotment limit.
+//-             .row.sub-sub-section-header Progress tracking
+//-                 p Our system allows users to track their weekly or monthly progress within the data section of atomiC to help increment their goal of reducing carbon emissions, making this daunting task feel manageable.
+//-             .row.sub-sub-section-header Improvement coaching
+//-                 p Our system customizes suggestions for how the user can reduce their carbon emissions. Suggests range from the micro to macro level.
+//-             .row.sub-sub-section-header Social Media
+//-                 p For externally motivated users, atomiC offers a social media component wherein they can compare their progress and emissions to the average or their friends.
+
+//- .position
+//- .section#section-ten
+//-     .container
+//-         .row.section-header Future Considerations
+//-             p The main objective of atomiC is to help residents of Washington track their carbon emissions. Future development on our project would largely focus on how to automatically track carbon emissions through different platforms outside of a mobile application. One way to do this is to monitor utility emissions through home appliances and allow users to control the power from their mobile application if they are near their carbon emissions.
+//-             p Going forward, we would like to add more tracking capabilities outside of a mobile application, although keep with our initial goal of tracking carbon emissions and not overwhelming our users.
 // Gallery Modal
 #galleryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')

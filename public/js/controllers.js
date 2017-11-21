@@ -103,15 +103,15 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
         });
     $scope.workExperiences = [
         {
-            url: 'images/portfolio_headers/guild.jpg',
+            url: 'images/portfolio_headers/sgi.jpg',
             title: 'Sustainability Guild International',
             description: 'Through a user centered design process, I designed a new website for a non-profit aiming to provide programs and resources to communities in Boston.',
             route: '',
             tags: ['Internship /', 'UX /', 'UI'],
-            class: 'guild'
+            class: ''
         },
         {
-            url: 'images/portfolio_headers/freedom.jpg',
+            url: 'images/portfolio_headers/fp.jpg',
             title: 'Freedom Project',
             description: 'As part of the 12-hour \“Design Like Mad\” event, I helped designed logos and collaterals for a non-profit to promote to non violent communication, mindfulness, and racial equity.',
             route: '',
@@ -153,7 +153,7 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
     ]
     $scope.listOfProjects = [
         {
-            url: 'images/portfolio_headers/recovery.jpg',
+            url: 'images/portfolio_headers/rec.jpg',
             title: 'RECOVERY',
             description: 'Using a culmination of my skills in the user-centered design process, I helped design RECOVERY: Earthquake Edition, a board game that educates players about disaster recovery.',
             route: 'project1',
@@ -177,7 +177,7 @@ function MyCtrl1($location, $scope, $timeout, $rootScope, globalFunctions) {
             class: ''
         },   
         {
-            url: 'images/portfolio_headers/sightseers.jpg',
+            url: 'images/portfolio_headers/ss.jpg',
             title: 'Sightseers',
             description: 'Through iterations of user research and usability tests, I helped develop a mobile application prototype to better document and share their travel experiences.',
             route: 'SightSeers',
@@ -269,7 +269,63 @@ function Project1Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
         }     
     ]
 
+    $scope.competitiveGames = [
+        {
+            name: 'Machi Koro',
+            source: 'images/recovery/competitive_games/machi_koro.jpg',
+            objective: 'Earn enough coins to unlock all landmark cards',
+            mechanism: 'City-building game that involves cards, dice, and currency'
+        },
+        {
+            name: 'Forbidden Desert',
+            source: 'images/recovery/competitive_games/forbidden.jpg',
+            objective: 'Overcome the sand storm while facing an array of obstacles',
+            mechanism: 'Cooperative game that involves board tiles, shipwreck parts, sand markers, player pieces, adventurer cards, an equipment deck, a storm deck, and a storm meter'
+        },
+        {
+            name: 'Touring',
+            source: 'images/recovery/competitive_games/touring.jpg',
+            objective: 'Race to travel the furthest distance',
+            mechanism: 'Card game'
+        },
+        {
+            name: 'Santorini',
+            source: 'images/recovery/competitive_games/santorini.jpg',
+            objective: 'Have a player piece on a third-level elevation building block',
+            mechanism: '3D city-building game that involves a board, building blocks, player pieces, and god power cards'
+        },
+        {
+            name: 'Flip City',
+            source: 'images/recovery/competitive_games/flip.jpg',
+            objective: 'build your own deck to augment your chances of winning',
+            mechanism: 'city-building card game'
+        },                       
+        {
+            name: 'Between',
+            source: 'images/recovery/competitive_games/between.jpg',
+            objective: 'Earn the highest points while building two cities',
+            mechanism: 'city-building card game'
+        }
+    ];
     
+    $scope.listOfRespondents = [
+        {
+            percentage: '65',
+            desc: 'believed recovery was about returning to \“normal\"'
+        },
+        {
+            percentage: '78',
+            desc: 'like competitive games'
+        },
+        {
+            percentage: '69',
+            desc: 'like having teams'
+        },
+        {
+            percentage: '7',
+            desc: 'mentioned improvements'
+        }
+    ]
     $scope.lowFidelityPrototypes = [
         [
             {
@@ -503,8 +559,19 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
             image: 'fa-book'
         }                    
     ]
-
     
+        
+    $scope.listOfRespondents = [
+        {
+            percentage: '5 out of 6',
+            desc: 'Were supportive of a carbon tax'
+        },
+        {
+            percentage: '3 out of 6',
+            desc: 'Would not pay for an application that tracks carbon output'
+        }
+    ];
+
     $scope.lowFidelityPrototypes = [
         [
             {
@@ -627,7 +694,33 @@ function Project2Ctrl($scope, $rootScope, globalFunctions, $location, $sce) {
             driveSrc: '',
             title: 'Site Map',
             targetModal: '#modalImageViewer'            
-        }
+        },
+        brainstorm: [
+            {
+                localSrc: 'images/atomic/brainstorm/sketch_1.jpg',
+                driveSrc: '',
+                title: 'Brainstorm Sketch #1',
+                targetModal: '#modalImageViewer'       
+            },
+            {
+                localSrc: 'images/atomic/brainstorm/sketch_2.jpg',
+                driveSrc: '',
+                title: 'Brainstorm Sketch #2',
+                targetModal: '#modalImageViewer'       
+            },
+            {
+                localSrc: 'images/atomic/brainstorm/sketch_3.jpg',
+                driveSrc: '',
+                title: 'Brainstorm Sketch #3',
+                targetModal: '#modalImageViewer'       
+            },     
+            {
+                localSrc: 'images/atomic/brainstorm/sketch_4.jpg',
+                driveSrc: '',
+                title: 'Brainstorm Sketch #4',
+                targetModal: '#modalImageViewer'       
+            },                       
+        ]
     };
 
     $scope.trustSrc = function(src) {

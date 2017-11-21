@@ -78,7 +78,10 @@
 
 body {
   /*padding-top:70px;*/
-  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Ruluko', sans-serif; */
+  font-family: 'Pavanam', sans-serif;
+  /* font-family: 'Text Me One', sans-serif; */
+  /* font-family: 'Quicksand', sans-serif; */
 }
 
 .navbar-nav.navbar-right:last-child {
@@ -253,14 +256,27 @@ div.container {
 
 
 /** Common CSS **/
+.project-title {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
 .list-not-decorated {
   list-style: none;
   padding-left: 0;
   font-size: 15pt;
 }
 
+li {
+  font-size: 15pt;
+  margin-top: 10px;
+}
+
 .section-container-10-0 {
   padding: 10% 0%;
+}
+.section-container-0-0 {
+  padding: 0% 0%;
 }
 .section-container-10-10 {
   padding: 10% 10%;
@@ -272,8 +288,9 @@ div.container {
 .stats-contaner {
   margin: 1%;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  padding: 5px;
+  border: 5px solid #ddd;
+  padding: 20px;
+  height: 100%;
 }
 .stats-value {
   font-size: 50pt;
@@ -286,3 +303,30 @@ div.container {
 .stats-description {
   font-size: 15pt;
 }
+
+
+/** box row **/ 
+.box-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.box-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.box-item {
+  text-align: center;
+  font-size: 15pt;
+  margin: 1%;
+  border-radius: 5px;
+  border: 5px solid #ddd;
+  padding: 20px;
+  height: 100%;
+}
+
