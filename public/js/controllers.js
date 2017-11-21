@@ -794,6 +794,20 @@ function SightSeersCtrl($scope, $rootScope, globalFunctions, $location, $sce) {
         }                    
     ]
 
+    $scope.userTestingList = {
+        results: [
+             "Participants displayed confusion with the \“PUBLISH & VIEW\” button",
+             "Participants displayed confusion on the intuitiveness and functionality of the homepage",
+             "Participants displayed confusion on the redirection of multiple pages in the system including the pages that follow \‘SEARCH\’ and \‘FRIENDS FEED\'",
+             "\‘PUBLISH & VIEW\’ -> Separate \‘PREVIEW\’ button and \“PUBLISH\” button",
+             "\‘FRIEND\’s FEED\’ on the homepage to \“FEED\”"
+        ],
+        positives: [
+            "Easy use due to simplicity in screen design",
+            "Covers all basic features given example problem",
+            "Likes the social media sharing aspect"  
+        ]
+    };
     
     $scope.lowFidelityPrototypes = [
         [

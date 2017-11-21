@@ -52,9 +52,18 @@ div
         .row.section-header Research
         .row 
             p In the research phase, I helped my team conduct competitive analysis and web research.
-        .row.sub-section-header Competitive Analysis
+        .row.sub-section-header Existing Application
         .row
             p We discovered that many existing travel documenting application allow users to post an image with a short caption. This limited text space can limit the user in further writing their entire experiences. 
+        .row
+            .col-md-12.col-lg-12.col-sm-12
+                img(src='images/sight_seers/insta.jpg', class='img-rounded img-responsive')
+                p 
+                    b Pros
+                    | : allow users to post an image with a short caption
+                p
+                    b Cons
+                    | : limit the user in further writing their entire experiences
 //Details Section
 .container 
     .col-md-12.col-lg-12.col-sm-12
@@ -109,19 +118,15 @@ div
             .row.sub-section-header Usability Tests
                 .row
                     p My team and I conducted usability tests with over 10 participants using our low-fidelity prototype. Our team noticed confusion in initial wording between “CREATE CARD” and “CREATE STORY”, furthermore, my team noticed that participants would rather have one option to create a post that would allow them to further expand their writing if needed. Results from all sessions are listed below.
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
-                        ul
-                            li Participants displayed confusion with the “PUBLISH & VIEW” button 
-                            li Participants displayed confusion on the intuitiveness and functionality of the homepage 
-                            li Participants displayed confusion on the redirection of multiple pages in the system including the pages that follow ‘SEARCH’ and ‘FRIENDS FEED'
-                            li ‘PUBLISH & VIEW’ -> Separate ‘PREVIEW’ button and “PUBLISH” button
-                            li ‘FRIEND’s FEED’ on the homepage to “FEED”
+                    .row.box-row
+                        .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='result in ::userTestingList.results')
+                            .stats-contaner
+                                .stats-description {{result}}
                     p A few positive findings:
-                    .col-lg-12.col-md-12.col-sm-12.col-xs-12.section-title
-                        ul
-                            li Easy use due to simplicity in screen design
-                            li Covers all basic features given example problem
-                            li Likes the social media sharing aspect  
+                    .row.box-row
+                        .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='positive in ::userTestingList.positives')
+                            .stats-contaner
+                                .stats-description {{positive}}
 .container 
     .col-md-12.col-lg-12.col-sm-12
         .section-container-0-0

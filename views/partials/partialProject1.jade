@@ -5,6 +5,9 @@ div
 .container
     .col-md-9.col-lg-9.col-sm-9
         .project-title RECOVERY: Earthquake Edition
+        .row.section-header Overview
+        .row
+            p I worked in a team of four undergraduate students to create a card game prototype to teach college students about earthquake recovery. The idea was proposed to my team by our sponsor, Scott Miles from The Center for Collaborative Systems for Security, Safety, and Regional Resilience (CoSSaR).
         .row.section-header Problem Statement
         .row
             p Earthquake recovery is a probable threat in the Pacific Northwest. 
@@ -76,12 +79,14 @@ div
             .row.section-header Research
             .row
                 p My team and I conducted literature research of over 70 peer reviewed and Association for Computer Machinery (ACM) research papers on disaster recovery and game mechanisms.
-                p(style='font-weight: bold') Email me for the articles I read.
+                p(style='font-weight: bold') 
+                    a(href="mailto:eangshelley@gmail.com", target="_blank") Email me
+                    |  for the articles I read.
             .row.sub-section-header Existing Competitive Games
                 p My team and I conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
             .row.box-row
                 .col-md-4.col-lg-4.col-sm-4(ng-repeat='game in ::competitiveGames')
-                    img(src='{{game.source}}', class='img-rounded')
+                    img(src='{{game.source}}', class='img-rounded img-responsive')
                     br
                     p 
                         b Objective
@@ -103,11 +108,7 @@ div
                     .stats-contaner
                         .stats-value {{respondent.percentage}}%
                         .stats-line of Respondents
-                        .stats-description {{respondent.desc}}
-            br
-            .row(style='text-align:center')
-                a(href="#")
-                    .button(type="submit", style="padding-left: 60px; padding-right: 60px") View Source                            
+                        .stats-description {{respondent.desc}}                           
             .row.sub-section-header Persona
             .row
                 div.text-center
