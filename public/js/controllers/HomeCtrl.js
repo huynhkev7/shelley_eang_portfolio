@@ -56,23 +56,15 @@ angular.module('myApp.homeCtrl', [])
             url: 'images/portfolio_headers/sgi.jpg',
             title: 'Sustainability Guild International',
             description: 'Through a user centered design process, I designed a new website for a non-profit aiming to provide programs and resources to communities in Boston.',
-            route: 'Sgi',
-            tags: ['Internship /', 'UX /', 'UI'],
-            class: ''
-        },
-        {
-            url: 'images/portfolio_headers/fp.jpg',
-            title: 'Freedom Project',
-            description: 'As part of the 12-hour \“Design Like Mad\” event, I helped designed logos and collaterals for a non-profit to promote to non violent communication, mindfulness, and racial equity.',
-            route: 'Freedom',
-            tags: ['Design Marathon /', 'Graphic Design'],
+            route: '',
+            tags: ['Internship /', 'UX /', 'UI /', 'NDA' ],
             class: ''
         },
         {
             url: 'images/portfolio_headers/ala.jpg',
             title: 'Asian Law Alliance',
             description: 'Appling core visual design concepts, I designed event flyers, letters, and social media banners for a non-profit focused in providing access to basic human and legal rights.',
-            route: '',
+            route: 'Ala',
             tags: ['Internship /', 'Graphic Design '],
             class: ''
         },
@@ -89,7 +81,7 @@ angular.module('myApp.homeCtrl', [])
             title: 'G2L',
             description: 'Using UX design principles, I designed and revamped a new website for a non-profit aiming to improve public health services in my local community.',
             route: '',
-            tags: ['Internship /', 'UX '],
+            tags: ['Internship /', 'UX /', 'NDA'],
             class: ''
         },
         {
@@ -97,11 +89,19 @@ angular.module('myApp.homeCtrl', [])
             title: 'Avanade',
             description: 'I interned at Avanade, an IT consulting company focused on the Microsoft platform, where I helped design and develop the interface of a multi-million dollar application.',
             route: '',
-            tags: ['Internship /', 'UX /', 'UI'],
+            tags: ['Internship /', 'UX /', 'UI /', 'NDA'],
             class: ''
         }           
     ]
     $scope.listOfProjects = [
+        {
+            url: 'images/portfolio_headers/fp.jpg',
+            title: 'Freedom Project',
+            description: 'As part of the 12-hour \“Design Like Mad\” event, I helped designed logos and collaterals for a non-profit to promote to non violent communication, mindfulness, and racial equity.',
+            route: 'Freedom',
+            tags: ['Design Marathon /', 'Graphic Design'],
+            class: ''
+        },
         {
             url: 'images/portfolio_headers/rec.jpg',
             title: 'RECOVERY',

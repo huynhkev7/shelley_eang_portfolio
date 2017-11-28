@@ -79,14 +79,14 @@ angular.module('myApp.recoveryCtrl', [])
         {
             name: 'Flip City',
             source: 'images/recovery/competitive_games/flip.jpg',
-            objective: 'build your own deck to augment your chances of winning',
-            mechanism: 'city-building card game'
+            objective: 'Build your own deck to augment your chances of winning',
+            mechanism: 'City-building card game'
         },                       
         {
             name: 'Between',
             source: 'images/recovery/competitive_games/between.jpg',
             objective: 'Earn the highest points while building two cities',
-            mechanism: 'city-building card game'
+            mechanism: 'City-building card game'
         }
     ];
     

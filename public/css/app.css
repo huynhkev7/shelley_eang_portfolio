@@ -333,3 +333,8 @@ li {
   height: 100%;
 }
 
+.emphasize {
+  font-size: 20pt;
+  font-weight: 500;
+}
+

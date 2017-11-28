@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp.sgiCtrl', [])
-  .controller('SgiCtrl', ['$scope','$rootScope', 'globalFunctions', '$location', '$sce', function($scope, $rootScope, globalFunctions, $location, $sce) {
+angular.module('myApp.alaCtrl', [])
+  .controller('AlaCtrl', ['$scope','$rootScope', 'globalFunctions', '$location', '$sce', function($scope, $rootScope, globalFunctions, $location, $sce) {
     window.scrollTo(0, 0);
     $rootScope.currentBaseUrl =  '/home'   
     $rootScope.showNavbar = true;
