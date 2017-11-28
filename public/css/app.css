@@ -307,19 +307,11 @@ li {
 
 /** box row **/ 
 .box-row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  
+  display: flex; 
+  flex-flow: row wrap;
+  align-items: stretch;
 }
 .box-row > [class*='col-'] {
-  /* display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; */
-  flex-direction: column;
   padding: 5px;
 }
 
