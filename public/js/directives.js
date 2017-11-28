@@ -137,7 +137,7 @@ angular.module('myApp.directives', []).
       restrict: 'EA',
       scope: true,
       link: function($scope, $window, element){
-        if(location.path() === '/view1'){
+        if(location.path() === '/home'){
           angular.element(window).bind("scroll", function() {
                 console.log(window.scrollY);
                 console.log('element');

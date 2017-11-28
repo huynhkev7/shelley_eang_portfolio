@@ -315,10 +315,10 @@ li {
   
 }
 .box-row > [class*='col-'] {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex; */
   flex-direction: column;
   padding: 5px;
 }
