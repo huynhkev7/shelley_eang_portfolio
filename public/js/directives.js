@@ -170,7 +170,7 @@ directive('onFinishRender', ['version', '$window', '$location', '$timeout', func
                       target: null,
                       remove: false
                   });
-              }, 100);                
+              }, 500);                
             });
         }
     }
