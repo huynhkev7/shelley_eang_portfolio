@@ -82,12 +82,12 @@ div
             .row.sub-section-header User Research
             .row
                 p My team and I talked to 6 potential users, 4 men 2 women, to understand their experiences, frustrations, and needs with tracking carbon emissions. Below are our main findings.
-            .box-row
-                .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='respondent in ::listOfRespondents')
+            .row
+                .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='respondent in ::listOfRespondents', on-finish-render='ngRepeatFinished')
                     .stats-contaner
                         .stats-value {{respondent.percentage}}
                         .stats-description {{respondent.desc}}
-                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12
                     .stats-contaner
                         .stats-description Useful features were the credit card tracker that calculated carbon output based on itemized credit statements and notification about carbon allotment
 //Details Section
@@ -119,14 +119,14 @@ div
                 p Results from the first usability test sessions were from the paper prototypes while the second was gathered using the high fidelity digital prototypes.
                 p After conducting both usability tests, our team noticed a significant drop in average task time and mistakes along with a significant increase in usability and likeability rankings in the digital prototypes compared to the paper prototypes. My team used sticky notes and hand drawn prototypes to showcase our paper prototype. For our high fidelity designs, we designed our prototypes on Figma and used the POP app to showcase interactions.
                 p A few positive findings:
-            .box-row
-                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+            .row
+                .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12
                     .stats-contaner
                         .stats-description Easy use due to simplicity in screen design
-                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12
                     .stats-contaner
                         .stats-description Covers all basic features given example problem
-                .col-md-4.col-lg-4.col-sm-12.col-xs-12
+                .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12
                     .stats-contaner
                         .stats-description Both micro and macro analysis of emissions are included
  //Details Section

@@ -193,56 +193,41 @@ angular.module('myApp.freedomCtrl', [])
     ];
 
     $scope.modalObjects = {
-        text_with_image: {
-            localSrc: 'images/wta/text_with_image.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4WUJmUVdETHlxbUE/preview',
-            title: 'Text w/ Image',
-            targetModal: '#modalIframeViewer'            
-        },
-        type_hierarchy: {
-            localSrc: 'images/wta/type_hierarchy.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZUI0MExONTRvazg/preview',
-            title: 'Typography and Hierarchy',
-            targetModal: '#modalIframeViewer'            
-        },
-        color_and_emotion: {
-            localSrc: 'images/wta/color_and_emotion.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZjdNcjFPWm1sd2c/preview',
-            title: 'Color and Emotion',
-            targetModal: '#modalIframeViewer'            
-        },
-        sketch_1: {
-            localSrc: 'images/wta/sketches/sketch_1.jpg',
+        artboard_1: {
+            localSrc: 'images/freedom/artboard_1.jpg',
             driveSrc: '',
-            title: 'Sketch #1',
+            title: 'Artboard #1',
+            targetModal: '#modalImageViewer'            
+        },
+        artboard_2: {
+            localSrc: 'images/freedom/artboard_2.jpg',
+            driveSrc: '',
+            title: 'Artboard #2',
+            targetModal: '#modalImageViewer'            
+        },
+        artboard_3: {
+            localSrc: 'images/freedom/artboard_3.jpg',
+            driveSrc: '',
+            title: 'Artboard #3',
+            targetModal: '#modalImageViewer'            
+        },
+        FP_BusinessCard_1: {
+            localSrc: 'images/freedom/FP_BusinessCard_1.jpg',
+            driveSrc: '',
+            title: 'Business Card #1',
             targetModal: '#modalImageViewer'
         },
-        sketch_2: {
-            localSrc: 'images/wta/sketches/sketch_2.jpg',
+        FP_BusinessCard_2: {
+            localSrc: 'images/freedom/FP_BusinessCard_2.jpg',
             driveSrc: '',
-            title: 'Sketch #2',
+            title: 'Business Card #2',
             targetModal: '#modalImageViewer'
         },
-        logo_prototyping: {
-            localSrc: 'images/wta/logo_prototyping/wta_logo_black.jpg',
+        FP_Logo: {
+            localSrc: 'images/freedom/FP_Logo.jpg',
             driveSrc: '',
             title: 'Logo',
             targetModal: '#modalImageViewer'
-        },
-        home_screen: {
-            localSrc: 'images/wta/home_screen.jpg',
-            title: 'Home Screen',
-            targetModal: '#modalImageViewer'
-        },
-        wta_home: {
-            localSrc: 'images/wta/wta_home.jpg',
-            title: 'WTA Home Screen',
-            targetModal: '#modalImageViewer'            
-        },
-        business_card: {
-            localSrc: 'images/wta/wta_business_card.jpg',
-            title: 'WTA Business Card',
-            targetModal: '#modalImageViewer'              
         }
     };
 

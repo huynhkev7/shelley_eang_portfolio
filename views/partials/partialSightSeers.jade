@@ -121,13 +121,13 @@ div
             .row.sub-section-header Usability Tests
                 .row
                     p My team and I conducted usability tests with over 10 participants using our low-fidelity prototype. Our team noticed confusion in initial wording between “CREATE CARD” and “CREATE STORY”, furthermore, my team noticed that participants would rather have one option to create a post that would allow them to further expand their writing if needed. Results from all sessions are listed below.
-                    .box-row
-                        .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='result in ::userTestingList.results')
+                    .row
+                        .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='result in ::userTestingList.results',on-finish-render='ngRepeatFinished', style='margin-bottom: 10px')
                             .stats-contaner
                                 .stats-description {{result}}
                     p A few positive findings:
-                    .box-row
-                        .col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='positive in ::userTestingList.positives')
+                    .row
+                        .artifact-element.col-md-4.col-lg-4.col-sm-12.col-xs-12(ng-repeat='positive in ::userTestingList.positives',on-finish-render='ngRepeatFinished')
                             .stats-contaner
                                 .stats-description {{positive}}
 .container 

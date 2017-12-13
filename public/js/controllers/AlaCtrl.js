@@ -193,57 +193,48 @@ angular.module('myApp.alaCtrl', [])
     ];
 
     $scope.modalObjects = {
-        text_with_image: {
-            localSrc: 'images/wta/text_with_image.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4WUJmUVdETHlxbUE/preview',
-            title: 'Text w/ Image',
-            targetModal: '#modalIframeViewer'            
-        },
-        type_hierarchy: {
-            localSrc: 'images/wta/type_hierarchy.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZUI0MExONTRvazg/preview',
-            title: 'Typography and Hierarchy',
-            targetModal: '#modalIframeViewer'            
-        },
-        color_and_emotion: {
-            localSrc: 'images/wta/color_and_emotion.jpg',
-            driveSrc: 'https://drive.google.com/file/d/0B02JzOinFmv4ZjdNcjFPWm1sd2c/preview',
-            title: 'Color and Emotion',
-            targetModal: '#modalIframeViewer'            
-        },
-        sketch_1: {
-            localSrc: 'images/wta/sketches/sketch_1.jpg',
+        ala_banner: {
+            localSrc: 'images/ala/ala_banner.jpg',
             driveSrc: '',
-            title: 'Sketch #1',
-            targetModal: '#modalImageViewer'
-        },
-        sketch_2: {
-            localSrc: 'images/wta/sketches/sketch_2.jpg',
-            driveSrc: '',
-            title: 'Sketch #2',
-            targetModal: '#modalImageViewer'
-        },
-        logo_prototyping: {
-            localSrc: 'images/wta/logo_prototyping/wta_logo_black.jpg',
-            driveSrc: '',
-            title: 'Logo',
-            targetModal: '#modalImageViewer'
-        },
-        home_screen: {
-            localSrc: 'images/wta/home_screen.jpg',
-            title: 'Home Screen',
-            targetModal: '#modalImageViewer'
-        },
-        wta_home: {
-            localSrc: 'images/wta/wta_home.jpg',
-            title: 'WTA Home Screen',
+            title: 'Banner',
             targetModal: '#modalImageViewer'            
         },
-        business_card: {
-            localSrc: 'images/wta/wta_business_card.jpg',
-            title: 'WTA Business Card',
-            targetModal: '#modalImageViewer'              
-        }
+        ala_final: {
+            localSrc: 'images/ala/ala_final.jpg',
+            driveSrc: '',
+            title: 'Final Flyer',
+            targetModal: '#modalImageViewer'            
+        },
+        ala_flyer: {
+            localSrc: 'images/ala/ala_flyer.jpg',
+            driveSrc: '',
+            title: 'Final Flyer #2',
+            targetModal: '#modalImageViewer'            
+        },
+        ala_flyer_back: {
+            localSrc: 'images/ala/ala_flyer_back.jpg',
+            driveSrc: '',
+            title: 'Back of Flyer',
+            targetModal: '#modalImageViewer'
+        },
+        ala_flyer_front: {
+            localSrc: 'images/ala/ala_flyer_front.jpg',
+            driveSrc: '',
+            title: 'Front of Flyer',
+            targetModal: '#modalImageViewer'
+        },
+        ala_logo_black: {
+            localSrc: 'images/ala/ala_logo_black.jpg',
+            driveSrc: '',
+            title: 'ALA Logo Black',
+            targetModal: '#modalImageViewer'
+        },
+        ala_logo_blue: {
+            localSrc: 'images/ala/ala_logo_blue.jpg',
+            driveSrc: '',
+            title: 'ALA Logo Blue',
+            targetModal: '#modalImageViewer'
+        }        
     };
 
     $scope.trustSrc = function(src) {

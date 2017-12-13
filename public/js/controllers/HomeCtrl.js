@@ -3,6 +3,7 @@
 angular.module('myApp.homeCtrl', [])
   .controller('HomeCtrl', ['$location', '$scope', '$timeout', '$rootScope', 'globalFunctions', function($location, $scope, $timeout, $rootScope, globalFunctions) {
     $rootScope.currentBaseUrl =  $location.path();   
+    
     if(globalFunctions.getIsMobile()){
         $rootScope.showNavbar = true;
     }else{
@@ -91,7 +92,7 @@ angular.module('myApp.homeCtrl', [])
             route: '',
             tags: ['Internship /', 'UX /', 'UI /', 'NDA'],
             class: ''
-        }           
+        }            
     ]
     $scope.listOfProjects = [
         {

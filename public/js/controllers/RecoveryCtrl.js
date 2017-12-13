@@ -6,6 +6,14 @@ angular.module('myApp.recoveryCtrl', [])
     $rootScope.showNavbar = true;
     $rootScope.currentBaseUrl =  '/home';
     $scope.videoURL = 'https://youtu.be/48piu-OeOrY';  
+
+    $scope.surveyList = [
+        'Add a card that signified a trade of cards',
+        'Players were confused at the instructions of the game',
+        'Players noted that the game was too general- ized and did not know it was recovery specific',
+        'All players enjoyed the game and players (who originally were unac- quainted) collaborated with each other'
+    ]
+    
     $scope.team = [
         {
             name: 'Shelley Eang',

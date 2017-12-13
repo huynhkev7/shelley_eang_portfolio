@@ -13,16 +13,17 @@ br
 			#project-title Projects
 	br
 .container
-	div
-		.box-row
-			.col-md-4(ng-repeat='project in ::listOfProjects')
-				.profile-card.text-center(ng-click='goToProject(project.route)')
-					img.img-responsive(src='{{project.url}}')
-					.profile-info
-						h2(class="{{project.class}}").hvr-underline-from-center {{project.title}}
-						div
-							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
-						div {{project.description}}
+	.row
+		.project-thumbnail.artifact-element.col-xs-12.col-sm-12.col-md-6.col-lg-4(ng-repeat='project in ::listOfProjects',on-finish-render='ngRepeatFinished', style='margin-top: 10px')
+			.thumbnail.project-container(ng-click='goToProject(project.route)',style='padding: 0px; background-color: #30343f')
+				img(src='{{project.url}}', alt='')
+				.caption(style='text-align:center; color: white')
+					h2.hvr-underline-from-center.project-name {{project.title}}
+					div(style='text-align:center')
+						span.project-tag(ng-repeat="tag in project.tags") {{tag}}&nbsp;
+					p.project-info {{project.description}}
+br
+br
 .page-wrapper#projects-content
 	.row
 		.col-lg-12.text-center
@@ -30,13 +31,16 @@ br
 			#project-sub-title Note: Work items tagged as "NDA" are not clickable due to non-discolure agreements.
 	br
 .container
-	div
-		.box-row
-			.col-md-4(ng-repeat='project in ::workExperiences')
-				.profile-card.text-center(ng-click='goToProject(project.route)')
-					img.img-responsive(src='{{project.url}}')
-					.profile-info
-						h2(class="{{project.class}}").hvr-underline-from-center {{project.title}}
-						div
-							span(ng-repeat="tag in project.tags") {{tag}}&nbsp;
-						div {{project.description}}
+	.row
+		.project-thumbnail.artifact-element.col-xs-12.col-sm-12.col-md-6.col-lg-4(ng-repeat='project in ::workExperiences', on-finish-render='ngRepeatFinished', style='margin-top: 10px')
+			.thumbnail.project-container(ng-click='goToProject(project.route)',style='padding: 0px; background-color: #30343f')
+				img(src='{{project.url}}', alt='')
+				.caption(style='text-align:center; color: white')
+					h2.hvr-underline-from-center.project-name {{project.title}}
+					div(style='text-align:center')
+						span.project-tag(ng-repeat="tag in project.tags") {{tag}}&nbsp;
+					p.project-info {{project.description}}
+
+
+						
+					

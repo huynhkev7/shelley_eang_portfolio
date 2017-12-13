@@ -154,3 +154,25 @@ angular.module('myApp.directives', []).
       }
   }
 }])
+.
+directive('onFinishRender', ['version', '$window', '$location', '$timeout', function(version, $window, location, $timeout) {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attr) {
+        if (scope.$last === true) {
+            $timeout(function () {
+                scope.$emit(attr.onFinishRender);
+                //update the heights
+                setTimeout(function(){
+                  $('.artifact-element').matchHeight({
+                      byRow: true,
+                      property: 'height',
+                      target: null,
+                      remove: false
+                  });
+              }, 100);                
+            });
+        }
+    }
+}
+}])

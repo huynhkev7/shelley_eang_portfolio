@@ -306,14 +306,6 @@ li {
 
 
 /** box row **/ 
-.box-row {
-  display: flex; 
-  flex-flow: row wrap;
-  align-items: stretch;
-}
-.box-row > [class*='col-'] {
-  padding: 5px;
-}
 
 .box-item {
   text-align: center;
@@ -330,3 +322,102 @@ li {
   font-weight: 500;
 }
 
+.thumbnail {
+  height: 100%;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 52%;
+  right: 52%;
+  bottom: 0;
+  background: #FFFFFF;
+  border-radius: 50%;
+  height: 3px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.thumbnail:hover .hvr-underline-from-center:before, .thumbnail:focus .hvr-underline-from-center:before, .thumbnail:active .hvr-underline-from-center:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #CECECE;
+}
+
+.project-name {
+  color: #E8E8E8;
+  letter-spacing: 4px;
+  padding-bottom: 12px;
+  margin-top: 15px;
+}
+
+.project-tag {
+  font-size: 12px;
+  color: #BDBDBD;
+  letter-spacing: 2px;
+}
+
+.project-info {
+  color: #ddd;
+}
+
+.project-container {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.project-button {
+  display: inline-block;
+  background: #962d22;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 2px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.project-button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+  cursor: pointer;
+}
+
+.project-container {
+  box-shadow: 0 0 20px rgba(236, 240, 241,1.0);
+  border: none;
+}
+
+.project-container:hover {
+  box-shadow: 0 0 20px rgba(149, 165, 166,1.0);
+  -o-transition:1s;
+  -ms-transition:1s;
+  -moz-transition:1s;
+  -webkit-transition:1s;
+  /* ...and now for the proper property */
+  transition:1s;
+  cursor: pointer;
+}

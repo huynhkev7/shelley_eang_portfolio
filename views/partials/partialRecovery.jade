@@ -89,8 +89,8 @@ div
                     |  for the articles I read.
             .row.sub-section-header Existing Competitive Games
                 p My team and I conducted competitive analysis on 6 board games to gain an understanding of game mechanics and how existing board games work. We discovered that many existing competitive games relied on a random factor, team-playing games often required strategy, and competitive collaborative games often required negotiation.
-            .box-row
-                .col-md-4.col-lg-4.col-sm-4(ng-repeat='game in ::competitiveGames')
+            .row
+                .col-md-4.col-lg-4.col-sm-4.artifact-element(ng-repeat='game in ::competitiveGames', on-finish-render='ngRepeatFinished')
                     img(src='{{game.source}}', class='img-rounded img-responsive')
                     br
                     p 
@@ -108,8 +108,8 @@ div
             .row
                 p Disaster recovery is a complex process that many college students often do not know about or have little understanding of. My team and I conducted user research in the form of user surveys at the University of Washington to gain a better understanding of our target audience.
             .row.sub-section-header User Survey Results
-            .box-row
-                .col-md-3.col-lg-3.col-sm-12.col-xs-12(ng-repeat='respondent in ::listOfRespondents')
+            .row
+                .col-md-3.col-lg-3.col-sm-12.col-xs-12.artifact-element(ng-repeat='respondent in ::listOfRespondents',on-finish-render='ngRepeatFinished')
                     .stats-contaner
                         .stats-value {{respondent.percentage}}%
                         .stats-line of Respondents
@@ -147,15 +147,9 @@ div
             .row
                 p My team and I conducted two structured usability test sessions that simulated real game play. The first session had a group of 3 players and the second session had a group of 4 players. Results from the usability test sessions were from the low fidelity prototypes.
             .row.sub-section-header User Survey Results
-            .box-row
-                .col-mg-3.col-lg-3.col-sm-3
-                    .box-item  Add a card that signified a trade of cards
-                .col-mg-3.col-lg-3.col-sm-3
-                    .box-item Players were confused at the instructions of the game
-                .col-mg-3.col-lg-3.col-sm-3
-                    .box-item Players noted that the game was too general- ized and did not know it was recovery specific
-                .col-mg-3.col-lg-3.col-sm-3
-                    .box-item  All players enjoyed the game and players (who originally were unac- quainted) collaborated with each other
+            .row
+                .col-mg-3.col-lg-3.col-sm-3(ng-repeat='survey in ::surveyList', on-finish-render='ngRepeatFinished')
+                    .box-item.artifact-element  {{survey}}
 //Details Section
 .container 
     .col-md-12.col-lg-12.col-sm-12
